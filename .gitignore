@@ -1,0 +1,8 @@
+.vscode
+logs
+*.log
+npm-debug.log*
+node_modules
+semantic
+semantic.json
+~$docs.xlsx

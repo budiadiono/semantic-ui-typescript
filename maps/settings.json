@@ -1,0 +1,3280 @@
+{
+  "api": [
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "on",
+      "": "",
+      "description": "When API event should occur"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "cache",
+      "": "",
+      "description": "Can be set to 'local' to cache successful returned AJAX responses when using a JSON API. This helps avoid server roundtrips when API endpoints will return the same results when accessed repeatedly. Setting to false, will add cache busting parameters to the URL."
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "stateContext",
+      "": "",
+      "description": "UI state will be applied to this element, defaults to triggering element."
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "encodeParameters",
+      "": "",
+      "description": "Whether to encode parameters with encodeURIComponent before adding into url string"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "defaultData",
+      "": "",
+      "description": "Whether to automatically include default data like {value} and {text}"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "serializeForm",
+      "": "",
+      "description": "Whether to serialize closest form and include in request"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "throttle",
+      "": "",
+      "description": "How long to wait when a request is made before triggering request, useful for rate limiting oninput"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "throttleFirstRequest",
+      "": "",
+      "description": "When set to false will not delay the first request made, when no others are queued"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "interruptRequests",
+      "": "",
+      "description": "Whether an API request can occur while another request is still pending"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "loadingDuration",
+      "": "",
+      "description": "Minimum duration to show loading indication"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "hideError",
+      "": "",
+      "description": "The default auto will automatically remove error state after error duration, unless the element is a form"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Behavior",
+      "name": "errorDuration",
+      "": "",
+      "description": "Setting to true, will not remove error. Setting to a duration in milliseconds to show error state after request error."
+    },
+    {
+      "values": "String or false",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "action",
+      "": "",
+      "description": "Named API action for query, originally specified in $.fn.settings.api"
+    },
+    {
+      "values": "String or false",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "url",
+      "": "",
+      "description": "Templated URL for query, will override specified action"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "urlData",
+      "": "",
+      "description": "Variables to use for replacement"
+    },
+    {
+      "values": "{} or false",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "response",
+      "": "",
+      "description": "Can be set to a Javascript object which will be returned automatically instead of requesting JSON from server"
+    },
+    {
+      "values": "function or false",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "responseAsync(settings, callback)",
+      "": "",
+      "description": "When specified, this function can be used to retrieve content from a server and return it asynchronously instead of a standard AJAX call. The callback function should return the server response."
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "mockResponse",
+      "": "",
+      "description": "Alias of response"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "mockResponseAsync",
+      "": "",
+      "description": "Alias of responseAsync"
+    },
+    {
+      "values": "'post', 'get'",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "method",
+      "": "",
+      "description": "Method for transmitting request to server"
+    },
+    {
+      "values": "'xml', 'json', 'jsonp', 'script', 'html', 'text'",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "dataType",
+      "": "",
+      "description": "Expected data type of response"
+    },
+    {
+      "values": "",
+      "module": "api",
+      "category": "Request Settings",
+      "name": "data",
+      "": "",
+      "description": "POST/GET Data to Send with Request"
+    }
+  ],
+  "accordion": [
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "exclusive",
+      "": "",
+      "description": "Only allow one section open at a time"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "on",
+      "": "",
+      "description": "Event on title that will cause accordion to open"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "animateChildren",
+      "": "",
+      "description": "Whether child content opacity should be animated (may cause performance issues with many child elements)"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "close nested",
+      "": "",
+      "description": "Close open nested accordion content when an element closes"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "collapsible",
+      "": "",
+      "description": "Allow active sections to collapse"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "duration",
+      "": "",
+      "description": "Duration in ms of opening animation"
+    },
+    {
+      "values": "",
+      "module": "accordion",
+      "category": "Behavior",
+      "name": "easing",
+      "": "",
+      "description": "Easing of opening animation. EaseInOutQuint is included with accordion, for additional options you must include easing equations."
+    }
+  ],
+  "checkbox": [
+    {
+      "values": "",
+      "module": "checkbox",
+      "category": "",
+      "name": "uncheckable",
+      "": "auto",
+      "description": "Setting to true/false will determine whether an input will allow no selection. Auto will set disallow this behavior only for radio boxes"
+    },
+    {
+      "values": "",
+      "module": "checkbox",
+      "category": "",
+      "name": "fireOnInit",
+      "": "FALSE",
+      "description": "Whether callbacks for checked status should be fired on init as well as change"
+    }
+  ],
+  "dimmer": [
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "opacity",
+      "": "auto",
+      "description": "Dimmers opacity from 0-1. Defaults to auto which uses the CSS specified opacity."
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "variation",
+      "": "FALSE",
+      "description": "Specify a variation to add when generating dimmer, like inverted"
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "dimmerName",
+      "": "FALSE",
+      "description": "If initializing a dimmer on a dimmable context, you can use dimmerName to distinguish between multiple dimmers in that context."
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "closable",
+      "": "auto",
+      "description": "Whether clicking on the dimmer should hide the dimmer (Defaults to auto, closable only when settings.on is not hover"
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "on",
+      "": "FALSE",
+      "description": "Can be set to hover or click to show/hide dimmer on dimmable event"
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "useCSS",
+      "": "TRUE",
+      "description": "Whether to dim dimmers using CSS transitions."
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "duration",
+      "": "",
+      "description": "Animation duration of dimming. If an integer is used, that value will apply to both show and hide animations."
+    },
+    {
+      "values": "",
+      "module": "dimmer",
+      "category": "Behavior",
+      "name": "transition",
+      "": "Fade",
+      "description": "Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions"
+    }
+  ],
+  "dropdown": [
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "on",
+      "": "click",
+      "description": "Event used to trigger dropdown (Hover, Click, Custom Event)"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "allowReselection",
+      "": "FALSE",
+      "description": "When set to true will fire onChange even when the value a user select matches the currently selected value."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "allowAdditions",
+      "": "FALSE",
+      "description": "Whether search selection should allow users to add their own selections, works for single or multiselect."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "hideAdditions",
+      "": "TRUE",
+      "description": "When disabled user additions will appear in the results menu using a specially formatted selection item formatted by templates.addition."
+    },
+    {
+      "values": "'activate', 'select', 'combo', 'nothing', 'hide', Function",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "action",
+      "": "auto",
+      "description": "Sets a default action to occur. (See usage guide)"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "minCharacters",
+      "": "1",
+      "description": "The minimum characters for a search to begin showing results"
+    },
+    {
+      "values": "'both', 'value', 'text'",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "match",
+      "": "both",
+      "description": "When using search selection specifies how to match values."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "selectOnKeydown",
+      "": "TRUE",
+      "description": "Whether dropdown should select new option when using keyboard shortcuts. Setting to false will require enter or left click to confirm a choice."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "forceSelection",
+      "": "TRUE",
+      "description": "Whether search selection will force currently selected choice when element is blurred."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "allowCategorySelection",
+      "": "FALSE",
+      "description": "Whether menu items with sub-menus (categories) should be selectable"
+    },
+    {
+      "values": "'auto', 'value', false",
+      "module": "dropdown",
+      "category": "Frequently Used Settings",
+      "name": "placeholder",
+      "": "auto",
+      "description": "auto: Convert option with \"\" (blank string) value to placeholder text, value: Sets string value to placeholder text, leaves \"\" value, false: Leaves \"\" value as a selectable option"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Remote Settings",
+      "name": "apiSettings",
+      "": "FALSE",
+      "description": "Can be set to an object to specify API settings for retrieving remote selection menu content from an API endpoint"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Remote Settings",
+      "name": "fields",
+      "": "",
+      "description": "List mapping dropdown content to JSON Property when using API"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Remote Settings",
+      "name": "saveRemoteData",
+      "": "",
+      "description": "When enabled will automatically store selected name/value pairs in sessionStorage to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Multiple Select Settings",
+      "name": "useLabels",
+      "": "TRUE",
+      "description": "Whether multiselect should use labels. Must be set to true when allowAdditions is true"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Multiple Select Settings",
+      "name": "maxSelections",
+      "": "FALSE",
+      "description": "When set to a number, sets the maximum number of selections"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Multiple Select Settings",
+      "name": "glyphWidth",
+      "": "1.0714",
+      "description": "Maximum glyph width, used to calculate search size. This is usually size of a \"W\" in your font in em"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Multiple Select Settings",
+      "name": "label",
+      "": "",
+      "description": "Allows customization of multi-select labels"
+    },
+    {
+      "values": "'auto', 'upward', 'downward'",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "direction",
+      "": "'auto'",
+      "description": "When set to auto determines direction based on whether dropdown can fit on screen. Set to upward or downward to always force a direction."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "keepOnScreen",
+      "": "TRUE",
+      "description": "Whether dropdown should try to keep itself on screen by checking whether menus display position in its context (Default context is page)."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "context",
+      "": "window",
+      "description": "Element context to use when checking whether can show when keepOnScreen: true"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "fullTextSearch",
+      "": "FALSE",
+      "description": "Specifying to \"true\" will use a fuzzy full text search, setting to \"exact\" will force the exact search to be matched somewhere in the string"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "preserveHTML",
+      "": "TRUE",
+      "description": "Whether HTML included in dropdown values should be preserved. (Allows icons to show up in selected value)"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "sortSelect",
+      "": "FALSE",
+      "description": "Whether to sort values when creating a dropdown automatically from a select element."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "showOnFocus",
+      "": "TRUE",
+      "description": "Whether to show dropdown menu automatically on element focus."
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "allowTab",
+      "": "TRUE",
+      "description": "Whether to allow the element to be navigable by keyboard, by automatically creating a tabindex"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "transition",
+      "": "auto (slide down / slide up)",
+      "description": "Named transition to use when animating menu in and out. Defaults to slide down or slide up depending on dropdown direction. Fade and slide down are available without including ui transitions"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "duration",
+      "": "200",
+      "description": "Duration of animation events"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "keys",
+      "": "",
+      "description": "The keycode used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass false for comma delimiter's value"
+    },
+    {
+      "values": "",
+      "module": "dropdown",
+      "category": "Additional Settings",
+      "name": "delay",
+      "": "",
+      "description": "Time in milliseconds to debounce show or hide behavior when on: hover is used, or when touch is used."
+    }
+  ],
+  "embed": [
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Embed Settings",
+      "name": "icon",
+      "": "FALSE",
+      "description": "Specifies an icon to use with placeholder content"
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Embed Settings",
+      "name": "source",
+      "": "FALSE",
+      "description": "Specifies a source to use, if no source is provided it will be determined from the domain of a specified url."
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Embed Settings",
+      "name": "url",
+      "": "FALSE",
+      "description": "Specifies a url to use for embed"
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Embed Settings",
+      "name": "id",
+      "": "FALSE",
+      "description": "Specifies an id value to replace with the {id} value found in templated urls"
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Embed Settings",
+      "name": "parameters",
+      "": "FALSE",
+      "description": "Specify an object containing key/value pairs to add to the iframes GET parameters"
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Video Settings",
+      "name": "autoplay",
+      "": "auto",
+      "description": "Default setting auto will only autoplay content when a placeholder is specified. Setting to true or false will force autoplay."
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Video Settings",
+      "name": "color",
+      "": "#444444",
+      "description": "Specifies a default chrome color with Vimeo or YouTube."
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Video Settings",
+      "name": "hd",
+      "": "TRUE",
+      "description": "Whether to prefer HD content"
+    },
+    {
+      "values": "",
+      "module": "embed",
+      "category": "Video Settings",
+      "name": "brandedUI",
+      "": "FALSE",
+      "description": "Whether to show networks branded UI like title cards, or after video calls to action."
+    }
+  ],
+  "form": [
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "keyboardShortcuts",
+      "": "TRUE",
+      "description": "Adds keyboard shortcuts for enter and escape keys to submit form and blur fields respectively"
+    },
+    {
+      "values": "'submit', 'blur', 'change'",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "on",
+      "": "submit",
+      "description": "Event used to trigger validation. Can be either submit, blur or change."
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "revalidate",
+      "": "TRUE",
+      "description": "If set to true will revalidate fields with errors on input change"
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "delay",
+      "": "TRUE",
+      "description": "Delay from last typed letter to validate a field when using on: changeor when revalidating a field."
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "inline",
+      "": "FALSE",
+      "description": "Adds inline error on field validation error"
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "transition",
+      "": "scale",
+      "description": "Named transition to use when animating validation errors. Fade and slide down are available without including ui transitions"
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Settings",
+      "name": "duration",
+      "": "150",
+      "description": "Animation speed for inline prompt"
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Prompts",
+      "name": "text",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "form",
+      "category": "Form Prompts",
+      "name": "prompt",
+      "": "",
+      "description": ""
+    }
+  ],
+  "modal": [
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "detachable",
+      "": "TRUE",
+      "description": "If set to false will prevent the modal from being moved to inside the dimmer"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "autofocus",
+      "": "TRUE",
+      "description": "When true, the first form input inside the modal will receive focus when shown. Set this to false to prevent this behavior."
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "observeChanges",
+      "": "FALSE",
+      "description": "Whether any change in modal DOM should automatically refresh cached positions"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "allowMultiple",
+      "": "FALSE",
+      "description": "If set to true will not close other visible modals when opening a new one"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "keyboardShortcuts",
+      "": "TRUE",
+      "description": "Whether to automatically bind keyboard shortcuts"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "offset",
+      "": "0",
+      "description": "A vertical offset to allow for content outside of modal, for example a close button, to be centered."
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "context",
+      "": "body",
+      "description": "Selector or jquery object specifying the area to dim"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "closable",
+      "": "TRUE",
+      "description": "Setting to false will not allow you to close the modal by clicking on the dimmer"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "dimmerSettings",
+      "": "",
+      "description": "You can specify custom settings to extend UI dimmer"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "transition",
+      "": "scale",
+      "description": "Named transition to use when animating menu in and out, full list can be found in ui transitions docs."
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "duration",
+      "": "400",
+      "description": "Duration of animation"
+    },
+    {
+      "values": "",
+      "module": "modal",
+      "category": "Modal Settings",
+      "name": "queue",
+      "": "FALSE",
+      "description": "Whether additional animations should queue"
+    }
+  ],
+  "popup": [
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "popup",
+      "": "FALSE",
+      "description": "Can specify a DOM element that should be used as the popup. This is useful for including a pre-formatted popup."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "exclusive",
+      "": "FALSE",
+      "description": "Whether all other popups should be hidden when this popup is opened"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "movePopup",
+      "": "TRUE",
+      "description": "Whether to move popup to same offset container as target element when popup already exists on the page. Using a popup inside of an element without overflow:visible, like a sidebar, may require you to set this to false"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "observeChanges",
+      "": "TRUE",
+      "description": "Whether popup should attach mutationObservers to automatically run destroy when the element is removed from the page's DOM."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "boundary",
+      "": "window",
+      "description": "When the popup surpasses the boundary of this element, it will attempt to find another display position."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "context",
+      "": "body",
+      "description": "Selector or jquery object specifying where the popup should be created."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "scrollContext",
+      "": "window",
+      "description": "Will automatically hide a popup on scroll event in this context"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "jitter",
+      "": "2",
+      "description": "Number of pixels that a popup is allowed to appear outside the boundaries of its context. This allows for permissible rounding errors when an element is against the edge of its context."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "position",
+      "": "top left",
+      "description": "Position that the popup should appear"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "inline",
+      "": "FALSE",
+      "description": "If a popup is inline it will be created next to current element, allowing for local css rules to apply. It will not be removed from the DOM after being hidden. Otherwise popups will appended to body and removed after being hidden."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "preserve",
+      "": "FALSE",
+      "description": "Whether popup contents should be preserved in the page after being hidden, allowing it to re-appear slightly faster on subsequent loads."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "prefer",
+      "": "adjacent",
+      "description": "Can be set to adjacent or opposite to prefer adjacent or opposite position if popup cannot fit on screen"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "lastResort",
+      "": "FALSE",
+      "description": "When set to false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, right center forces the popup to use this position as a last resort even if it is partially offstage. Setting this to true will use the last attempted position."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "on",
+      "": "hover",
+      "description": "Event used to trigger popup. Can be either focus, click, hover, or manual. Manual popups must be triggered with $('.element').popup('show');"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "delay",
+      "": "",
+      "description": "Delay in milliseconds before showing or hiding a popup on hover or focus"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "transition",
+      "": "slide down",
+      "description": "Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "duration",
+      "": "200",
+      "description": "Duration of animation events"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "setFluidWidth",
+      "": "TRUE",
+      "description": "Whether popup should set fluid popup variation width on load to avoid width: 100%including padding"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "hoverable",
+      "": "FALSE",
+      "description": "Whether popup should not close on hover (useful for popup navigation menus)"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "closable",
+      "": "TRUE",
+      "description": "When using on: 'click' specifies whether clicking the page should close the popup"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "addTouchEvents",
+      "": "TRUE",
+      "description": "When using on: 'hover' whether touchstart events should be added to allow the popup to be triggered"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "hideOnScroll",
+      "": "auto",
+      "description": "Whether popup should hide on scroll or touchmove, auto only hides for popups without on: 'click'."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "",
+      "": "",
+      "description": "Set this to false to prevent mobile browsers from closing popups when you tap inside input fields."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "target",
+      "": "FALSE",
+      "description": "If a selector or jQuery object is specified this allows the popup to be positioned relative to that element."
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "distanceAway",
+      "": "0",
+      "description": "Offset for distance of popup from element"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "offset",
+      "": "0",
+      "description": "Offset in pixels from calculated position"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Popup Settings",
+      "name": "maxSearchDepth",
+      "": "10",
+      "description": "Number of iterations before giving up search for popup position when a popup cannot fit on screen"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Content Settings",
+      "name": "variation",
+      "": "",
+      "description": "Popup variation to use, can use multiple variations with a space delimiter"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Content Settings",
+      "name": "content",
+      "": "",
+      "description": "Content to display"
+    },
+    {
+      "values": "",
+      "module": "popup",
+      "category": "Content Settings",
+      "name": "title",
+      "": "",
+      "description": "Title to display alongside content"
+    },
+    {
+      "values": "DOM",
+      "module": "popup",
+      "category": "Content Settings",
+      "name": "html",
+      "": "",
+      "description": "HTML content to display instead of preformatted title and content"
+    }
+  ],
+  "progress": [
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "autoSuccess",
+      "": "TRUE",
+      "description": "Whether success state should automatically trigger when progress completes"
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "showActivity",
+      "": "TRUE",
+      "description": "Whether progress should automatically show activity when incremented"
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "limitValues",
+      "": "TRUE",
+      "description": "When set to true, values that calculate to above 100% or below 0% will be adjusted. When set to false, inappropriate values will produce an error."
+    },
+    {
+      "values": "'percent', 'ratio', string",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "label",
+      "": "percent",
+      "description": "Can be set to either to display progress as percent or ratio. Matches up to corresponding text template with the same name."
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "random",
+      "": "",
+      "description": "When incrementing without value, sets range for random increment value"
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "precision",
+      "": "1",
+      "description": "Decimal point precision for calculated progress"
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "total",
+      "": "FALSE",
+      "description": "Setting a total value will make each call to increment get closer to this total (i.e. 1/20, 2/20 etc)"
+    },
+    {
+      "values": "",
+      "module": "progress",
+      "category": "Progress Settings",
+      "name": "value",
+      "": "FALSE",
+      "description": "Sets current value, when total is specified, this is used to calculate a ratio of the total, with percent this should be the overall percent"
+    }
+  ],
+  "rating": [
+    {
+      "values": "",
+      "module": "rating",
+      "category": "Rating Settings",
+      "name": "initialRating",
+      "": "0",
+      "description": "A number representing the default rating to apply"
+    },
+    {
+      "values": "",
+      "module": "rating",
+      "category": "Rating Settings",
+      "name": "fireOnInit",
+      "": "FALSE",
+      "description": "Whether callbacks like onRate should fire immediately after initializing with the current value."
+    },
+    {
+      "values": "",
+      "module": "rating",
+      "category": "Rating Settings",
+      "name": "clearable",
+      "": "auto",
+      "description": "By default a rating will be only clearable if there is 1 icon. Setting to true/false will allow or disallow a user to clear their rating"
+    },
+    {
+      "values": "",
+      "module": "rating",
+      "category": "Rating Settings",
+      "name": "interactive",
+      "": "TRUE",
+      "description": "Whether to enable user's ability to rate"
+    }
+  ],
+  "search": [
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "apiSettings",
+      "": "",
+      "description": "Settings for API call."
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "minCharacters",
+      "": "1",
+      "description": "Minimum characters to query for results"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "transition",
+      "": "fade",
+      "description": "Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "duration",
+      "": "300",
+      "description": "Duration of animation events"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "maxResults",
+      "": "7",
+      "description": "Maximum results to display when using local and simple search, maximum category count for category search"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "cache",
+      "": "TRUE",
+      "description": "Caches results locally to avoid requerying server"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "source",
+      "": "FALSE",
+      "description": "Specify a Javascript object which will be searched locally"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "selectFirstResult",
+      "": "FALSE",
+      "description": "Whether the search should automatically select the first search result after searching"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "showNoResults",
+      "": "FALSE",
+      "description": "Whether a \"no results\" message should be shown if no results are found. (These messages can be modified using the template object specified below)"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "searchFullText",
+      "": "TRUE",
+      "description": "Return local results that match anywhere inside your content"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "fields",
+      "": "",
+      "description": "List mapping display content to JSON property, either with API or source."
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "searchFields",
+      "": "",
+      "description": "Specify object properties inside local source object which will be searched"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "hideDelay",
+      "": "0",
+      "description": "Delay before hiding results after search blur"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "searchDelay",
+      "": "100",
+      "description": "Delay before querying results on inputchange"
+    },
+    {
+      "values": "",
+      "module": "search",
+      "category": "Behavior",
+      "name": "easing",
+      "": "easeOutExpo",
+      "description": "Easing equation when using fallback Javascript animation"
+    }
+  ],
+  "shape": [
+    {
+      "values": "",
+      "module": "shape",
+      "category": "Shape Settings",
+      "name": "duration",
+      "": "700ms",
+      "description": "Duration of side change animation"
+    },
+    {
+      "values": "",
+      "module": "shape",
+      "category": "Shape Settings",
+      "name": "width",
+      "": "initial",
+      "description": "When set to next will use the width of the next side during the shape's animation. When set to initial it will use the width of the shape at initialization. When set to a specifix pixel height, will force the width to that height."
+    },
+    {
+      "values": "",
+      "module": "shape",
+      "category": "Shape Settings",
+      "name": "height",
+      "": "initial",
+      "description": "When set to next will use the height of the next side during the shape's animation. When set to initial it will use the height of the shape at initialization. When set to a specifix pixel height, will force the height to that height."
+    }
+  ],
+  "sidebar": [
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "context",
+      "": "body",
+      "description": "Context which sidebar will appear inside"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "exclusive",
+      "": "FALSE",
+      "description": "Whether multiple sidebars can be open at once"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "closable",
+      "": "TRUE",
+      "description": "Whether sidebar can be closed by clicking on page"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "dimPage",
+      "": "TRUE",
+      "description": "Whether to dim page contents when sidebar is visible"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "scrollLock",
+      "": "FALSE",
+      "description": "Whether to lock page scroll when sidebar is visible"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "returnScroll",
+      "": "FALSE",
+      "description": "Whether to return to original scroll position when sidebar is hidden, automatically occurs with transition: scale"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Behavior",
+      "name": "delaySetup",
+      "": "FALSE",
+      "description": "When sidebar is initialized without the proper HTML, using this option will defer creation of DOM to use requestAnimationFrame."
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "transition",
+      "": "auto",
+      "description": "Named transition to use when animating sidebar. Defaults to 'auto' which selects transition from defaultTransition based on direction."
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "mobileTransition",
+      "": "auto",
+      "description": "Named transition to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from defaultTransitionbased on direction."
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "defaultTransition",
+      "": "",
+      "description": "Default transitions for each direction and screen size, used with transition: auto"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "useLegacy",
+      "": "FALSE",
+      "description": "Whether Javascript animations should be used. Defaults to false. Setting to auto will use legacy animations only for browsers that do not support CSS transforms"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "duration",
+      "": "500",
+      "description": "Duration of sidebar animation when using legacy Javascript animation"
+    },
+    {
+      "values": "",
+      "module": "sidebar",
+      "category": "Animation",
+      "name": "easing",
+      "": "easeInOutQuint",
+      "description": "Easing to use when using legacy Javascript animation"
+    }
+  ],
+  "sticky": [
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "pushing",
+      "": "FALSE",
+      "description": "Whether element should be \"pushed\" by the viewport, attaching to the bottom of the screen when scrolling up"
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "jitter",
+      "": "5",
+      "description": "Sticky container height will only be set if the difference between heights of container and context is larger than this jitter value."
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "observeChanges",
+      "": "FALSE",
+      "description": "Whether any change in context DOM should automatically refresh cached sticky positions"
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "context",
+      "": "FALSE",
+      "description": "Context which sticky element should stick to"
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "scrollContext",
+      "": "window",
+      "description": "Context which sticky should attach onscroll events."
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "offset",
+      "": "0",
+      "description": "Offset in pixels from the top of the screen when fixing element to viewport"
+    },
+    {
+      "values": "",
+      "module": "sticky",
+      "category": "Sticky Settings",
+      "name": "bottomOffset",
+      "": "0",
+      "description": "Offset in pixels from the bottom of the screen when fixing element to viewport"
+    }
+  ],
+  "tab": [
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "auto",
+      "": "FALSE",
+      "description": "Whether tab should load remote content as same url as history"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "history",
+      "": "FALSE",
+      "description": "Whether to record history events for tab changes"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "ignoreFirstLoad",
+      "": "FALSE",
+      "description": "Do not load content remotely on first tab load. Useful when open tab is rendered on server."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "evaluateScripts",
+      "": "once",
+      "description": "Whether inline scripts in tab HTML should be parsed on tab load. Defaults to once, parsing only on first load. Can also be set to true or false to always parse or never parse inline scripts."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "alwaysRefresh",
+      "": "FALSE",
+      "description": "Tab should reload content every time it is opened"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "deactivate",
+      "": "siblings",
+      "description": "Can be set to either siblings or all. Siblings will only de-activate tab activators that are siblings of the clicked element when a tab is selected. All will deactivate all other tab activators initialized at the same time."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "cacheType",
+      "": "response",
+      "description": "Can be set to either response or html. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "cache",
+      "": "TRUE",
+      "description": "Tab should cache content after loading locally to avoid server trip on second load"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "apiSettings",
+      "": "FALSE",
+      "description": "Settings object for $.api call"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "historyType",
+      "": "hash",
+      "description": "Can be set to hash or state. Hash will use an in-page link to create history events. State will use DOM History and load pages from server on refresh."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "path",
+      "": "FALSE",
+      "description": "When using historyType state you must specify the base URL for all internal links."
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "context",
+      "": "FALSE",
+      "description": "Tabs are limited to those found inside this context"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "childrenOnly",
+      "": "FALSE",
+      "description": "If enabled limits tabs to children of passed context"
+    },
+    {
+      "values": "",
+      "module": "tab",
+      "category": "Tab Settings",
+      "name": "maxDepth",
+      "": "25",
+      "description": "Maximum amount of nested tabs allowed (avoids recursion)"
+    }
+  ],
+  "transition": [
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "animation",
+      "": "fade",
+      "description": "Named animation event to used. Must be defined in CSS."
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "interval",
+      "": "0",
+      "description": "Interval in MS between each elements transition"
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "reverse",
+      "": "auto",
+      "description": "When an interval is specified, sets order of animations. auto reverses only animations that are hiding."
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "displayType",
+      "": "FALSE",
+      "description": "Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated."
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "duration",
+      "": "500ms",
+      "description": "Duration of the CSS transition animation"
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "useFailSafe",
+      "": "TRUE",
+      "description": "If enabled a timeout will be added to ensure animationend callback occurs even if element is hidden"
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "allowRepeats",
+      "": "FALSE",
+      "description": "If enabled will allow same animation to be queued while it is already occurring"
+    },
+    {
+      "values": "",
+      "module": "transition",
+      "category": "Transition Settings",
+      "name": "queue",
+      "": "TRUE",
+      "description": "Whether to automatically queue animation if another is occurring"
+    }
+  ],
+  "visibility": [
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "once",
+      "": "TRUE",
+      "description": "When set to false a callback will occur each time an element passes the threshold for a condition."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "continuous",
+      "": "FALSE",
+      "description": "When set to true a callback will occur anytime an element passes a condition not just immediately after the threshold is met."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "type",
+      "": "FALSE",
+      "description": "Set to image to load images when on screen. Set to fixed to add class name fixed when passed."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "initialCheck",
+      "": "TRUE",
+      "description": "Whether visibility conditions should be checked immediately on init"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "context",
+      "": "window",
+      "description": "The scroll context visibility should use."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "refreshOnLoad",
+      "": "TRUE",
+      "description": "Whether visibility conditions should be checked on window load. This ensures that after images load content positions will be updated correctly."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "refreshOnResize",
+      "": "TRUE",
+      "description": "Whether visibility conditions should be checked on window resize. Useful when content resizes causes continuous changes in position"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "checkOnRefresh",
+      "": "TRUE",
+      "description": "Whether visibility conditions should be checked on calls to refresh. These calls can be triggered from either resize, load or manually calling $('.foo').visibility('refresh')"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "zIndex",
+      "": "1",
+      "description": "Specify a z-index when using type: 'fixed'."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "offset",
+      "": "0",
+      "description": "Value that context scrollTop should be adjusted in pixels. Useful for making content appear below content fixed to the page."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "includeMargin",
+      "": "FALSE",
+      "description": "Whether element calculations should include its margin"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "throttle",
+      "": "FALSE",
+      "description": "When set to an integer, scroll position will be debounced using this ms value. false will debounce with requestAnimationFrame."
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "observeChanges",
+      "": "TRUE",
+      "description": "Whether to automatically refresh content when changes are made to the element's DOM subtree"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "transition",
+      "": "FALSE",
+      "description": "When using type: image allows you to specify transition when showing a loaded image"
+    },
+    {
+      "values": "",
+      "module": "visibility",
+      "category": "Functionality",
+      "name": "duration",
+      "": "1000",
+      "description": "When using type: image allows you to specify transition duration"
+    }
+  ],
+  "": [
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    },
+    {
+      "values": "",
+      "module": "",
+      "category": "",
+      "name": "",
+      "": "",
+      "description": ""
+    }
+  ]
+}

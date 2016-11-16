@@ -1,0 +1,46 @@
+[
+  {
+    "description": "Name used in log statements",
+    "name": "name"
+  },
+  {
+    "description": "Event namespace. Makes sure module teardown does not effect other events attached to an element.",
+    "name": "namespace"
+  },
+  {
+    "description": "Regular expressions used for template matching",
+    "name": "regExp"
+  },
+  {
+    "description": "Selectors used to find parts of a module",
+    "name": "selector"
+  },
+  {
+    "description": "Class names used to determine element state",
+    "name": "className"
+  },
+  {
+    "description": "Metadata used to store XHR and response promise",
+    "name": "metadata"
+  },
+  {
+    "description": "Silences all console output including error messages, regardless of other debug settings.",
+    "name": "silent"
+  },
+  {
+    "description": "Debug output to console",
+    "name": "debug"
+  },
+  {
+    "description": "Show console.table output with performance metrics",
+    "name": "performance"
+  },
+  {
+    "description": "Debug output includes all internal behaviors",
+    "name": "verbose"
+  },
+  {
+    "description": "",
+    "name": "errors"
+  }
+]

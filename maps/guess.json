@@ -1,0 +1,62 @@
+[
+  {
+    "value": "false | string",
+    "target": "FALSE",
+    "by": "value"
+  },
+  {
+    "value": "SUI.animations",
+    "target": "transition",
+    "by": "name"
+  },
+  {
+    "value": "SUI.animations",
+    "target": "animation",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "throttle",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "duration",
+    "by": "name"
+  },
+  {
+    "value": "DOM",
+    "target": "$element",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "delay",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "offset",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "distanceAway",
+    "by": "name"
+  },
+  {
+    "value": "number",
+    "target": "maxSearchDepth",
+    "by": "name"
+  },
+  {
+    "value": "DOM",
+    "target": "scrollContext",
+    "by": "name"
+  },
+  {
+    "value": "DOM",
+    "target": "context",
+    "by": "name"
+  }
+]

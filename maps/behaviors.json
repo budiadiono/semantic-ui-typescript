@@ -1,0 +1,1384 @@
+{
+  "api": [
+    {
+      "description": "Execute query using existing API settings",
+      "module": "api",
+      "name": "query"
+    },
+    {
+      "description": "Adds data to existing templated url and returns full url string",
+      "module": "api",
+      "name": "add url data(url: string, data: any)"
+    },
+    {
+      "description": "Gets promise for current API request",
+      "module": "api",
+      "name": "get request"
+    },
+    {
+      "description": "Aborts current API request",
+      "module": "api",
+      "name": "abort"
+    },
+    {
+      "description": "Removes loading and error state from element",
+      "module": "api",
+      "name": "reset"
+    },
+    {
+      "description": "Returns whether last request was cancelled",
+      "module": "api",
+      "name": "was cancelled"
+    },
+    {
+      "description": "Returns whether last request was failure",
+      "module": "api",
+      "name": "was failure"
+    },
+    {
+      "description": "Returns whether last request was successful",
+      "module": "api",
+      "name": "was successful"
+    },
+    {
+      "description": "Returns whether last request was completed",
+      "module": "api",
+      "name": "was complete"
+    },
+    {
+      "description": "Returns whether element is disabled",
+      "module": "api",
+      "name": "is disabled"
+    },
+    {
+      "description": "Returns whether element response is mocked",
+      "module": "api",
+      "name": "is mocked"
+    },
+    {
+      "description": "Returns whether element is loading",
+      "module": "api",
+      "name": "is loading"
+    },
+    {
+      "description": "Sets loading state to element",
+      "module": "api",
+      "name": "set loading"
+    },
+    {
+      "description": "Sets error state to element",
+      "module": "api",
+      "name": "set error"
+    },
+    {
+      "description": "Removes loading state to element",
+      "module": "api",
+      "name": "remove loading"
+    },
+    {
+      "description": "Removes error state to element",
+      "module": "api",
+      "name": "remove error"
+    },
+    {
+      "description": "Gets event that API request will occur on",
+      "module": "api",
+      "name": "get event"
+    },
+    {
+      "description": "Returns encodeURIComponent value only if value passsed is not already encoded",
+      "module": "api",
+      "name": "get url encoded value(value: any)"
+    },
+    {
+      "description": "Reads a locally cached response for a URL",
+      "module": "api",
+      "name": "read cached response(url: string)"
+    },
+    {
+      "description": "Writes a cached response for a URL",
+      "module": "api",
+      "name": "write cached response(url: string, response: any)"
+    },
+    {
+      "description": "Creates new cache, removing all locally cached URLs",
+      "module": "api",
+      "name": "create cache"
+    },
+    {
+      "description": "Removes API settings from the page and all events",
+      "module": "api",
+      "name": "destroy"
+    }
+  ],
+  "accordion": [
+    {
+      "description": "Refreshes all cached selectors and data",
+      "module": "accordion",
+      "name": "refresh"
+    },
+    {
+      "description": "Opens accordion content at index",
+      "module": "accordion",
+      "name": "open (index: number)"
+    },
+    {
+      "description": "Closes accordion content that are not active",
+      "module": "accordion",
+      "name": "close others"
+    },
+    {
+      "description": "Closes accordion content at index",
+      "module": "accordion",
+      "name": "close (index: number)"
+    },
+    {
+      "description": "Toggles accordion content at index",
+      "module": "accordion",
+      "name": "toggle (index: number)"
+    }
+  ],
+  "checkbox": [
+    {
+      "description": "Switches a checkbox from current state",
+      "module": "checkbox",
+      "name": "toggle"
+    },
+    {
+      "description": "Set a checkbox state to checked",
+      "module": "checkbox",
+      "name": "check"
+    },
+    {
+      "description": "Set a checkbox state to unchecked",
+      "module": "checkbox",
+      "name": "uncheck"
+    },
+    {
+      "description": "Set as indeterminate checkbox",
+      "module": "checkbox",
+      "name": "indeterminate"
+    },
+    {
+      "description": "Set as determinate checkbox",
+      "module": "checkbox",
+      "name": "determinate"
+    },
+    {
+      "description": "Enable interaction with a checkbox",
+      "module": "checkbox",
+      "name": "enable"
+    },
+    {
+      "description": "Set a checkbox state to checked without callbacks",
+      "module": "checkbox",
+      "name": "set checked"
+    },
+    {
+      "description": "Set a checkbox state to unchecked without callbacks",
+      "module": "checkbox",
+      "name": "set unchecked"
+    },
+    {
+      "description": "Set as indeterminate checkbox without callbacks",
+      "module": "checkbox",
+      "name": "set indeterminate"
+    },
+    {
+      "description": "Set as determinate checkbox without callbacks",
+      "module": "checkbox",
+      "name": "set determinate"
+    },
+    {
+      "description": "Enable interaction with a checkbox without callbacks",
+      "module": "checkbox",
+      "name": "set enabled"
+    },
+    {
+      "description": "Disable interaction with a checkbox without callbacks",
+      "module": "checkbox",
+      "name": "set disabled"
+    },
+    {
+      "description": "Attach checkbox events to another element",
+      "module": "checkbox",
+      "name": "attach events(selector: DOM, behavior: checkbox.behaviors)"
+    },
+    {
+      "description": "Returns whether element is radio selection",
+      "module": "checkbox",
+      "name": "is radio"
+    },
+    {
+      "description": "Returns whether element is currently checked",
+      "module": "checkbox",
+      "name": "is checked"
+    },
+    {
+      "description": "Returns whether element is not checked",
+      "module": "checkbox",
+      "name": "is unchecked"
+    },
+    {
+      "description": "Returns whether element is able to be changed",
+      "module": "checkbox",
+      "name": "can change"
+    },
+    {
+      "description": "Returns whether element can be checked (checking if already checked or `beforeChecked` would cancel)",
+      "module": "checkbox",
+      "name": "should allow check"
+    },
+    {
+      "description": "Returns whether element can be unchecked (checking if already unchecked or `beforeUnchecked` would cancel)",
+      "module": "checkbox",
+      "name": "should allow uncheck"
+    },
+    {
+      "description": "Returns whether element can be determinate (checking if already determinate or `beforeDeterminate` would cancel)",
+      "module": "checkbox",
+      "name": "should allow determinate"
+    },
+    {
+      "description": "Returns whether element can be indeterminate (checking if already indeterminate or `beforeIndeterminate` would cancel)",
+      "module": "checkbox",
+      "name": "should allow indeterminate"
+    },
+    {
+      "description": "Returns whether element is able to be unchecked",
+      "module": "checkbox",
+      "name": "can uncheck"
+    }
+  ],
+  "dimmer": [
+    {
+      "description": "Detaches a given element from DOM and reattaches element inside dimmer",
+      "module": "dimmer",
+      "name": "add content (element: DOM)"
+    },
+    {
+      "description": "Shows dimmer",
+      "module": "dimmer",
+      "name": "show"
+    },
+    {
+      "description": "Hides dimmer",
+      "module": "dimmer",
+      "name": "hide"
+    },
+    {
+      "description": "Toggles current dimmer visibility",
+      "module": "dimmer",
+      "name": "toggle"
+    },
+    {
+      "description": "Changes dimmer opacity",
+      "module": "dimmer",
+      "name": "set opacity(opacity: number)"
+    },
+    {
+      "description": "Creates a new dimmer in dimmable context",
+      "module": "dimmer",
+      "name": "create"
+    },
+    {
+      "description": "Returns current duration for show or hide event depending on current visibility",
+      "module": "dimmer",
+      "name": "get duration"
+    },
+    {
+      "description": "Returns DOM element for dimmer",
+      "module": "dimmer",
+      "name": "get dimmer"
+    },
+    {
+      "description": "Returns whether current dimmable has a dimmer",
+      "module": "dimmer",
+      "name": "has dimmer"
+    },
+    {
+      "description": "Whether section's dimmer is active",
+      "module": "dimmer",
+      "name": "is active"
+    },
+    {
+      "description": "Whether dimmer is animating",
+      "module": "dimmer",
+      "name": "is animating"
+    },
+    {
+      "description": "Whether current element is a dimmer",
+      "module": "dimmer",
+      "name": "is dimmer"
+    },
+    {
+      "description": "Whether current element is a dimmable section",
+      "module": "dimmer",
+      "name": "is dimmable"
+    },
+    {
+      "description": "Whether dimmer is disabled",
+      "module": "dimmer",
+      "name": "is disabled"
+    },
+    {
+      "description": "Whether dimmer is not disabled",
+      "module": "dimmer",
+      "name": "is enabled"
+    },
+    {
+      "description": "Whether dimmable section is body",
+      "module": "dimmer",
+      "name": "is page"
+    },
+    {
+      "description": "Whether dimmer is a page dimmer",
+      "module": "dimmer",
+      "name": "is page dimmer"
+    },
+    {
+      "description": "Sets page dimmer to active",
+      "module": "dimmer",
+      "name": "set active"
+    },
+    {
+      "description": "Sets an element as a dimmable section",
+      "module": "dimmer",
+      "name": "set dimmable"
+    },
+    {
+      "description": "Sets a dimmable section as dimmed",
+      "module": "dimmer",
+      "name": "set dimmed"
+    },
+    {
+      "description": "Sets current dimmer as a page dimmer",
+      "module": "dimmer",
+      "name": "set page dimmer"
+    },
+    {
+      "description": "Sets a dimmer as disabled",
+      "module": "dimmer",
+      "name": "set disabled"
+    }
+  ],
+  "dropdown": [
+    {
+      "description": "Recreates dropdown menu from select option values.",
+      "module": "dropdown",
+      "name": "setup menu"
+    },
+    {
+      "description": "Refreshes all cached selectors and data",
+      "module": "dropdown",
+      "name": "refresh"
+    },
+    {
+      "description": "Toggles current visibility of dropdown",
+      "module": "dropdown",
+      "name": "toggle"
+    },
+    {
+      "description": "Shows dropdown",
+      "module": "dropdown",
+      "name": "show"
+    },
+    {
+      "description": "Hides dropdown",
+      "module": "dropdown",
+      "name": "hide"
+    },
+    {
+      "description": "Clears dropdown of selection",
+      "module": "dropdown",
+      "name": "clear"
+    },
+    {
+      "description": "Hides all other dropdowns that is not current dropdown",
+      "module": "dropdown",
+      "name": "hide others"
+    },
+    {
+      "description": "Restores dropdown text and value to its value on page load",
+      "module": "dropdown",
+      "name": "restore defaults"
+    },
+    {
+      "description": "Restores dropdown text to its value on page load",
+      "module": "dropdown",
+      "name": "restore default text"
+    },
+    {
+      "description": "Restores dropdown text to its prompt, placeholder text",
+      "module": "dropdown",
+      "name": "restore placeholder text"
+    },
+    {
+      "description": "Restores dropdown value to its value on page load",
+      "module": "dropdown",
+      "name": "restore default value"
+    },
+    {
+      "description": "Saves current text and value as new defaults (for use with restore)",
+      "module": "dropdown",
+      "name": "save defaults"
+    },
+    {
+      "description": "Sets value as selected",
+      "module": "dropdown",
+      "name": "set selected(value: any)"
+    },
+    {
+      "description": "Remove value from selected",
+      "module": "dropdown",
+      "name": "remove selected(value)"
+    },
+    {
+      "description": "Adds a group of values as selected",
+      "module": "dropdown",
+      "name": "set selected(...values:any[])"
+    },
+    {
+      "description": "Sets selected values to exactly specified values, removing current selection",
+      "module": "dropdown",
+      "name": "set exactly(...values:any[])"
+    },
+    {
+      "description": "Sets dropdown text to a value",
+      "module": "dropdown",
+      "name": "set text(text: string)"
+    },
+    {
+      "description": "Sets dropdown input to value (does not update display state)",
+      "module": "dropdown",
+      "name": "set value(value: any)"
+    },
+    {
+      "description": "Returns current dropdown text",
+      "module": "dropdown",
+      "name": "get text"
+    },
+    {
+      "description": "Returns current dropdown input value",
+      "module": "dropdown",
+      "name": "get value"
+    },
+    {
+      "description": "Returns DOM element that matches a given input value",
+      "module": "dropdown",
+      "name": "get item(value: any)"
+    },
+    {
+      "description": "Adds touch events to element",
+      "module": "dropdown",
+      "name": "bind touch events"
+    },
+    {
+      "description": "Adds mouse events to element",
+      "module": "dropdown",
+      "name": "bind mouse events"
+    },
+    {
+      "description": "Binds a click to document to determine if you click away from a dropdown",
+      "module": "dropdown",
+      "name": "bind intent"
+    },
+    {
+      "description": "Unbinds document intent click",
+      "module": "dropdown",
+      "name": "unbind intent"
+    },
+    {
+      "description": "Returns whether event occurred inside dropdown",
+      "module": "dropdown",
+      "name": "determine intent"
+    },
+    {
+      "description": "Triggers preset item selection action based on settings passing text/value",
+      "module": "dropdown",
+      "name": "determine select action(text: string, value: any)"
+    },
+    {
+      "description": "Sets dropdown to active state",
+      "module": "dropdown",
+      "name": "set active"
+    },
+    {
+      "description": "Sets dropdown to visible state",
+      "module": "dropdown",
+      "name": "set visible"
+    },
+    {
+      "description": "Removes dropdown active state",
+      "module": "dropdown",
+      "name": "remove active"
+    },
+    {
+      "description": "Removes dropdown visible state",
+      "module": "dropdown",
+      "name": "remove visible"
+    },
+    {
+      "description": "Returns whether dropdown is a selection dropdown",
+      "module": "dropdown",
+      "name": "is selection"
+    },
+    {
+      "description": "Returns whether dropdown is animated",
+      "module": "dropdown",
+      "name": "is animated"
+    },
+    {
+      "description": "Returns whether dropdown is visible",
+      "module": "dropdown",
+      "name": "is visible"
+    },
+    {
+      "description": "Returns whether dropdown is hidden",
+      "module": "dropdown",
+      "name": "is hidden"
+    },
+    {
+      "description": "Returns dropdown value as set on page load",
+      "module": "dropdown",
+      "name": "get default text"
+    },
+    {
+      "description": "Returns placeholder text",
+      "module": "dropdown",
+      "name": "get placeholder text"
+    }
+  ],
+  "embed": [
+    {
+      "description": "Changes iframe to a new content source",
+      "module": "embed",
+      "name": "change(source: string, id: string, url: string)"
+    },
+    {
+      "description": "Removes embed and shows placeholder content if available",
+      "module": "embed",
+      "name": "reset"
+    },
+    {
+      "description": "Shows embed content",
+      "module": "embed",
+      "name": "show"
+    },
+    {
+      "description": "Hides embed content and shows placeholder content",
+      "module": "embed",
+      "name": "hide"
+    },
+    {
+      "description": "Returns current content id",
+      "module": "embed",
+      "name": "get id"
+    },
+    {
+      "description": "Returns placeholder image url",
+      "module": "embed",
+      "name": "get placeholder"
+    },
+    {
+      "description": "Returns source name",
+      "module": "embed",
+      "name": "get sources"
+    },
+    {
+      "description": "Returns source type",
+      "module": "embed",
+      "name": "get type"
+    },
+    {
+      "description": "Returns URL with all parameters added",
+      "module": "embed",
+      "name": "get url"
+    },
+    {
+      "description": "Returns whether embed content has placeholder",
+      "module": "embed",
+      "name": "has placeholder"
+    },
+    {
+      "description": "Destroys instance and removes all events",
+      "module": "embed",
+      "name": "destroy"
+    }
+  ],
+  "modal": [
+    {
+      "description": "Shows the modal",
+      "module": "modal",
+      "name": "show"
+    },
+    {
+      "description": "Hides the modal",
+      "module": "modal",
+      "name": "hide"
+    },
+    {
+      "description": "Toggles the modal",
+      "module": "modal",
+      "name": "toggle"
+    },
+    {
+      "description": "Refreshes centering of modal on page",
+      "module": "modal",
+      "name": "refresh"
+    },
+    {
+      "description": "Shows associated page dimmer",
+      "module": "modal",
+      "name": "show dimmer"
+    },
+    {
+      "description": "Hides associated page dimmer",
+      "module": "modal",
+      "name": "hide dimmer"
+    },
+    {
+      "description": "Hides all modals not selected modal in a dimmer",
+      "module": "modal",
+      "name": "hide others"
+    },
+    {
+      "description": "Hides all visible modals in the same dimmer",
+      "module": "modal",
+      "name": "hide all"
+    },
+    {
+      "description": "Caches current modal size",
+      "module": "modal",
+      "name": "cache sizes"
+    },
+    {
+      "description": "Returns whether the modal can fit on the page",
+      "module": "modal",
+      "name": "can fit"
+    },
+    {
+      "description": "Returns whether the modal is active",
+      "module": "modal",
+      "name": "is active"
+    },
+    {
+      "description": "Sets modal to active",
+      "module": "modal",
+      "name": "set active"
+    },
+    {
+      "description": "Attach modal events to another element",
+      "module": "modal",
+      "name": "attach events(selector: DOM, behavior?: modal.behaviors)"
+    }
+  ],
+  "popup": [
+    {
+      "description": "Shows popup",
+      "module": "popup",
+      "name": "show"
+    },
+    {
+      "description": "Hides popup",
+      "module": "popup",
+      "name": "hide"
+    },
+    {
+      "description": "Hides all visible pop ups on the page",
+      "module": "popup",
+      "name": "hide all"
+    },
+    {
+      "description": "Returns current popup dom element",
+      "module": "popup",
+      "name": "get popup"
+    },
+    {
+      "description": "Changes current popup content",
+      "module": "popup",
+      "name": "change content(html: any)"
+    },
+    {
+      "description": "Toggles visibility of popup",
+      "module": "popup",
+      "name": "toggle"
+    },
+    {
+      "description": "Returns whether popup is visible",
+      "module": "popup",
+      "name": "is visible"
+    },
+    {
+      "description": "Returns whether popup is hidden",
+      "module": "popup",
+      "name": "is hidden"
+    },
+    {
+      "description": "Returns whether popup is created and inserted into the page",
+      "module": "popup",
+      "name": "exists"
+    },
+    {
+      "description": "Adjusts popup when content size changes (only necessary for centered popups)",
+      "module": "popup",
+      "name": "reposition"
+    },
+    {
+      "description": "Repositions a popup",
+      "module": "popup",
+      "name": "set position(position: sui.positions)"
+    },
+    {
+      "description": "Removes popup from the page and removes all events",
+      "module": "popup",
+      "name": "destroy"
+    },
+    {
+      "description": "Removes popup from the page",
+      "module": "popup",
+      "name": "remove popup"
+    }
+  ],
+  "progress": [
+    {
+      "description": "Sets current percent of progress to value. If using a total will convert from percent to estimated value.",
+      "module": "progress",
+      "name": "set percent(percent: number)"
+    },
+    {
+      "description": "Sets progress to specified value. Will automatically calculate percent from total.",
+      "module": "progress",
+      "name": "set progress(value: number)"
+    },
+    {
+      "description": "Increments progress by increment value, if not passed a value will use random amount specified in settings",
+      "module": "progress",
+      "name": "increment(incrementValue: number)"
+    },
+    {
+      "description": "Decrements progress by decrement value, if not passed a value will use random amount specified in settings",
+      "module": "progress",
+      "name": "decrement(decrementValue: number)"
+    },
+    {
+      "description": "Immediately updates progress to value, ignoring progress animation interval delays",
+      "module": "progress",
+      "name": "update progress(value: number)"
+    },
+    {
+      "description": "Finishes progress and sets loaded to 100%",
+      "module": "progress",
+      "name": "complete"
+    },
+    {
+      "description": "Resets progress to zero",
+      "module": "progress",
+      "name": "reset"
+    },
+    {
+      "description": "Set total to a new value",
+      "module": "progress",
+      "name": "set total(total: number)"
+    },
+    {
+      "description": "Replaces templated string with value, total, percent left and percent.",
+      "module": "progress",
+      "name": "get text(text: string)"
+    },
+    {
+      "description": "Returns normalized value inside acceptable range specified by total.",
+      "module": "progress",
+      "name": "get normalized value(value: number)"
+    },
+    {
+      "description": "Returns percent as last specified",
+      "module": "progress",
+      "name": "get percent"
+    },
+    {
+      "description": "Returns current progress value",
+      "module": "progress",
+      "name": "get value"
+    },
+    {
+      "description": "Returns total",
+      "module": "progress",
+      "name": "get total"
+    },
+    {
+      "description": "Returns whether progress is completed",
+      "module": "progress",
+      "name": "is complete"
+    },
+    {
+      "description": "Returns whether progress was a success",
+      "module": "progress",
+      "name": "is success"
+    },
+    {
+      "description": "Returns whether progress is in warning state",
+      "module": "progress",
+      "name": "is warning"
+    },
+    {
+      "description": "Returns whether progress is in error state",
+      "module": "progress",
+      "name": "is error"
+    },
+    {
+      "description": "Returns whether progress is in active state",
+      "module": "progress",
+      "name": "is active"
+    },
+    {
+      "description": "Sets progress to active state",
+      "module": "progress",
+      "name": "set active"
+    },
+    {
+      "description": "Sets progress to warning state",
+      "module": "progress",
+      "name": "set warning"
+    },
+    {
+      "description": "Sets progress to success state",
+      "module": "progress",
+      "name": "set success"
+    },
+    {
+      "description": "Sets progress to error state",
+      "module": "progress",
+      "name": "set error"
+    },
+    {
+      "description": "Changes progress animation speed",
+      "module": "progress",
+      "name": "set duration(value: number)"
+    },
+    {
+      "description": "Sets progress exterior label to text",
+      "module": "progress",
+      "name": "set label(text: string)"
+    },
+    {
+      "description": "Sets progress bar label to text",
+      "module": "progress",
+      "name": "set bar label(text: string)"
+    },
+    {
+      "description": "Removes progress to active state",
+      "module": "progress",
+      "name": "remove active"
+    },
+    {
+      "description": "Removes progress to warning state",
+      "module": "progress",
+      "name": "remove warning"
+    },
+    {
+      "description": "Removes progress to success state",
+      "module": "progress",
+      "name": "remove success"
+    },
+    {
+      "description": "Removes progress to error state",
+      "module": "progress",
+      "name": "remove error"
+    }
+  ],
+  "rating": [
+    {
+      "description": "Sets rating programmatically",
+      "module": "rating",
+      "name": "set rating(rating: number)"
+    },
+    {
+      "description": "Gets current rating",
+      "module": "rating",
+      "name": "get rating"
+    },
+    {
+      "description": "Disables interactive rating mode",
+      "module": "rating",
+      "name": "disable"
+    },
+    {
+      "description": "Enables interactive rating mode",
+      "module": "rating",
+      "name": "enable"
+    },
+    {
+      "description": "Clears current rating",
+      "module": "rating",
+      "name": "clear rating"
+    }
+  ],
+  "search": [
+    {
+      "description": "Search for value currently set in search input",
+      "module": "search",
+      "name": "query"
+    },
+    {
+      "description": "Displays message in search results with text, using template matching type",
+      "module": "search",
+      "name": "display message(text: string, type)"
+    },
+    {
+      "description": "Cancels current remote search query",
+      "module": "search",
+      "name": "cancel query"
+    },
+    {
+      "description": "Search local object for specified query and display results",
+      "module": "search",
+      "name": "search local(query: any)"
+    },
+    {
+      "description": "Whether has minimum characters",
+      "module": "search",
+      "name": "has minimum characters"
+    },
+    {
+      "description": "Search remote endpoint for specified query and display results",
+      "module": "search",
+      "name": "search remote(query: any)"
+    },
+    {
+      "description": "Search object for specified query and return results",
+      "module": "search",
+      "name": "search object(query: any, object: any, searchFields: any)"
+    },
+    {
+      "description": "Cancels current remote search request",
+      "module": "search",
+      "name": "cancel query"
+    },
+    {
+      "description": "Whether search is currently focused",
+      "module": "search",
+      "name": "is focused"
+    },
+    {
+      "description": "Whether search results are visible",
+      "module": "search",
+      "name": "is visible"
+    },
+    {
+      "description": "Whether search results are empty",
+      "module": "search",
+      "name": "is empty"
+    },
+    {
+      "description": "Returns current search value",
+      "module": "search",
+      "name": "get value"
+    },
+    {
+      "description": "Returns JSON object matching searched title or id (see above)",
+      "module": "search",
+      "name": "get result(value: any)"
+    },
+    {
+      "description": "Sets search input to value",
+      "module": "search",
+      "name": "set value(value: any)"
+    },
+    {
+      "description": "Reads cached results for query",
+      "module": "search",
+      "name": "read cache(query: any)"
+    },
+    {
+      "description": "Clears value from cache, if no parameter passed clears all cache",
+      "module": "search",
+      "name": "clear cache(query: any)"
+    },
+    {
+      "description": "Writes cached results for query",
+      "module": "search",
+      "name": "write cache(query: any)"
+    },
+    {
+      "description": "Adds HTML to results and displays",
+      "module": "search",
+      "name": "add results(html: any)"
+    },
+    {
+      "description": "Shows results container",
+      "module": "search",
+      "name": "show results"
+    },
+    {
+      "description": "Hides results container",
+      "module": "search",
+      "name": "hide results"
+    },
+    {
+      "description": "Generates results using parser specified by settings.template",
+      "module": "search",
+      "name": "generate results(response: any)"
+    },
+    {
+      "description": "Removes all events",
+      "module": "search",
+      "name": "destroy"
+    }
+  ],
+  "shape": [
+    {
+      "description": "Flips the shape upward",
+      "module": "shape",
+      "name": "flip up"
+    },
+    {
+      "description": "Flips the shape downward",
+      "module": "shape",
+      "name": "flip down"
+    },
+    {
+      "description": "Flips the shape right",
+      "module": "shape",
+      "name": "flip right"
+    },
+    {
+      "description": "Flips the shape left",
+      "module": "shape",
+      "name": "flip left"
+    },
+    {
+      "description": "Flips the shape over clock-wise",
+      "module": "shape",
+      "name": "flip over"
+    },
+    {
+      "description": "Flips the shape over counter-clockwise",
+      "module": "shape",
+      "name": "flip back"
+    },
+    {
+      "description": "Set the next side to a specific selector",
+      "module": "shape",
+      "name": "set next side(selector: DOM)"
+    },
+    {
+      "description": "Returns whether shape is currently animating",
+      "module": "shape",
+      "name": "is animating"
+    },
+    {
+      "description": "Removes all inline styles",
+      "module": "shape",
+      "name": "reset"
+    },
+    {
+      "description": "Queues an animationtill after current animation",
+      "module": "shape",
+      "name": "queue(animation: sui.animations)"
+    },
+    {
+      "description": "Forces a reflow on element",
+      "module": "shape",
+      "name": "repaint"
+    },
+    {
+      "description": "Set the next side to next sibling to active element",
+      "module": "shape",
+      "name": "set default side"
+    },
+    {
+      "description": "Sets shape to the content size of the next side",
+      "module": "shape",
+      "name": "set stage size"
+    },
+    {
+      "description": "Refreshes the selector cache for element sides",
+      "module": "shape",
+      "name": "refresh"
+    },
+    {
+      "description": "Returns translation for next side staged below",
+      "module": "shape",
+      "name": "get transform down"
+    },
+    {
+      "description": "Returns translation for next side staged left",
+      "module": "shape",
+      "name": "get transform left"
+    },
+    {
+      "description": "Returns translation for next side staged right",
+      "module": "shape",
+      "name": "get transform right"
+    },
+    {
+      "description": "Returns translation for next side staged up",
+      "module": "shape",
+      "name": "get transform up"
+    },
+    {
+      "description": "Returns translation for next side staged down",
+      "module": "shape",
+      "name": "get transform down"
+    }
+  ],
+  "sidebar": [
+    {
+      "description": "Attaches sidebar action to given selector. Default event if none specified is toggle",
+      "module": "sidebar",
+      "name": "attach events(selector: DOM, event:sidebar.behaviors)"
+    },
+    {
+      "description": "Shows sidebar",
+      "module": "sidebar",
+      "name": "show"
+    },
+    {
+      "description": "Hides sidebar",
+      "module": "sidebar",
+      "name": "hide"
+    },
+    {
+      "description": "Toggles visibility of sidebar",
+      "module": "sidebar",
+      "name": "toggle"
+    },
+    {
+      "description": "Returns whether sidebar is visible",
+      "module": "sidebar",
+      "name": "is visible"
+    },
+    {
+      "description": "Returns whether sidebar is hidden",
+      "module": "sidebar",
+      "name": "is hidden"
+    },
+    {
+      "description": "Pushes page content to be visible alongside sidebar",
+      "module": "sidebar",
+      "name": "push page"
+    },
+    {
+      "description": "Returns direction of current sidebar",
+      "module": "sidebar",
+      "name": "get direction"
+    },
+    {
+      "description": "Returns page content to original position",
+      "module": "sidebar",
+      "name": "pull page"
+    },
+    {
+      "description": "Adds stylesheet to page head to trigger sidebar animations",
+      "module": "sidebar",
+      "name": "add body CSS"
+    },
+    {
+      "description": "Removes any inline stylesheets for sidebar animation",
+      "module": "sidebar",
+      "name": "remove body CSS"
+    },
+    {
+      "description": "Returns vendor prefixed transition end event",
+      "module": "sidebar",
+      "name": "get transition event"
+    }
+  ],
+  "tab": [
+    {
+      "description": "Attaches tab action to given selector. Default event if none specified is toggle",
+      "module": "tab",
+      "name": "attach events(selector: DOM, event: tab.behaviors)"
+    },
+    {
+      "description": "Changes tab to path",
+      "module": "tab",
+      "name": "change tab(path: any)"
+    },
+    {
+      "description": "Sets current path to state",
+      "module": "tab",
+      "name": "set state(path: any)"
+    },
+    {
+      "description": "Returns current path",
+      "module": "tab",
+      "name": "get path"
+    },
+    {
+      "description": "Returns whether tab exists",
+      "module": "tab",
+      "name": "is tab"
+    },
+    {
+      "description": "Returns cached HTML for path",
+      "module": "tab",
+      "name": "cache read(path: any)"
+    },
+    {
+      "description": "Sets cached HTML for path",
+      "module": "tab",
+      "name": "cache add(path: any, html: any)"
+    },
+    {
+      "description": "Removes cached HTML for path",
+      "module": "tab",
+      "name": "cache remove(path: any)"
+    }
+  ],
+  "transition": [
+    {
+      "description": "Stop current animation and preserve queue",
+      "module": "transition",
+      "name": "stop"
+    },
+    {
+      "description": "Stop current animation and queued animations",
+      "module": "transition",
+      "name": "stop all"
+    },
+    {
+      "description": "Clears all queued animations",
+      "module": "transition",
+      "name": "clear queue"
+    },
+    {
+      "description": "Stop current animation and show element",
+      "module": "transition",
+      "name": "show"
+    },
+    {
+      "description": "Stop current animation and hide element",
+      "module": "transition",
+      "name": "hide"
+    },
+    {
+      "description": "Toggles between hide and show",
+      "module": "transition",
+      "name": "toggle"
+    },
+    {
+      "description": "Forces reflow using a more expensive but stable method",
+      "module": "transition",
+      "name": "force repaint"
+    },
+    {
+      "description": "Triggers reflow on element",
+      "module": "transition",
+      "name": "repaint"
+    },
+    {
+      "description": "Resets all conditions changes during transition",
+      "module": "transition",
+      "name": "reset"
+    },
+    {
+      "description": "Enables animation looping",
+      "module": "transition",
+      "name": "looping"
+    },
+    {
+      "description": "Removes looping state from element",
+      "module": "transition",
+      "name": "remove looping"
+    },
+    {
+      "description": "Adds disabled state (stops ability to animate)",
+      "module": "transition",
+      "name": "disable"
+    },
+    {
+      "description": "Removes disabled state",
+      "module": "transition",
+      "name": "enable"
+    },
+    {
+      "description": "Modifies element animation duration",
+      "module": "transition",
+      "name": "set duration(duration: number)"
+    },
+    {
+      "description": "Saves all class names and styles to cache to be retrieved after animation",
+      "module": "transition",
+      "name": "save conditions"
+    },
+    {
+      "description": "Adds back cached names and styles to element",
+      "module": "transition",
+      "name": "restore conditions"
+    },
+    {
+      "description": "Returns vendor prefixed animation property for animationname",
+      "module": "transition",
+      "name": "get animation name"
+    },
+    {
+      "description": "Returns vendor prefixed animation property for animationend",
+      "module": "transition",
+      "name": "get animation event"
+    },
+    {
+      "description": "Returns whether element is currently visible",
+      "module": "transition",
+      "name": "is visible"
+    },
+    {
+      "description": "Returns whether transition is currently occurring",
+      "module": "transition",
+      "name": "is animating"
+    },
+    {
+      "description": "Returns whether animation looping is set",
+      "module": "transition",
+      "name": "is looping"
+    },
+    {
+      "description": "Returns whether animations are supported",
+      "module": "transition",
+      "name": "is supported"
+    }
+  ],
+  "visibility": [
+    {
+      "description": "Disable callbacks temporarily. This is useful if you need to adjust scroll position and do not want to trigger callbacks during the position change.",
+      "module": "visibility",
+      "name": "disable callbacks"
+    },
+    {
+      "description": "Re-enable callbacks",
+      "module": "visibility",
+      "name": "enable callbacks"
+    },
+    {
+      "description": "Returns whether element is on screen",
+      "module": "visibility",
+      "name": "is on screen"
+    },
+    {
+      "description": "Returns whether element is off screen",
+      "module": "visibility",
+      "name": "is off screen"
+    },
+    {
+      "description": "Returns number of pixels passed in current element from top of element",
+      "module": "visibility",
+      "name": "get pixels passed"
+    },
+    {
+      "description": "Returns element calculations as object",
+      "module": "visibility",
+      "name": "get element calculations"
+    },
+    {
+      "description": "Returns screen calculations as object",
+      "module": "visibility",
+      "name": "get screen calculations"
+    },
+    {
+      "description": "Returns screen size as object",
+      "module": "visibility",
+      "name": "get screen size"
+    }
+  ]
+}

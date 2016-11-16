@@ -1,0 +1,30 @@
+{
+  "name": "semantic-ui-typescript",
+  "homepage": "https://github.com/budiadiono/semantic-ui-typescript",
+  "version": "0.0.1",
+  "description": "Semantic UI helper to get deal with Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-refs": "node ./meta-builder/buildRefs",
+    "build": "node build",
+    "rebuild": "npm run build-refs && npm run build"
+  },
+  "keywords": [
+    "semantic-ui",
+    "typescript"
+  ],
+  "author": "Budi Adiono <budiadiono@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.1",
+    "js-beautify": "^1.6.4",
+    "jsdom": "^9.8.3",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.16.6",
+    "log-writer": "0.0.9",
+    "semantic-ui": "^2.2.6",
+    "xls-to-json": "^0.4.0"
+  }
+}

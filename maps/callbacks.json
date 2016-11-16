@@ -1,0 +1,686 @@
+{
+  "api": [
+    {
+      "description": "Allows modifying settings before request, or cancelling request",
+      "module": "api",
+      "name": "beforeSend(settings)",
+      "context": "initialized element"
+    },
+    {
+      "description": "Allows modifying XHR object for request",
+      "module": "api",
+      "name": "beforeXHR(xhrObject)",
+      "context": ""
+    },
+    {
+      "description": "Callback that occurs when request is made. Receives both the API success promise and the XHR request promise.",
+      "module": "api",
+      "name": "onRequest(promise, xhr)",
+      "context": "state context"
+    },
+    {
+      "description": "Allows modifying the server's response before parsed by other callbacks to determine API event success",
+      "module": "api",
+      "name": "onResponse(response)",
+      "context": "state context"
+    },
+    {
+      "description": "Determines whether completed JSON response should be treated as successful",
+      "module": "api",
+      "name": "successTest(response)",
+      "context": ""
+    },
+    {
+      "description": "Callback after successful response, JSON response must pass successTest",
+      "module": "api",
+      "name": "onSuccess(response, element, xhr)",
+      "context": "state context"
+    },
+    {
+      "description": "Callback on request complete regardless of conditions",
+      "module": "api",
+      "name": "onComplete(response, element, xhr)",
+      "context": "state context"
+    },
+    {
+      "description": "Callback on failed response, or JSON response that fails successTest",
+      "module": "api",
+      "name": "onFailure(response, element)",
+      "context": "state context"
+    },
+    {
+      "description": "Callback on server error from returned status code, or XHR failure.",
+      "module": "api",
+      "name": "onError(errorMessage, element, xhr)",
+      "context": "state context"
+    },
+    {
+      "description": "Callback on abort caused by user clicking a link or manually cancelling request.",
+      "module": "api",
+      "name": "onAbort(errorMessage, element, xhr)",
+      "context": "state context"
+    }
+  ],
+  "accordion": [
+    {
+      "description": "Callback before element opens",
+      "module": "accordion",
+      "name": "onOpening",
+      "context": "active content"
+    },
+    {
+      "description": "Callback after element is open",
+      "module": "accordion",
+      "name": "onOpen",
+      "context": "active content"
+    },
+    {
+      "description": "Callback before element closes",
+      "module": "accordion",
+      "name": "onClosing",
+      "context": "active content"
+    },
+    {
+      "description": "Callback after element is closed",
+      "module": "accordion",
+      "name": "onClose",
+      "context": "active content"
+    },
+    {
+      "description": "Callback on element open or close",
+      "module": "accordion",
+      "name": "onChange",
+      "context": "active content"
+    }
+  ],
+  "checkbox": [
+    {
+      "description": "Callback after a checkbox is either checked or unchecked.",
+      "module": "checkbox",
+      "name": "onChange",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is checked.",
+      "module": "checkbox",
+      "name": "onChecked",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is set to undeterminate.",
+      "module": "checkbox",
+      "name": "onIndeterminate",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is set to determinate.",
+      "module": "checkbox",
+      "name": "onDeterminate",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is unchecked.",
+      "module": "checkbox",
+      "name": "onUnchecked",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback before a checkbox is checked. Can cancel change by returning false",
+      "module": "checkbox",
+      "name": "beforeChecked",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback before a checkbox is set to undeterminate. Can cancel change by returning false",
+      "module": "checkbox",
+      "name": "beforeIndeterminate",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback before a checkbox is set to determinate. Can cancel change by returning false",
+      "module": "checkbox",
+      "name": "beforeDeterminate",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback before a checkbox is unchecked. Can cancel change by returning false",
+      "module": "checkbox",
+      "name": "beforeUnchecked",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is enabled.",
+      "module": "checkbox",
+      "name": "onEnable",
+      "context": "HTML input element"
+    },
+    {
+      "description": "Callback after a checkbox is disabled.",
+      "module": "checkbox",
+      "name": "onDisable",
+      "context": "HTML input element"
+    }
+  ],
+  "dimmer": [
+    {
+      "description": "Callback on element show",
+      "module": "dimmer",
+      "name": "onShow",
+      "context": "dimmable"
+    },
+    {
+      "description": "Callback on element hide",
+      "module": "dimmer",
+      "name": "onHide",
+      "context": "dimmable"
+    },
+    {
+      "description": "Callback on element show or hide",
+      "module": "dimmer",
+      "name": "onChange",
+      "context": "dimmable"
+    }
+  ],
+  "dropdown": [
+    {
+      "description": "Is called after a dropdown value changes. Receives the name and value of selection and the active menu element",
+      "module": "dropdown",
+      "name": "onChange(value, text, $choice)",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Is called after a dropdown selection is added using a multiple select dropdown, only receives the added value",
+      "module": "dropdown",
+      "name": "onAdd(addedValue, addedText, $addedChoice)",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value",
+      "module": "dropdown",
+      "name": "onRemove(removedValue, removedText, $removedChoice)",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.",
+      "module": "dropdown",
+      "name": "onLabelCreate(value, text)",
+      "context": "$label (jQDOM)"
+    },
+    {
+      "description": "Called when a label is remove, return false; will prevent the label from being removed.",
+      "module": "dropdown",
+      "name": "onLabelRemove(value)",
+      "context": "$label (jqDOM)"
+    },
+    {
+      "description": "Is called after a label is selected by a user",
+      "module": "dropdown",
+      "name": "onLabelSelect($selectedLabels)",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Is called after a dropdown is searched with no matching values",
+      "module": "dropdown",
+      "name": "onNoResults(searchValue)",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Is called before a dropdown is shown. If false is returned, dropdown will not be shown.",
+      "module": "dropdown",
+      "name": "onShow",
+      "context": "Dropdown"
+    },
+    {
+      "description": "Is called before a dropdown is hidden. If false is returned, dropdown will not be hidden.",
+      "module": "dropdown",
+      "name": "onHide",
+      "context": "Dropdown"
+    }
+  ],
+  "embed": [
+    {
+      "description": "Callback when iframe is generated",
+      "module": "embed",
+      "name": "onCreate(url)",
+      "context": "$module"
+    },
+    {
+      "description": "Whenever an iframe contents is shown",
+      "module": "embed",
+      "name": "onDisplay",
+      "context": "$module"
+    },
+    {
+      "description": "Callback immediately before Embed is removed from DOM",
+      "module": "embed",
+      "name": "onPlaceholderDisplay",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when module parameters are determined. Allows you to adjust parameters at run time by returning a new parameters object.",
+      "module": "embed",
+      "name": "onEmbed(parameters)",
+      "context": "$module"
+    }
+  ],
+  "form": [
+    {
+      "description": "Callback on each valid field",
+      "module": "form",
+      "name": "onValid",
+      "context": "field"
+    },
+    {
+      "description": "Callback on each invalid field",
+      "module": "form",
+      "name": "onInvalid",
+      "context": "field"
+    },
+    {
+      "description": "Callback if a form is all valid",
+      "module": "form",
+      "name": "onSuccess(event, fields)",
+      "context": "form"
+    },
+    {
+      "description": "Callback if any form field is invalid",
+      "module": "form",
+      "name": "onFailure(formErrors, fields)",
+      "context": "form"
+    }
+  ],
+  "modal": [
+    {
+      "description": "Is called when a modal starts to show.",
+      "module": "modal",
+      "name": "onShow",
+      "context": "Modal"
+    },
+    {
+      "description": "Is called after a modal has finished showing animating.",
+      "module": "modal",
+      "name": "onVisible",
+      "context": "Modal"
+    },
+    {
+      "description": "Is called after a modal starts to hide. If the function returns false, the modal will not hide.",
+      "module": "modal",
+      "name": "onHide($element)",
+      "context": "Modal"
+    },
+    {
+      "description": "Is called after a modal has finished hiding animation.",
+      "module": "modal",
+      "name": "onHidden",
+      "context": "Modal"
+    },
+    {
+      "description": "Is called after a positive, approve or ok button is pressed. If the function returns false, the modal will not hide.",
+      "module": "modal",
+      "name": "onApprove($element)",
+      "context": "Click"
+    },
+    {
+      "description": "Is called after a negative, deny or cancel button is pressed. If the function returns false the modal will not hide.",
+      "module": "modal",
+      "name": "onDeny($element)",
+      "context": "Modal"
+    }
+  ],
+  "popup": [
+    {
+      "description": "Callback on popup element creation, with created popup",
+      "module": "popup",
+      "name": "onCreate($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback immediately before Popup is removed from DOM",
+      "module": "popup",
+      "name": "onRemove($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback before popup is shown. Returning false from this callback will cancel the popup from showing.",
+      "module": "popup",
+      "name": "onShow($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback after popup is shown",
+      "module": "popup",
+      "name": "onVisible($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback before popup is hidden. Returning false from this callback will cancel the popup from hiding.",
+      "module": "popup",
+      "name": "onHide($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback after popup is hidden",
+      "module": "popup",
+      "name": "onHidden($module)",
+      "context": "$popup"
+    },
+    {
+      "description": "Callback after popup cannot be plaed on screen",
+      "module": "popup",
+      "name": "onUnplaceable($module)",
+      "context": "$popup"
+    }
+  ],
+  "progress": [
+    {
+      "description": "Callback on percentage change",
+      "module": "progress",
+      "name": "onChange(percent, value, total)",
+      "context": "Progress"
+    },
+    {
+      "description": "Callback on success state",
+      "module": "progress",
+      "name": "onSuccess(total)",
+      "context": "Progress"
+    },
+    {
+      "description": "Callback on active state",
+      "module": "progress",
+      "name": "onActive(value, total)",
+      "context": "Progress"
+    },
+    {
+      "description": "Callback on error state",
+      "module": "progress",
+      "name": "onError(value, total)",
+      "context": "Progress"
+    },
+    {
+      "description": "Callback on warning state",
+      "module": "progress",
+      "name": "onWarning(value, total)",
+      "context": "Progress"
+    }
+  ],
+  "rating": [
+    {
+      "description": "Is called after user selects a new rating",
+      "module": "rating",
+      "name": "onRate(value)",
+      "context": "Rating"
+    }
+  ],
+  "search": [
+    {
+      "description": "Callback on element selection by user. The first parameter includes the filtered response results for that element. The function should return false to prevent default action (closing search results and selecting value).",
+      "module": "search",
+      "name": "onSelect(result, response)",
+      "context": "module"
+    },
+    {
+      "description": "Callback after processing element template to add HTML to results. Function should return false to prevent default actions.",
+      "module": "search",
+      "name": "onResultsAdd(html)",
+      "context": "module"
+    },
+    {
+      "description": "Callback on search query",
+      "module": "search",
+      "name": "onSearchQuery(query)",
+      "context": "module"
+    },
+    {
+      "description": "Callback on server response",
+      "module": "search",
+      "name": "onResults(response)",
+      "context": "module"
+    },
+    {
+      "description": "Callback when results are opened",
+      "module": "search",
+      "name": "onResultsOpen",
+      "context": "results element"
+    },
+    {
+      "description": "Callback when results are closed",
+      "module": "search",
+      "name": "onResultsClose",
+      "context": "results element"
+    }
+  ],
+  "shape": [
+    {
+      "description": "Is called before side change",
+      "module": "shape",
+      "name": "beforeChange",
+      "context": "Next Side"
+    },
+    {
+      "description": "Is called after visible side change",
+      "module": "shape",
+      "name": "onChange",
+      "context": "Active Side"
+    }
+  ],
+  "sidebar": [
+    {
+      "description": "Is called when a sidebar begins animating in.",
+      "module": "sidebar",
+      "name": "onVisible",
+      "context": "Sidebar"
+    },
+    {
+      "description": "Is called when a sidebar has finished animating in.",
+      "module": "sidebar",
+      "name": "onShow",
+      "context": "Sidebar"
+    },
+    {
+      "description": "Is called when a sidebar begins to hide or show",
+      "module": "sidebar",
+      "name": "onChange",
+      "context": "Sidebar"
+    },
+    {
+      "description": "Is called before a sidebar begins to animate out.",
+      "module": "sidebar",
+      "name": "onHide",
+      "context": "Sidebar"
+    },
+    {
+      "description": "Is called after a sidebar has finished animating out.",
+      "module": "sidebar",
+      "name": "onHidden",
+      "context": "Sidebar"
+    }
+  ],
+  "sticky": [
+    {
+      "description": "Callback when element is repositioned from layout change",
+      "module": "sticky",
+      "name": "onReposition",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when requestAnimationFrame fires from scroll handler.",
+      "module": "sticky",
+      "name": "onScroll",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when element is fixed to page",
+      "module": "sticky",
+      "name": "onStick",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when element is unfixed from page",
+      "module": "sticky",
+      "name": "onUnstick",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when element is bound to top of parent container",
+      "module": "sticky",
+      "name": "onTop",
+      "context": "$module"
+    },
+    {
+      "description": "Callback when element is bound to bottom of parent container",
+      "module": "sticky",
+      "name": "onBottom",
+      "context": "$module"
+    }
+  ],
+  "tab": [
+    {
+      "description": "Callback only the first time a tab is loaded",
+      "module": "tab",
+      "name": "onFirstLoad(tabPath: string, parameterArray: any[], historyEvent: any)",
+      "context": "Tab"
+    },
+    {
+      "description": "Callback every time a tab is loaded",
+      "module": "tab",
+      "name": "onLoad(tabPath: string, parameterArray: any[], historyEvent: any)",
+      "context": "Tab"
+    },
+    {
+      "description": "Called when a tab begins loading remote content",
+      "module": "tab",
+      "name": "onRequest(tabPath: string)",
+      "context": "Tab"
+    },
+    {
+      "description": "Called after a tab becomes visible",
+      "module": "tab",
+      "name": "onVisible(tabPath: string)",
+      "context": "Tab"
+    }
+  ],
+  "transition": [
+    {
+      "description": "Callback on each transition that changes visibility to shown",
+      "module": "transition",
+      "name": "onShow",
+      "context": "transitioned element"
+    },
+    {
+      "description": "Callback on each transition that changes visibility to hidden",
+      "module": "transition",
+      "name": "onHide",
+      "context": "transitioned element"
+    },
+    {
+      "description": "Callback on animation start, useful for queued animations",
+      "module": "transition",
+      "name": "onStart",
+      "context": "transitioned element"
+    },
+    {
+      "description": "Callback on each transition complete",
+      "module": "transition",
+      "name": "onComplete",
+      "context": "transitioned element"
+    }
+  ],
+  "visibility": [
+    {
+      "description": "Element's top edge has passed bottom of screen",
+      "module": "visibility",
+      "name": "onTopVisible",
+      "context": "$element"
+    },
+    {
+      "description": "Element's top edge has passed top of the screen",
+      "module": "visibility",
+      "name": "onTopPassed",
+      "context": "$element"
+    },
+    {
+      "description": "Element's bottom edge has passed bottom of screen",
+      "module": "visibility",
+      "name": "onBottomVisible",
+      "context": "$element"
+    },
+    {
+      "description": "Any part of an element is visible on screen",
+      "module": "visibility",
+      "name": "onPassing",
+      "context": "$element"
+    },
+    {
+      "description": "Element's bottom edge has passed top of screen",
+      "module": "visibility",
+      "name": "onBottomPassed",
+      "context": "$element"
+    },
+    {
+      "description": "Element's top edge has not passed bottom of screen",
+      "module": "visibility",
+      "name": "onTopVisibleReverse",
+      "context": "$element"
+    },
+    {
+      "description": "Element's top edge has not passed top of the screen",
+      "module": "visibility",
+      "name": "onTopPassedReverse",
+      "context": "$element"
+    },
+    {
+      "description": "Element's bottom edge has not passed bottom of screen",
+      "module": "visibility",
+      "name": "onBottomVisibleReverse",
+      "context": "$element"
+    },
+    {
+      "description": "Element's top has not passed top of screen but bottom has",
+      "module": "visibility",
+      "name": "onPassingReverse",
+      "context": "$element"
+    },
+    {
+      "description": "Element's bottom edge has not passed top of screen",
+      "module": "visibility",
+      "name": "onBottomPassedReverse",
+      "context": "$element"
+    },
+    {
+      "description": "Occurs after an image has completed loading",
+      "module": "visibility",
+      "name": "onLoad",
+      "context": "img"
+    },
+    {
+      "description": "Occurs after all img initialized at the same time have loaded.",
+      "module": "visibility",
+      "name": "onAllLoaded",
+      "context": "last loaded img"
+    },
+    {
+      "description": "Occurs after element has been assigned position fixed",
+      "module": "visibility",
+      "name": "onFixed",
+      "context": "$element"
+    },
+    {
+      "description": "Occurs after element has been removed from fixed position",
+      "module": "visibility",
+      "name": "onUnfixed",
+      "context": "$element"
+    },
+    {
+      "description": "Occurs each time an elements calculations are updated",
+      "module": "visibility",
+      "name": "onUpdate(calculations)",
+      "context": "$element"
+    },
+    {
+      "description": "Occurs whenever element's visibility is refreshed",
+      "module": "visibility",
+      "name": "onRefresh",
+      "context": "$element"
+    }
+  ]
+}
