@@ -7,6 +7,7 @@ let _components = require('./components.js')
 let metaBuilder = require('./meta-builder')
 var LogWriter = require('log-writer')
 var beautify = require('js-beautify').js_beautify
+var jsonfile = require('jsonfile')
 
 jsdom.env({
   url: 'http://bikini.bottom.com',
@@ -21,7 +22,7 @@ jsdom.env({
     writer.writeln('-'.repeat(120))
     writer.writeln(Date())
     writer.writeln('-'.repeat(120))
-    
+
     let components = {}
     _.each(_components, function (c) {
       meta = metaBuilder(c).build()
@@ -35,5 +36,13 @@ jsdom.env({
 
     writer.writeln('-'.repeat(120))
     writer.end()
+
+    console.log('Writing schema.json...')
+    jsonfile.writeFile('./output/schema.json', components, {spaces: 2}, function (err) {
+      if (err)
+        console.error('error: ', err)
+      else
+        console.log('done.')
+    })
   }
 })

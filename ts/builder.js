@@ -97,7 +97,8 @@ module.exports = function (components) {
     build: function (done) {
       buildTypes()
 
-      _.each(components, function (c) { buildSettings(c)
+      _.each(components, function (c) { 
+        buildSettings(c)
         buildBehaviors(c)
       })
 
