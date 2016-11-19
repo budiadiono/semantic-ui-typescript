@@ -206,7 +206,7 @@
       "values": "",
       "module": "accordion",
       "category": "Behavior",
-      "name": "close nested",
+      "name": "closeNested",
       "": "",
       "description": "Close open nested accordion content when an element closes"
     },

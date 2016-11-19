@@ -896,6 +896,16 @@
         "values": "",
         "module": "accordion",
         "category": "Behavior",
+        "name": "closeNested",
+        "": "",
+        "description": "Close open nested accordion content when an element closes",
+        "type": "any",
+        "isDummy": true
+      },
+      {
+        "values": "",
+        "module": "accordion",
+        "category": "Behavior",
         "name": "collapsible",
         "": "",
         "description": "Allow active sections to collapse",
@@ -1039,14 +1049,6 @@
         "description": "No documentation",
         "type": "any",
         "default": true,
-        "isDummy": true
-      },
-      {
-        "name": "closeNested",
-        "module": "accordion",
-        "category": "!!UN-DOCUMENTED!!",
-        "description": "No documentation",
-        "type": "any",
         "isDummy": true
       }
     ],

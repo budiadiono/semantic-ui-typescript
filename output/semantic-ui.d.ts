@@ -5,8 +5,8 @@
 
 declare namespace SemanticUI {
 
-  type AnimationNames = ['scale', 'fade', 'fade up', 'fade down', 'fade left', 'fade right', 'horizontal flip', 'vertical flip', 'drop', 'fly left', 'fly right', 'fly up', 'fly down', 'swing left', 'swing right', 'swing up', 'swing down', 'browse', 'browse right', 'slide down', 'slide up', 'slide left', 'slide right', 'jiggle', 'flash', 'shake', 'pulse', 'tada', 'bounce']
-  type Positions = ['top left', 'top center', 'top right', 'right center', 'bottom right', 'bottom center', 'bottom left', 'left center']
+  type AnimationNames = 'scale' | 'fade' | 'fade up' | 'fade down' | 'fade left' | 'fade right' | 'horizontal flip' | 'vertical flip' | 'drop' | 'fly left' | 'fly right' | 'fly up' | 'fly down' | 'swing left' | 'swing right' | 'swing up' | 'swing down' | 'browse' | 'browse right' | 'slide down' | 'slide up' | 'slide left' | 'slide right' | 'jiggle' | 'flash' | 'shake' | 'pulse' | 'tada' | 'bounce'
+  type Positions = 'top left' | 'top center' | 'top right' | 'right center' | 'bottom right' | 'bottom center' | 'bottom left' | 'left center'
 
   namespace Api {
     interface Settings {
@@ -946,6 +946,15 @@ declare namespace SemanticUI {
       animateChildren ? : any
 
       /**
+       * Close open nested accordion content when an element closes
+       * Category: Behavior
+       * 
+       * @type {any}
+       * @memberOf SemanticUI.Accordion.Settings
+       */
+      closeNested ? : any
+
+      /**
        * Allow active sections to collapse
        * Category: Behavior
        * 
@@ -1089,15 +1098,6 @@ declare namespace SemanticUI {
        */
       observeChanges ? : any
 
-      /**
-       * No documentation
-       * Category: !!UN-DOCUMENTED!!
-       * 
-       * @type {any}
-       * @memberOf SemanticUI.Accordion.Settings
-       */
-      closeNested ? : any
-
     }
 
     type SettingNames =
@@ -1125,6 +1125,13 @@ declare namespace SemanticUI {
        * @type {any}
        */
       'animateChildren' |
+
+      /**
+       * Close open nested accordion content when an element closes
+       * Category: Behavior
+       * @type {any}
+       */
+      'closeNested' |
 
       /**
        * Allow active sections to collapse
@@ -1248,14 +1255,7 @@ declare namespace SemanticUI {
        * @default true
        * @type {any}
        */
-      'observeChanges' |
-
-      /**
-       * No documentation
-       * Category: !!UN-DOCUMENTED!!
-       * @type {any}
-       */
-      'closeNested'
+      'observeChanges'
 
     type BehaviorNames =
 
