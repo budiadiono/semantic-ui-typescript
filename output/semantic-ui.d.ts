@@ -14,6 +14,7 @@ declare namespace SemanticUI {
 
       /**
        * When API event should occur
+       * 
        * Category: Behavior
        * 
        * @default auto
@@ -24,6 +25,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to 'local' to cache successful returned AJAX responses when using a JSON API. This helps avoid server roundtrips when API endpoints will return the same results when accessed repeatedly. Setting to false, will add cache busting parameters to the URL.
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -34,6 +36,7 @@ declare namespace SemanticUI {
 
       /**
        * UI state will be applied to this element, defaults to triggering element.
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -43,6 +46,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to encode parameters with encodeURIComponent before adding into url string
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -53,6 +57,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically include default data like {value} and {text}
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -63,6 +68,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to serialize closest form and include in request
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -72,6 +78,7 @@ declare namespace SemanticUI {
 
       /**
        * How long to wait when a request is made before triggering request, useful for rate limiting oninput
+       * 
        * Category: Behavior
        * 
        * @type {number}
@@ -81,6 +88,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false will not delay the first request made, when no others are queued
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -91,6 +99,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether an API request can occur while another request is still pending
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -101,6 +110,7 @@ declare namespace SemanticUI {
 
       /**
        * Minimum duration to show loading indication
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -110,6 +120,7 @@ declare namespace SemanticUI {
 
       /**
        * The default auto will automatically remove error state after error duration, unless the element is a form
+       * 
        * Category: Behavior
        * 
        * @default auto
@@ -120,6 +131,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting to true, will not remove error. Setting to a duration in milliseconds to show error state after request error.
+       * 
        * Category: Behavior
        * 
        * @default 2000
@@ -130,6 +142,7 @@ declare namespace SemanticUI {
 
       /**
        * Named API action for query, originally specified in $.fn.settings.api
+       * 
        * Category: Request Settings
        * 
        * @type {string | false}
@@ -139,6 +152,7 @@ declare namespace SemanticUI {
 
       /**
        * Templated URL for query, will override specified action
+       * 
        * Category: Request Settings
        * 
        * @type {string | false}
@@ -148,6 +162,7 @@ declare namespace SemanticUI {
 
       /**
        * Variables to use for replacement
+       * 
        * Category: Request Settings
        * 
        * @default {}
@@ -158,6 +173,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to a Javascript object which will be returned automatically instead of requesting JSON from server
+       * 
        * Category: Request Settings
        * 
        * @type {{} | false}
@@ -167,6 +183,7 @@ declare namespace SemanticUI {
 
       /**
        * When specified, this function can be used to retrieve content from a server and return it asynchronously instead of a standard AJAX call. The callback function should return the server response.
+       * 
        * Category: Request Settings
        * 
        * @param {any} settings
@@ -178,6 +195,7 @@ declare namespace SemanticUI {
 
       /**
        * Alias of response
+       * 
        * Category: Request Settings
        * 
        * @type {any}
@@ -187,6 +205,7 @@ declare namespace SemanticUI {
 
       /**
        * Alias of responseAsync
+       * 
        * Category: Request Settings
        * 
        * @type {any}
@@ -196,6 +215,7 @@ declare namespace SemanticUI {
 
       /**
        * Method for transmitting request to server
+       * 
        * Category: Request Settings
        * 
        * @default get
@@ -206,6 +226,7 @@ declare namespace SemanticUI {
 
       /**
        * Expected data type of response
+       * 
        * Category: Request Settings
        * 
        * @default json
@@ -216,6 +237,7 @@ declare namespace SemanticUI {
 
       /**
        * POST/GET Data to Send with Request
+       * 
        * Category: Request Settings
        * 
        * @default {}
@@ -316,6 +338,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying settings before request, or cancelling request
+       * 
        * Category: Callback
        * 
        * @param {any} settings
@@ -326,6 +349,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying XHR object for request
+       * 
        * Category: Callback
        * 
        * @param {any} xhrObject
@@ -336,6 +360,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback that occurs when request is made. Receives both the API success promise and the XHR request promise.
+       * 
        * Category: Callback
        * 
        * @param {any} promise
@@ -347,6 +372,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying the server's response before parsed by other callbacks to determine API event success
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -357,6 +383,7 @@ declare namespace SemanticUI {
 
       /**
        * Determines whether completed JSON response should be treated as successful
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -367,6 +394,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after successful response, JSON response must pass successTest
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -379,6 +407,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on request complete regardless of conditions
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -391,6 +420,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on failed response, or JSON response that fails successTest
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -402,6 +432,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on server error from returned status code, or XHR failure.
+       * 
        * Category: Callback
        * 
        * @param {any} errorMessage
@@ -414,6 +445,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on abort caused by user clicking a link or manually cancelling request.
+       * 
        * Category: Callback
        * 
        * @param {any} errorMessage
@@ -426,6 +458,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -436,6 +469,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -449,6 +483,7 @@ declare namespace SemanticUI {
 
       /**
        * When API event should occur
+       * 
        * Category: Behavior
        * @default auto
        * @type {any}
@@ -457,6 +492,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to 'local' to cache successful returned AJAX responses when using a JSON API. This helps avoid server roundtrips when API endpoints will return the same results when accessed repeatedly. Setting to false, will add cache busting parameters to the URL.
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -465,6 +501,7 @@ declare namespace SemanticUI {
 
       /**
        * UI state will be applied to this element, defaults to triggering element.
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -472,6 +509,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to encode parameters with encodeURIComponent before adding into url string
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -480,6 +518,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically include default data like {value} and {text}
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -488,6 +527,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to serialize closest form and include in request
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -495,6 +535,7 @@ declare namespace SemanticUI {
 
       /**
        * How long to wait when a request is made before triggering request, useful for rate limiting oninput
+       * 
        * Category: Behavior
        * @type {number}
        */
@@ -502,6 +543,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false will not delay the first request made, when no others are queued
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -510,6 +552,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether an API request can occur while another request is still pending
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -518,6 +561,7 @@ declare namespace SemanticUI {
 
       /**
        * Minimum duration to show loading indication
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -525,6 +569,7 @@ declare namespace SemanticUI {
 
       /**
        * The default auto will automatically remove error state after error duration, unless the element is a form
+       * 
        * Category: Behavior
        * @default auto
        * @type {any}
@@ -533,6 +578,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting to true, will not remove error. Setting to a duration in milliseconds to show error state after request error.
+       * 
        * Category: Behavior
        * @default 2000
        * @type {any}
@@ -541,6 +587,7 @@ declare namespace SemanticUI {
 
       /**
        * Named API action for query, originally specified in $.fn.settings.api
+       * 
        * Category: Request Settings
        * @type {string | false}
        */
@@ -548,6 +595,7 @@ declare namespace SemanticUI {
 
       /**
        * Templated URL for query, will override specified action
+       * 
        * Category: Request Settings
        * @type {string | false}
        */
@@ -555,6 +603,7 @@ declare namespace SemanticUI {
 
       /**
        * Variables to use for replacement
+       * 
        * Category: Request Settings
        * @default {}
        * @type {any}
@@ -563,6 +612,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to a Javascript object which will be returned automatically instead of requesting JSON from server
+       * 
        * Category: Request Settings
        * @type {{} | false}
        */
@@ -570,6 +620,7 @@ declare namespace SemanticUI {
 
       /**
        * When specified, this function can be used to retrieve content from a server and return it asynchronously instead of a standard AJAX call. The callback function should return the server response.
+       * 
        * Category: Request Settings
        * @param {any} settings
        * @param {any} callback
@@ -579,6 +630,7 @@ declare namespace SemanticUI {
 
       /**
        * Alias of response
+       * 
        * Category: Request Settings
        * @type {any}
        */
@@ -586,6 +638,7 @@ declare namespace SemanticUI {
 
       /**
        * Alias of responseAsync
+       * 
        * Category: Request Settings
        * @type {any}
        */
@@ -593,6 +646,7 @@ declare namespace SemanticUI {
 
       /**
        * Method for transmitting request to server
+       * 
        * Category: Request Settings
        * @default get
        * @type {'post' | 'get'}
@@ -601,6 +655,7 @@ declare namespace SemanticUI {
 
       /**
        * Expected data type of response
+       * 
        * Category: Request Settings
        * @default json
        * @type {'xml' | 'json' | 'jsonp' | 'script' | 'html' | 'text'}
@@ -609,6 +664,7 @@ declare namespace SemanticUI {
 
       /**
        * POST/GET Data to Send with Request
+       * 
        * Category: Request Settings
        * @default {}
        * @type {any}
@@ -687,6 +743,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying settings before request, or cancelling request
+       * 
        * Category: Callback
        * @param {any} settings
        * @returns {any}
@@ -695,6 +752,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying XHR object for request
+       * 
        * Category: Callback
        * @param {any} xhrObject
        * @returns {any}
@@ -703,6 +761,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback that occurs when request is made. Receives both the API success promise and the XHR request promise.
+       * 
        * Category: Callback
        * @param {any} promise
        * @param {any} xhr
@@ -712,6 +771,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows modifying the server's response before parsed by other callbacks to determine API event success
+       * 
        * Category: Callback
        * @param {any} response
        * @returns {any}
@@ -720,6 +780,7 @@ declare namespace SemanticUI {
 
       /**
        * Determines whether completed JSON response should be treated as successful
+       * 
        * Category: Callback
        * @param {any} response
        * @returns {any}
@@ -728,6 +789,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after successful response, JSON response must pass successTest
+       * 
        * Category: Callback
        * @param {any} response
        * @param {any} element
@@ -738,6 +800,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on request complete regardless of conditions
+       * 
        * Category: Callback
        * @param {any} response
        * @param {any} element
@@ -748,6 +811,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on failed response, or JSON response that fails successTest
+       * 
        * Category: Callback
        * @param {any} response
        * @param {any} element
@@ -757,6 +821,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on server error from returned status code, or XHR failure.
+       * 
        * Category: Callback
        * @param {any} errorMessage
        * @param {any} element
@@ -767,6 +832,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on abort caused by user clicking a link or manually cancelling request.
+       * 
        * Category: Callback
        * @param {any} errorMessage
        * @param {any} element
@@ -777,6 +843,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -785,6 +852,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -917,6 +985,7 @@ declare namespace SemanticUI {
 
       /**
        * Only allow one section open at a time
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -927,6 +996,7 @@ declare namespace SemanticUI {
 
       /**
        * Event on title that will cause accordion to open
+       * 
        * Category: Behavior
        * 
        * @default click
@@ -937,6 +1007,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether child content opacity should be animated (may cause performance issues with many child elements)
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -947,6 +1018,7 @@ declare namespace SemanticUI {
 
       /**
        * Close open nested accordion content when an element closes
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -956,6 +1028,7 @@ declare namespace SemanticUI {
 
       /**
        * Allow active sections to collapse
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -966,6 +1039,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration in ms of opening animation
+       * 
        * Category: Behavior
        * 
        * @default 350
@@ -976,6 +1050,7 @@ declare namespace SemanticUI {
 
       /**
        * Easing of opening animation. EaseInOutQuint is included with accordion, for additional options you must include easing equations.
+       * 
        * Category: Behavior
        * 
        * @default easeOutQuad
@@ -1050,6 +1125,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before element opens
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Accordion.Settings
@@ -1058,6 +1134,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after element is open
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Accordion.Settings
@@ -1066,6 +1143,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before element closes
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Accordion.Settings
@@ -1074,6 +1152,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after element is closed
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Accordion.Settings
@@ -1082,6 +1161,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element open or close
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Accordion.Settings
@@ -1090,6 +1170,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -1104,6 +1185,7 @@ declare namespace SemanticUI {
 
       /**
        * Only allow one section open at a time
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -1112,6 +1194,7 @@ declare namespace SemanticUI {
 
       /**
        * Event on title that will cause accordion to open
+       * 
        * Category: Behavior
        * @default click
        * @type {any}
@@ -1120,6 +1203,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether child content opacity should be animated (may cause performance issues with many child elements)
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -1128,6 +1212,7 @@ declare namespace SemanticUI {
 
       /**
        * Close open nested accordion content when an element closes
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -1135,6 +1220,7 @@ declare namespace SemanticUI {
 
       /**
        * Allow active sections to collapse
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -1143,6 +1229,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration in ms of opening animation
+       * 
        * Category: Behavior
        * @default 350
        * @type {number}
@@ -1151,6 +1238,7 @@ declare namespace SemanticUI {
 
       /**
        * Easing of opening animation. EaseInOutQuint is included with accordion, for additional options you must include easing equations.
+       * 
        * Category: Behavior
        * @default easeOutQuad
        * @type {any}
@@ -1221,36 +1309,42 @@ declare namespace SemanticUI {
 
       /**
        * Callback before element opens
+       * 
        * Category: Callback
        */
       'onOpening' |
 
       /**
        * Callback after element is open
+       * 
        * Category: Callback
        */
       'onOpen' |
 
       /**
        * Callback before element closes
+       * 
        * Category: Callback
        */
       'onClosing' |
 
       /**
        * Callback after element is closed
+       * 
        * Category: Callback
        */
       'onClose' |
 
       /**
        * Callback on element open or close
+       * 
        * Category: Callback
        */
       'onChange' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -1375,6 +1469,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is either checked or unchecked.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1383,6 +1478,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is checked.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1391,6 +1487,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is set to undeterminate.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1399,6 +1496,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is set to determinate.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1407,6 +1505,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is unchecked.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1415,6 +1514,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before a checkbox is checked. Can cancel change by returning false
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1423,6 +1523,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before a checkbox is set to undeterminate. Can cancel change by returning false
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1431,6 +1532,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before a checkbox is set to determinate. Can cancel change by returning false
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1439,6 +1541,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before a checkbox is unchecked. Can cancel change by returning false
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1447,6 +1550,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is enabled.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1455,6 +1559,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is disabled.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Checkbox.Settings
@@ -1463,6 +1568,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -1472,6 +1578,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -1560,72 +1667,84 @@ declare namespace SemanticUI {
 
       /**
        * Callback after a checkbox is either checked or unchecked.
+       * 
        * Category: Callback
        */
       'onChange' |
 
       /**
        * Callback after a checkbox is checked.
+       * 
        * Category: Callback
        */
       'onChecked' |
 
       /**
        * Callback after a checkbox is set to undeterminate.
+       * 
        * Category: Callback
        */
       'onIndeterminate' |
 
       /**
        * Callback after a checkbox is set to determinate.
+       * 
        * Category: Callback
        */
       'onDeterminate' |
 
       /**
        * Callback after a checkbox is unchecked.
+       * 
        * Category: Callback
        */
       'onUnchecked' |
 
       /**
        * Callback before a checkbox is checked. Can cancel change by returning false
+       * 
        * Category: Callback
        */
       'beforeChecked' |
 
       /**
        * Callback before a checkbox is set to undeterminate. Can cancel change by returning false
+       * 
        * Category: Callback
        */
       'beforeIndeterminate' |
 
       /**
        * Callback before a checkbox is set to determinate. Can cancel change by returning false
+       * 
        * Category: Callback
        */
       'beforeDeterminate' |
 
       /**
        * Callback before a checkbox is unchecked. Can cancel change by returning false
+       * 
        * Category: Callback
        */
       'beforeUnchecked' |
 
       /**
        * Callback after a checkbox is enabled.
+       * 
        * Category: Callback
        */
       'onEnable' |
 
       /**
        * Callback after a checkbox is disabled.
+       * 
        * Category: Callback
        */
       'onDisable' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -1633,6 +1752,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -1796,6 +1916,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -1805,6 +1926,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -1815,6 +1937,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -1864,6 +1987,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -1871,6 +1995,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -1879,6 +2004,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -1894,6 +2020,7 @@ declare namespace SemanticUI {
 
       /**
        * Dimmers opacity from 0-1. Defaults to auto which uses the CSS specified opacity.
+       * 
        * Category: Behavior
        * 
        * @default auto
@@ -1904,6 +2031,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a variation to add when generating dimmer, like inverted
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -1913,6 +2041,7 @@ declare namespace SemanticUI {
 
       /**
        * If initializing a dimmer on a dimmable context, you can use dimmerName to distinguish between multiple dimmers in that context.
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -1922,6 +2051,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether clicking on the dimmer should hide the dimmer (Defaults to auto, closable only when settings.on is not hover
+       * 
        * Category: Behavior
        * 
        * @default auto
@@ -1932,6 +2062,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to hover or click to show/hide dimmer on dimmable event
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -1941,6 +2072,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to dim dimmers using CSS transitions.
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -1951,6 +2083,7 @@ declare namespace SemanticUI {
 
       /**
        * Animation duration of dimming. If an integer is used, that value will apply to both show and hide animations.
+       * 
        * Category: Behavior
        * 
        * @default {"show":500,"hide":500}
@@ -1961,6 +2094,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Behavior
        * 
        * @default fade
@@ -2033,6 +2167,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element show
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Dimmer.Settings
@@ -2041,6 +2176,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element hide
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Dimmer.Settings
@@ -2049,6 +2185,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element show or hide
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Dimmer.Settings
@@ -2057,6 +2194,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -2071,6 +2209,7 @@ declare namespace SemanticUI {
 
       /**
        * Dimmers opacity from 0-1. Defaults to auto which uses the CSS specified opacity.
+       * 
        * Category: Behavior
        * @default auto
        * @type {any}
@@ -2079,6 +2218,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a variation to add when generating dimmer, like inverted
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -2086,6 +2226,7 @@ declare namespace SemanticUI {
 
       /**
        * If initializing a dimmer on a dimmable context, you can use dimmerName to distinguish between multiple dimmers in that context.
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -2093,6 +2234,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether clicking on the dimmer should hide the dimmer (Defaults to auto, closable only when settings.on is not hover
+       * 
        * Category: Behavior
        * @default auto
        * @type {any}
@@ -2101,6 +2243,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to hover or click to show/hide dimmer on dimmable event
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -2108,6 +2251,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to dim dimmers using CSS transitions.
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -2116,6 +2260,7 @@ declare namespace SemanticUI {
 
       /**
        * Animation duration of dimming. If an integer is used, that value will apply to both show and hide animations.
+       * 
        * Category: Behavior
        * @default {"show":500,"hide":500}
        * @type {number}
@@ -2124,6 +2269,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Behavior
        * @default fade
        * @type {SemanticUI.AnimationNames}
@@ -2194,24 +2340,28 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element show
+       * 
        * Category: Callback
        */
       'onShow' |
 
       /**
        * Callback on element hide
+       * 
        * Category: Callback
        */
       'onHide' |
 
       /**
        * Callback on element show or hide
+       * 
        * Category: Callback
        */
       'onChange' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -2341,6 +2491,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger dropdown (Hover, Click, Custom Event)
+       * 
        * Category: Frequently Used Settings
        * 
        * @default click
@@ -2351,6 +2502,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true will fire onChange even when the value a user select matches the currently selected value.
+       * 
        * Category: Frequently Used Settings
        * 
        * @type {any}
@@ -2360,6 +2512,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether search selection should allow users to add their own selections, works for single or multiselect.
+       * 
        * Category: Frequently Used Settings
        * 
        * @type {any}
@@ -2369,6 +2522,7 @@ declare namespace SemanticUI {
 
       /**
        * When disabled user additions will appear in the results menu using a specially formatted selection item formatted by templates.addition.
+       * 
        * Category: Frequently Used Settings
        * 
        * @default true
@@ -2379,6 +2533,7 @@ declare namespace SemanticUI {
 
       /**
        * Sets a default action to occur. (See usage guide)
+       * 
        * Category: Frequently Used Settings
        * 
        * @default activate
@@ -2389,6 +2544,7 @@ declare namespace SemanticUI {
 
       /**
        * The minimum characters for a search to begin showing results
+       * 
        * Category: Frequently Used Settings
        * 
        * @type {any}
@@ -2398,6 +2554,7 @@ declare namespace SemanticUI {
 
       /**
        * When using search selection specifies how to match values.
+       * 
        * Category: Frequently Used Settings
        * 
        * @default both
@@ -2408,6 +2565,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether dropdown should select new option when using keyboard shortcuts. Setting to false will require enter or left click to confirm a choice.
+       * 
        * Category: Frequently Used Settings
        * 
        * @default true
@@ -2418,6 +2576,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether search selection will force currently selected choice when element is blurred.
+       * 
        * Category: Frequently Used Settings
        * 
        * @default true
@@ -2428,6 +2587,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether menu items with sub-menus (categories) should be selectable
+       * 
        * Category: Frequently Used Settings
        * 
        * @type {any}
@@ -2437,6 +2597,7 @@ declare namespace SemanticUI {
 
       /**
        * auto: Convert option with "" (blank string) value to placeholder text, value: Sets string value to placeholder text, leaves "" value, false: Leaves "" value as a selectable option
+       * 
        * Category: Frequently Used Settings
        * 
        * @default auto
@@ -2447,6 +2608,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to an object to specify API settings for retrieving remote selection menu content from an API endpoint
+       * 
        * Category: Remote Settings
        * 
        * @type {any}
@@ -2456,6 +2618,7 @@ declare namespace SemanticUI {
 
       /**
        * List mapping dropdown content to JSON Property when using API
+       * 
        * Category: Remote Settings
        * 
        * @default {"remoteValues":"results","values":"values","disabled":"disabled","name":"name","value":"value","text":"text"}
@@ -2466,6 +2629,7 @@ declare namespace SemanticUI {
 
       /**
        * When enabled will automatically store selected name/value pairs in sessionStorage to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.
+       * 
        * Category: Remote Settings
        * 
        * @default true
@@ -2476,6 +2640,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether multiselect should use labels. Must be set to true when allowAdditions is true
+       * 
        * Category: Multiple Select Settings
        * 
        * @default true
@@ -2486,6 +2651,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to a number, sets the maximum number of selections
+       * 
        * Category: Multiple Select Settings
        * 
        * @type {any}
@@ -2495,6 +2661,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in em
+       * 
        * Category: Multiple Select Settings
        * 
        * @default 1.037
@@ -2505,6 +2672,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows customization of multi-select labels
+       * 
        * Category: Multiple Select Settings
        * 
        * @default {"transition":"scale","duration":200,"variation":false}
@@ -2515,6 +2683,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to auto determines direction based on whether dropdown can fit on screen. Set to upward or downward to always force a direction.
+       * 
        * Category: Additional Settings
        * 
        * @default auto
@@ -2525,6 +2694,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether dropdown should try to keep itself on screen by checking whether menus display position in its context (Default context is page).
+       * 
        * Category: Additional Settings
        * 
        * @default true
@@ -2535,6 +2705,7 @@ declare namespace SemanticUI {
 
       /**
        * Element context to use when checking whether can show when keepOnScreen: true
+       * 
        * Category: Additional Settings
        * 
        * @default HTMLElement
@@ -2545,6 +2716,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string
+       * 
        * Category: Additional Settings
        * 
        * @type {any}
@@ -2554,6 +2726,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether HTML included in dropdown values should be preserved. (Allows icons to show up in selected value)
+       * 
        * Category: Additional Settings
        * 
        * @default true
@@ -2564,6 +2737,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to sort values when creating a dropdown automatically from a select element.
+       * 
        * Category: Additional Settings
        * 
        * @type {any}
@@ -2573,6 +2747,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to show dropdown menu automatically on element focus.
+       * 
        * Category: Additional Settings
        * 
        * @default true
@@ -2583,6 +2758,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to allow the element to be navigable by keyboard, by automatically creating a tabindex
+       * 
        * Category: Additional Settings
        * 
        * @default true
@@ -2593,6 +2769,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Defaults to slide down or slide up depending on dropdown direction. Fade and slide down are available without including ui transitions
+       * 
        * Category: Additional Settings
        * 
        * @default auto
@@ -2603,6 +2780,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Additional Settings
        * 
        * @default 200
@@ -2613,6 +2791,7 @@ declare namespace SemanticUI {
 
       /**
        * The keycode used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass false for comma delimiter's value
+       * 
        * Category: Additional Settings
        * 
        * @default {"backspace":8,"delimiter":188,"deleteKey":46,"enter":13,"escape":27,"pageUp":33,"pageDown":34,"leftArrow":37,"upArrow":38,"rightArrow":39,"downArrow":40}
@@ -2623,6 +2802,7 @@ declare namespace SemanticUI {
 
       /**
        * Time in milliseconds to debounce show or hide behavior when on: hover is used, or when touch is used.
+       * 
        * Category: Additional Settings
        * 
        * @default {"hide":300,"show":200,"search":20,"touch":50}
@@ -2709,6 +2889,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown value changes. Receives the name and value of selection and the active menu element
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -2721,6 +2902,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown selection is added using a multiple select dropdown, only receives the added value
+       * 
        * Category: Callback
        * 
        * @param {any} addedValue
@@ -2733,6 +2915,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value
+       * 
        * Category: Callback
        * 
        * @param {any} removedValue
@@ -2745,6 +2928,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -2756,6 +2940,7 @@ declare namespace SemanticUI {
 
       /**
        * Called when a label is remove, return false; will prevent the label from being removed.
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -2766,6 +2951,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a label is selected by a user
+       * 
        * Category: Callback
        * 
        * @param {any} $selectedLabels
@@ -2776,6 +2962,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown is searched with no matching values
+       * 
        * Category: Callback
        * 
        * @param {any} searchValue
@@ -2786,6 +2973,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called before a dropdown is shown. If false is returned, dropdown will not be shown.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Dropdown.Settings
@@ -2794,6 +2982,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called before a dropdown is hidden. If false is returned, dropdown will not be hidden.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Dropdown.Settings
@@ -2802,6 +2991,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 200
@@ -2812,6 +3002,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default ,
@@ -2822,6 +3013,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -2831,6 +3023,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"addResult":"Add <b>{term}</b>","count":"{count} selected","maxSelections":"Max {maxCount} selections","noResults":"No results found.","serverError":"There was an error contacting the server"}
@@ -2841,6 +3034,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -2855,6 +3049,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger dropdown (Hover, Click, Custom Event)
+       * 
        * Category: Frequently Used Settings
        * @default click
        * @type {any}
@@ -2863,6 +3058,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true will fire onChange even when the value a user select matches the currently selected value.
+       * 
        * Category: Frequently Used Settings
        * @type {any}
        */
@@ -2870,6 +3066,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether search selection should allow users to add their own selections, works for single or multiselect.
+       * 
        * Category: Frequently Used Settings
        * @type {any}
        */
@@ -2877,6 +3074,7 @@ declare namespace SemanticUI {
 
       /**
        * When disabled user additions will appear in the results menu using a specially formatted selection item formatted by templates.addition.
+       * 
        * Category: Frequently Used Settings
        * @default true
        * @type {any}
@@ -2885,6 +3083,7 @@ declare namespace SemanticUI {
 
       /**
        * Sets a default action to occur. (See usage guide)
+       * 
        * Category: Frequently Used Settings
        * @default activate
        * @type {'activate' | 'select' | 'combo' | 'nothing' | 'hide' | Function}
@@ -2893,6 +3092,7 @@ declare namespace SemanticUI {
 
       /**
        * The minimum characters for a search to begin showing results
+       * 
        * Category: Frequently Used Settings
        * @type {any}
        */
@@ -2900,6 +3100,7 @@ declare namespace SemanticUI {
 
       /**
        * When using search selection specifies how to match values.
+       * 
        * Category: Frequently Used Settings
        * @default both
        * @type {'both' | 'value' | 'text'}
@@ -2908,6 +3109,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether dropdown should select new option when using keyboard shortcuts. Setting to false will require enter or left click to confirm a choice.
+       * 
        * Category: Frequently Used Settings
        * @default true
        * @type {any}
@@ -2916,6 +3118,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether search selection will force currently selected choice when element is blurred.
+       * 
        * Category: Frequently Used Settings
        * @default true
        * @type {any}
@@ -2924,6 +3127,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether menu items with sub-menus (categories) should be selectable
+       * 
        * Category: Frequently Used Settings
        * @type {any}
        */
@@ -2931,6 +3135,7 @@ declare namespace SemanticUI {
 
       /**
        * auto: Convert option with "" (blank string) value to placeholder text, value: Sets string value to placeholder text, leaves "" value, false: Leaves "" value as a selectable option
+       * 
        * Category: Frequently Used Settings
        * @default auto
        * @type {'auto' | 'value' | false}
@@ -2939,6 +3144,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to an object to specify API settings for retrieving remote selection menu content from an API endpoint
+       * 
        * Category: Remote Settings
        * @type {any}
        */
@@ -2946,6 +3152,7 @@ declare namespace SemanticUI {
 
       /**
        * List mapping dropdown content to JSON Property when using API
+       * 
        * Category: Remote Settings
        * @default {"remoteValues":"results","values":"values","disabled":"disabled","name":"name","value":"value","text":"text"}
        * @type {any}
@@ -2954,6 +3161,7 @@ declare namespace SemanticUI {
 
       /**
        * When enabled will automatically store selected name/value pairs in sessionStorage to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.
+       * 
        * Category: Remote Settings
        * @default true
        * @type {any}
@@ -2962,6 +3170,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether multiselect should use labels. Must be set to true when allowAdditions is true
+       * 
        * Category: Multiple Select Settings
        * @default true
        * @type {any}
@@ -2970,6 +3179,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to a number, sets the maximum number of selections
+       * 
        * Category: Multiple Select Settings
        * @type {any}
        */
@@ -2977,6 +3187,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in em
+       * 
        * Category: Multiple Select Settings
        * @default 1.037
        * @type {any}
@@ -2985,6 +3196,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows customization of multi-select labels
+       * 
        * Category: Multiple Select Settings
        * @default {"transition":"scale","duration":200,"variation":false}
        * @type {any}
@@ -2993,6 +3205,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to auto determines direction based on whether dropdown can fit on screen. Set to upward or downward to always force a direction.
+       * 
        * Category: Additional Settings
        * @default auto
        * @type {'auto' | 'upward' | 'downward'}
@@ -3001,6 +3214,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether dropdown should try to keep itself on screen by checking whether menus display position in its context (Default context is page).
+       * 
        * Category: Additional Settings
        * @default true
        * @type {any}
@@ -3009,6 +3223,7 @@ declare namespace SemanticUI {
 
       /**
        * Element context to use when checking whether can show when keepOnScreen: true
+       * 
        * Category: Additional Settings
        * @default HTMLElement
        * @type {HTMLElement | JQuery | string}
@@ -3017,6 +3232,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string
+       * 
        * Category: Additional Settings
        * @type {any}
        */
@@ -3024,6 +3240,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether HTML included in dropdown values should be preserved. (Allows icons to show up in selected value)
+       * 
        * Category: Additional Settings
        * @default true
        * @type {any}
@@ -3032,6 +3249,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to sort values when creating a dropdown automatically from a select element.
+       * 
        * Category: Additional Settings
        * @type {any}
        */
@@ -3039,6 +3257,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to show dropdown menu automatically on element focus.
+       * 
        * Category: Additional Settings
        * @default true
        * @type {any}
@@ -3047,6 +3266,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to allow the element to be navigable by keyboard, by automatically creating a tabindex
+       * 
        * Category: Additional Settings
        * @default true
        * @type {any}
@@ -3055,6 +3275,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Defaults to slide down or slide up depending on dropdown direction. Fade and slide down are available without including ui transitions
+       * 
        * Category: Additional Settings
        * @default auto
        * @type {SemanticUI.AnimationNames}
@@ -3063,6 +3284,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Additional Settings
        * @default 200
        * @type {number}
@@ -3071,6 +3293,7 @@ declare namespace SemanticUI {
 
       /**
        * The keycode used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass false for comma delimiter's value
+       * 
        * Category: Additional Settings
        * @default {"backspace":8,"delimiter":188,"deleteKey":46,"enter":13,"escape":27,"pageUp":33,"pageDown":34,"leftArrow":37,"upArrow":38,"rightArrow":39,"downArrow":40}
        * @type {any}
@@ -3079,6 +3302,7 @@ declare namespace SemanticUI {
 
       /**
        * Time in milliseconds to debounce show or hide behavior when on: hover is used, or when touch is used.
+       * 
        * Category: Additional Settings
        * @default {"hide":300,"show":200,"search":20,"touch":50}
        * @type {number}
@@ -3163,6 +3387,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown value changes. Receives the name and value of selection and the active menu element
+       * 
        * Category: Callback
        * @param {any} value
        * @param {any} text
@@ -3173,6 +3398,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown selection is added using a multiple select dropdown, only receives the added value
+       * 
        * Category: Callback
        * @param {any} addedValue
        * @param {any} addedText
@@ -3183,6 +3409,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value
+       * 
        * Category: Callback
        * @param {any} removedValue
        * @param {any} removedText
@@ -3193,6 +3420,7 @@ declare namespace SemanticUI {
 
       /**
        * Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.
+       * 
        * Category: Callback
        * @param {any} value
        * @param {any} text
@@ -3202,6 +3430,7 @@ declare namespace SemanticUI {
 
       /**
        * Called when a label is remove, return false; will prevent the label from being removed.
+       * 
        * Category: Callback
        * @param {any} value
        * @returns {any}
@@ -3210,6 +3439,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a label is selected by a user
+       * 
        * Category: Callback
        * @param {any} $selectedLabels
        * @returns {any}
@@ -3218,6 +3448,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a dropdown is searched with no matching values
+       * 
        * Category: Callback
        * @param {any} searchValue
        * @returns {any}
@@ -3226,18 +3457,21 @@ declare namespace SemanticUI {
 
       /**
        * Is called before a dropdown is shown. If false is returned, dropdown will not be shown.
+       * 
        * Category: Callback
        */
       'onShow' |
 
       /**
        * Is called before a dropdown is hidden. If false is returned, dropdown will not be hidden.
+       * 
        * Category: Callback
        */
       'onHide' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 200
        * @type {any}
@@ -3246,6 +3480,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default ,
        * @type {any}
@@ -3254,6 +3489,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -3261,6 +3497,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"addResult":"Add <b>{term}</b>","count":"{count} selected","maxSelections":"Max {maxCount} selections","noResults":"No results found.","serverError":"There was an error contacting the server"}
        * @type {any}
@@ -3269,6 +3506,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -3480,6 +3718,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies an icon to use with placeholder content
+       * 
        * Category: Embed Settings
        * 
        * @type {any}
@@ -3489,6 +3728,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a source to use, if no source is provided it will be determined from the domain of a specified url.
+       * 
        * Category: Embed Settings
        * 
        * @type {any}
@@ -3498,6 +3738,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a url to use for embed
+       * 
        * Category: Embed Settings
        * 
        * @type {any}
@@ -3507,6 +3748,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies an id value to replace with the {id} value found in templated urls
+       * 
        * Category: Embed Settings
        * 
        * @type {any}
@@ -3516,6 +3758,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify an object containing key/value pairs to add to the iframes GET parameters
+       * 
        * Category: Embed Settings
        * 
        * @type {any}
@@ -3525,6 +3768,7 @@ declare namespace SemanticUI {
 
       /**
        * Default setting auto will only autoplay content when a placeholder is specified. Setting to true or false will force autoplay.
+       * 
        * Category: Video Settings
        * 
        * @default auto
@@ -3535,6 +3779,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a default chrome color with Vimeo or YouTube.
+       * 
        * Category: Video Settings
        * 
        * @default #444444
@@ -3545,6 +3790,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to prefer HD content
+       * 
        * Category: Video Settings
        * 
        * @default true
@@ -3555,6 +3801,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to show networks branded UI like title cards, or after video calls to action.
+       * 
        * Category: Video Settings
        * 
        * @type {any}
@@ -3633,6 +3880,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when iframe is generated
+       * 
        * Category: Callback
        * 
        * @param {any} url
@@ -3643,6 +3891,7 @@ declare namespace SemanticUI {
 
       /**
        * Whenever an iframe contents is shown
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Embed.Settings
@@ -3651,6 +3900,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback immediately before Embed is removed from DOM
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Embed.Settings
@@ -3659,6 +3909,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when module parameters are determined. Allows you to adjust parameters at run time by returning a new parameters object.
+       * 
        * Category: Callback
        * 
        * @param {any} parameters
@@ -3669,6 +3920,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -3678,6 +3930,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"youtube":{"name":"youtube","type":"video","icon":"video play","domain":"youtube.com","url":"//www.youtube.com/embed/{id}"},"vimeo":{"name":"vimeo","type":"video","icon":"video play","domain":"vimeo.com","url":"//player.vimeo.com/video/{id}"}}
@@ -3688,6 +3941,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -3698,6 +3952,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -3707,6 +3962,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -3716,6 +3972,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -3725,6 +3982,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -3738,6 +3996,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies an icon to use with placeholder content
+       * 
        * Category: Embed Settings
        * @type {any}
        */
@@ -3745,6 +4004,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a source to use, if no source is provided it will be determined from the domain of a specified url.
+       * 
        * Category: Embed Settings
        * @type {any}
        */
@@ -3752,6 +4012,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a url to use for embed
+       * 
        * Category: Embed Settings
        * @type {any}
        */
@@ -3759,6 +4020,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies an id value to replace with the {id} value found in templated urls
+       * 
        * Category: Embed Settings
        * @type {any}
        */
@@ -3766,6 +4028,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify an object containing key/value pairs to add to the iframes GET parameters
+       * 
        * Category: Embed Settings
        * @type {any}
        */
@@ -3773,6 +4036,7 @@ declare namespace SemanticUI {
 
       /**
        * Default setting auto will only autoplay content when a placeholder is specified. Setting to true or false will force autoplay.
+       * 
        * Category: Video Settings
        * @default auto
        * @type {any}
@@ -3781,6 +4045,7 @@ declare namespace SemanticUI {
 
       /**
        * Specifies a default chrome color with Vimeo or YouTube.
+       * 
        * Category: Video Settings
        * @default #444444
        * @type {any}
@@ -3789,6 +4054,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to prefer HD content
+       * 
        * Category: Video Settings
        * @default true
        * @type {any}
@@ -3797,6 +4063,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to show networks branded UI like title cards, or after video calls to action.
+       * 
        * Category: Video Settings
        * @type {any}
        */
@@ -3873,6 +4140,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when iframe is generated
+       * 
        * Category: Callback
        * @param {any} url
        * @returns {any}
@@ -3881,18 +4149,21 @@ declare namespace SemanticUI {
 
       /**
        * Whenever an iframe contents is shown
+       * 
        * Category: Callback
        */
       'onDisplay' |
 
       /**
        * Callback immediately before Embed is removed from DOM
+       * 
        * Category: Callback
        */
       'onPlaceholderDisplay' |
 
       /**
        * Callback when module parameters are determined. Allows you to adjust parameters at run time by returning a new parameters object.
+       * 
        * Category: Callback
        * @param {any} parameters
        * @returns {any}
@@ -3901,6 +4172,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -3908,6 +4180,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"youtube":{"name":"youtube","type":"video","icon":"video play","domain":"youtube.com","url":"//www.youtube.com/embed/{id}"},"vimeo":{"name":"vimeo","type":"video","icon":"video play","domain":"vimeo.com","url":"//player.vimeo.com/video/{id}"}}
        * @type {any}
@@ -3916,6 +4189,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -3924,6 +4198,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -3931,6 +4206,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -3938,6 +4214,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -3945,6 +4222,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -4019,6 +4297,7 @@ declare namespace SemanticUI {
 
       /**
        * Adds keyboard shortcuts for enter and escape keys to submit form and blur fields respectively
+       * 
        * Category: Form Settings
        * 
        * @default true
@@ -4029,6 +4308,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger validation. Can be either submit, blur or change.
+       * 
        * Category: Form Settings
        * 
        * @default submit
@@ -4039,6 +4319,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to true will revalidate fields with errors on input change
+       * 
        * Category: Form Settings
        * 
        * @default true
@@ -4049,6 +4330,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay from last typed letter to validate a field when using on: changeor when revalidating a field.
+       * 
        * Category: Form Settings
        * 
        * @default 200
@@ -4059,6 +4341,7 @@ declare namespace SemanticUI {
 
       /**
        * Adds inline error on field validation error
+       * 
        * Category: Form Settings
        * 
        * @type {any}
@@ -4068,6 +4351,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating validation errors. Fade and slide down are available without including ui transitions
+       * 
        * Category: Form Settings
        * 
        * @default scale
@@ -4078,6 +4362,7 @@ declare namespace SemanticUI {
 
       /**
        * Animation speed for inline prompt
+       * 
        * Category: Form Settings
        * 
        * @default 200
@@ -4088,6 +4373,7 @@ declare namespace SemanticUI {
 
       /**
        * 
+       * 
        * Category: Form Prompts
        * 
        * @default {"unspecifiedRule":"Please enter a valid value","unspecifiedField":"This field"}
@@ -4097,6 +4383,7 @@ declare namespace SemanticUI {
       text ? : any
 
       /**
+       * 
        * 
        * Category: Form Prompts
        * 
@@ -4178,6 +4465,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each valid field
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Form.Settings
@@ -4186,6 +4474,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each invalid field
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Form.Settings
@@ -4194,6 +4483,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback if a form is all valid
+       * 
        * Category: Callback
        * 
        * @param {any} event
@@ -4205,6 +4495,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback if any form field is invalid
+       * 
        * Category: Callback
        * 
        * @param {any} formErrors
@@ -4216,6 +4507,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -4225,6 +4517,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -4235,6 +4528,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -4249,6 +4543,7 @@ declare namespace SemanticUI {
 
       /**
        * Adds keyboard shortcuts for enter and escape keys to submit form and blur fields respectively
+       * 
        * Category: Form Settings
        * @default true
        * @type {any}
@@ -4257,6 +4552,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger validation. Can be either submit, blur or change.
+       * 
        * Category: Form Settings
        * @default submit
        * @type {'submit' | 'blur' | 'change'}
@@ -4265,6 +4561,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to true will revalidate fields with errors on input change
+       * 
        * Category: Form Settings
        * @default true
        * @type {any}
@@ -4273,6 +4570,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay from last typed letter to validate a field when using on: changeor when revalidating a field.
+       * 
        * Category: Form Settings
        * @default 200
        * @type {number}
@@ -4281,6 +4579,7 @@ declare namespace SemanticUI {
 
       /**
        * Adds inline error on field validation error
+       * 
        * Category: Form Settings
        * @type {any}
        */
@@ -4288,6 +4587,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating validation errors. Fade and slide down are available without including ui transitions
+       * 
        * Category: Form Settings
        * @default scale
        * @type {SemanticUI.AnimationNames}
@@ -4296,6 +4596,7 @@ declare namespace SemanticUI {
 
       /**
        * Animation speed for inline prompt
+       * 
        * Category: Form Settings
        * @default 200
        * @type {number}
@@ -4304,6 +4605,7 @@ declare namespace SemanticUI {
 
       /**
        * 
+       * 
        * Category: Form Prompts
        * @default {"unspecifiedRule":"Please enter a valid value","unspecifiedField":"This field"}
        * @type {any}
@@ -4311,6 +4613,7 @@ declare namespace SemanticUI {
       'text' |
 
       /**
+       * 
        * 
        * Category: Form Prompts
        * @default {"empty":"{name} must have a value","checked":"{name} must be checked","email":"{name} must be a valid e-mail","url":"{name} must be a valid url","regExp":"{name} is not formatted correctly","integer":"{name} must be an integer","decimal":"{name} must be a decimal number","number":"{name} must be set to a number","is":"{name} must be \"{ruleValue}\"","isExactly":"{name} must be exactly \"{ruleValue}\"","not":"{name} cannot be set to \"{ruleValue}\"","notExactly":"{name} cannot be set to exactly \"{ruleValue}\"","contain":"{name} cannot contain \"{ruleValue}\"","containExactly":"{name} cannot contain exactly \"{ruleValue}\"","doesntContain":"{name} must contain  \"{ruleValue}\"","doesntContainExactly":"{name} must contain exactly \"{ruleValue}\"","minLength":"{name} must be at least {ruleValue} characters","length":"{name} must be at least {ruleValue} characters","exactLength":"{name} must be exactly {ruleValue} characters","maxLength":"{name} cannot be longer than {ruleValue} characters","match":"{name} must match {ruleValue} field","different":"{name} must have a different value than {ruleValue} field","creditCard":"{name} must be a valid credit card number","minCount":"{name} must have at least {ruleValue} choices","exactCount":"{name} must have exactly {ruleValue} choices","maxCount":"{name} must have {ruleValue} or less choices"}
@@ -4390,18 +4693,21 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each valid field
+       * 
        * Category: Callback
        */
       'onValid' |
 
       /**
        * Callback on each invalid field
+       * 
        * Category: Callback
        */
       'onInvalid' |
 
       /**
        * Callback if a form is all valid
+       * 
        * Category: Callback
        * @param {any} event
        * @param {any} fields
@@ -4411,6 +4717,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback if any form field is invalid
+       * 
        * Category: Callback
        * @param {any} formErrors
        * @param {any} fields
@@ -4420,6 +4727,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -4427,6 +4735,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -4435,6 +4744,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -4450,6 +4760,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to false will prevent the modal from being moved to inside the dimmer
+       * 
        * Category: Modal Settings
        * 
        * @default true
@@ -4460,6 +4771,7 @@ declare namespace SemanticUI {
 
       /**
        * When true, the first form input inside the modal will receive focus when shown. Set this to false to prevent this behavior.
+       * 
        * Category: Modal Settings
        * 
        * @default true
@@ -4470,6 +4782,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether any change in modal DOM should automatically refresh cached positions
+       * 
        * Category: Modal Settings
        * 
        * @type {any}
@@ -4479,6 +4792,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to true will not close other visible modals when opening a new one
+       * 
        * Category: Modal Settings
        * 
        * @type {any}
@@ -4488,6 +4802,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically bind keyboard shortcuts
+       * 
        * Category: Modal Settings
        * 
        * @default true
@@ -4498,6 +4813,7 @@ declare namespace SemanticUI {
 
       /**
        * A vertical offset to allow for content outside of modal, for example a close button, to be centered.
+       * 
        * Category: Modal Settings
        * 
        * @type {number}
@@ -4507,6 +4823,7 @@ declare namespace SemanticUI {
 
       /**
        * Selector or jquery object specifying the area to dim
+       * 
        * Category: Modal Settings
        * 
        * @default body
@@ -4517,6 +4834,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting to false will not allow you to close the modal by clicking on the dimmer
+       * 
        * Category: Modal Settings
        * 
        * @default true
@@ -4527,6 +4845,7 @@ declare namespace SemanticUI {
 
       /**
        * You can specify custom settings to extend UI dimmer
+       * 
        * Category: Modal Settings
        * 
        * @default {"closable":false,"useCSS":true}
@@ -4537,6 +4856,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out, full list can be found in ui transitions docs.
+       * 
        * Category: Modal Settings
        * 
        * @default scale
@@ -4547,6 +4867,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation
+       * 
        * Category: Modal Settings
        * 
        * @default 500
@@ -4557,6 +4878,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether additional animations should queue
+       * 
        * Category: Modal Settings
        * 
        * @type {any}
@@ -4628,6 +4950,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a modal starts to show.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Modal.Settings
@@ -4636,6 +4959,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a modal has finished showing animating.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Modal.Settings
@@ -4644,6 +4968,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a modal starts to hide. If the function returns false, the modal will not hide.
+       * 
        * Category: Callback
        * 
        * @param {HTMLElement | JQuery | string} $element
@@ -4654,6 +4979,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a modal has finished hiding animation.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Modal.Settings
@@ -4662,6 +4988,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a positive, approve or ok button is pressed. If the function returns false, the modal will not hide.
+       * 
        * Category: Callback
        * 
        * @param {HTMLElement | JQuery | string} $element
@@ -4672,6 +4999,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a negative, deny or cancel button is pressed. If the function returns false the modal will not hide.
+       * 
        * Category: Callback
        * 
        * @param {HTMLElement | JQuery | string} $element
@@ -4682,6 +5010,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -4691,6 +5020,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -4700,6 +5030,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 50
@@ -4714,6 +5045,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to false will prevent the modal from being moved to inside the dimmer
+       * 
        * Category: Modal Settings
        * @default true
        * @type {any}
@@ -4722,6 +5054,7 @@ declare namespace SemanticUI {
 
       /**
        * When true, the first form input inside the modal will receive focus when shown. Set this to false to prevent this behavior.
+       * 
        * Category: Modal Settings
        * @default true
        * @type {any}
@@ -4730,6 +5063,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether any change in modal DOM should automatically refresh cached positions
+       * 
        * Category: Modal Settings
        * @type {any}
        */
@@ -4737,6 +5071,7 @@ declare namespace SemanticUI {
 
       /**
        * If set to true will not close other visible modals when opening a new one
+       * 
        * Category: Modal Settings
        * @type {any}
        */
@@ -4744,6 +5079,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically bind keyboard shortcuts
+       * 
        * Category: Modal Settings
        * @default true
        * @type {any}
@@ -4752,6 +5088,7 @@ declare namespace SemanticUI {
 
       /**
        * A vertical offset to allow for content outside of modal, for example a close button, to be centered.
+       * 
        * Category: Modal Settings
        * @type {number}
        */
@@ -4759,6 +5096,7 @@ declare namespace SemanticUI {
 
       /**
        * Selector or jquery object specifying the area to dim
+       * 
        * Category: Modal Settings
        * @default body
        * @type {HTMLElement | JQuery | string}
@@ -4767,6 +5105,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting to false will not allow you to close the modal by clicking on the dimmer
+       * 
        * Category: Modal Settings
        * @default true
        * @type {any}
@@ -4775,6 +5114,7 @@ declare namespace SemanticUI {
 
       /**
        * You can specify custom settings to extend UI dimmer
+       * 
        * Category: Modal Settings
        * @default {"closable":false,"useCSS":true}
        * @type {any}
@@ -4783,6 +5123,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out, full list can be found in ui transitions docs.
+       * 
        * Category: Modal Settings
        * @default scale
        * @type {SemanticUI.AnimationNames}
@@ -4791,6 +5132,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation
+       * 
        * Category: Modal Settings
        * @default 500
        * @type {number}
@@ -4799,6 +5141,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether additional animations should queue
+       * 
        * Category: Modal Settings
        * @type {any}
        */
@@ -4868,18 +5211,21 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a modal starts to show.
+       * 
        * Category: Callback
        */
       'onShow' |
 
       /**
        * Is called after a modal has finished showing animating.
+       * 
        * Category: Callback
        */
       'onVisible' |
 
       /**
        * Is called after a modal starts to hide. If the function returns false, the modal will not hide.
+       * 
        * Category: Callback
        * @param {HTMLElement | JQuery | string} $element
        * @returns {any}
@@ -4888,12 +5234,14 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a modal has finished hiding animation.
+       * 
        * Category: Callback
        */
       'onHidden' |
 
       /**
        * Is called after a positive, approve or ok button is pressed. If the function returns false, the modal will not hide.
+       * 
        * Category: Callback
        * @param {HTMLElement | JQuery | string} $element
        * @returns {any}
@@ -4902,6 +5250,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a negative, deny or cancel button is pressed. If the function returns false the modal will not hide.
+       * 
        * Category: Callback
        * @param {HTMLElement | JQuery | string} $element
        * @returns {any}
@@ -4910,6 +5259,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -4917,6 +5267,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -4924,6 +5275,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 50
        * @type {any}
@@ -5070,6 +5422,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5079,6 +5432,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5088,6 +5442,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"show":"slide","hide":"slide"}
@@ -5098,6 +5453,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5107,6 +5463,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5116,6 +5473,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 30
@@ -5126,6 +5484,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5135,6 +5494,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default /
@@ -5145,6 +5505,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default cookie
@@ -5155,6 +5516,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default nag
@@ -5165,6 +5527,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default dismiss
@@ -5175,6 +5538,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 500
@@ -5185,6 +5549,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default easeOutQuad
@@ -5195,6 +5560,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -5270,6 +5636,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5277,6 +5644,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5284,6 +5652,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"show":"slide","hide":"slide"}
        * @type {any}
@@ -5292,6 +5661,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5299,6 +5669,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5306,6 +5677,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 30
        * @type {any}
@@ -5314,6 +5686,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5321,6 +5694,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default /
        * @type {any}
@@ -5329,6 +5703,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default cookie
        * @type {any}
@@ -5337,6 +5712,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default nag
        * @type {any}
@@ -5345,6 +5721,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default dismiss
        * @type {any}
@@ -5353,6 +5730,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 500
        * @type {any}
@@ -5361,6 +5739,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default easeOutQuad
        * @type {any}
@@ -5369,6 +5748,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -5383,6 +5763,7 @@ declare namespace SemanticUI {
 
       /**
        * Can specify a DOM element that should be used as the popup. This is useful for including a pre-formatted popup.
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5392,6 +5773,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether all other popups should be hidden when this popup is opened
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5401,6 +5783,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to move popup to same offset container as target element when popup already exists on the page. Using a popup inside of an element without overflow:visible, like a sidebar, may require you to set this to false
+       * 
        * Category: Popup Settings
        * 
        * @default true
@@ -5411,6 +5794,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should attach mutationObservers to automatically run destroy when the element is removed from the page's DOM.
+       * 
        * Category: Popup Settings
        * 
        * @default true
@@ -5421,6 +5805,7 @@ declare namespace SemanticUI {
 
       /**
        * When the popup surpasses the boundary of this element, it will attempt to find another display position.
+       * 
        * Category: Popup Settings
        * 
        * @default HTMLElement
@@ -5431,6 +5816,7 @@ declare namespace SemanticUI {
 
       /**
        * Selector or jquery object specifying where the popup should be created.
+       * 
        * Category: Popup Settings
        * 
        * @default body
@@ -5441,6 +5827,7 @@ declare namespace SemanticUI {
 
       /**
        * Will automatically hide a popup on scroll event in this context
+       * 
        * Category: Popup Settings
        * 
        * @default HTMLElement
@@ -5451,6 +5838,7 @@ declare namespace SemanticUI {
 
       /**
        * Number of pixels that a popup is allowed to appear outside the boundaries of its context. This allows for permissible rounding errors when an element is against the edge of its context.
+       * 
        * Category: Popup Settings
        * 
        * @default 2
@@ -5461,6 +5849,7 @@ declare namespace SemanticUI {
 
       /**
        * Position that the popup should appear
+       * 
        * Category: Popup Settings
        * 
        * @default top left
@@ -5471,6 +5860,7 @@ declare namespace SemanticUI {
 
       /**
        * If a popup is inline it will be created next to current element, allowing for local css rules to apply. It will not be removed from the DOM after being hidden. Otherwise popups will appended to body and removed after being hidden.
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5480,6 +5870,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup contents should be preserved in the page after being hidden, allowing it to re-appear slightly faster on subsequent loads.
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5489,6 +5880,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to adjacent or opposite to prefer adjacent or opposite position if popup cannot fit on screen
+       * 
        * Category: Popup Settings
        * 
        * @default opposite
@@ -5499,6 +5891,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, right center forces the popup to use this position as a last resort even if it is partially offstage. Setting this to true will use the last attempted position.
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5508,6 +5901,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger popup. Can be either focus, click, hover, or manual. Manual popups must be triggered with $('.element').popup('show');
+       * 
        * Category: Popup Settings
        * 
        * @default hover
@@ -5518,6 +5912,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay in milliseconds before showing or hiding a popup on hover or focus
+       * 
        * Category: Popup Settings
        * 
        * @default {"show":50,"hide":70}
@@ -5528,6 +5923,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Popup Settings
        * 
        * @default scale
@@ -5538,6 +5934,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Popup Settings
        * 
        * @default 200
@@ -5548,6 +5945,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should set fluid popup variation width on load to avoid width: 100%including padding
+       * 
        * Category: Popup Settings
        * 
        * @default true
@@ -5558,6 +5956,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should not close on hover (useful for popup navigation menus)
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5567,6 +5966,7 @@ declare namespace SemanticUI {
 
       /**
        * When using on: 'click' specifies whether clicking the page should close the popup
+       * 
        * Category: Popup Settings
        * 
        * @default true
@@ -5577,6 +5977,7 @@ declare namespace SemanticUI {
 
       /**
        * When using on: 'hover' whether touchstart events should be added to allow the popup to be triggered
+       * 
        * Category: Popup Settings
        * 
        * @default true
@@ -5587,6 +5988,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should hide on scroll or touchmove, auto only hides for popups without on: 'click'.
+       * 
        * Category: Popup Settings
        * 
        * @default auto
@@ -5597,6 +5999,7 @@ declare namespace SemanticUI {
 
       /**
        * If a selector or jQuery object is specified this allows the popup to be positioned relative to that element.
+       * 
        * Category: Popup Settings
        * 
        * @type {any}
@@ -5606,6 +6009,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset for distance of popup from element
+       * 
        * Category: Popup Settings
        * 
        * @type {number}
@@ -5615,6 +6019,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from calculated position
+       * 
        * Category: Popup Settings
        * 
        * @type {number}
@@ -5624,6 +6029,7 @@ declare namespace SemanticUI {
 
       /**
        * Number of iterations before giving up search for popup position when a popup cannot fit on screen
+       * 
        * Category: Popup Settings
        * 
        * @default 15
@@ -5634,6 +6040,7 @@ declare namespace SemanticUI {
 
       /**
        * Popup variation to use, can use multiple variations with a space delimiter
+       * 
        * Category: Content Settings
        * 
        * @type {any}
@@ -5643,6 +6050,7 @@ declare namespace SemanticUI {
 
       /**
        * Content to display
+       * 
        * Category: Content Settings
        * 
        * @type {any}
@@ -5652,6 +6060,7 @@ declare namespace SemanticUI {
 
       /**
        * Title to display alongside content
+       * 
        * Category: Content Settings
        * 
        * @type {any}
@@ -5661,6 +6070,7 @@ declare namespace SemanticUI {
 
       /**
        * HTML content to display instead of preformatted title and content
+       * 
        * Category: Content Settings
        * 
        * @type {HTMLElement | JQuery | string}
@@ -5739,6 +6149,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on popup element creation, with created popup
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5749,6 +6160,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback immediately before Popup is removed from DOM
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5759,6 +6171,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before popup is shown. Returning false from this callback will cancel the popup from showing.
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5769,6 +6182,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup is shown
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5779,6 +6193,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before popup is hidden. Returning false from this callback will cancel the popup from hiding.
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5789,6 +6204,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup is hidden
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5799,6 +6215,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup cannot be plaed on screen
+       * 
        * Category: Callback
        * 
        * @param {any} $module
@@ -5809,6 +6226,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -5823,6 +6241,7 @@ declare namespace SemanticUI {
 
       /**
        * Can specify a DOM element that should be used as the popup. This is useful for including a pre-formatted popup.
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5830,6 +6249,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether all other popups should be hidden when this popup is opened
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5837,6 +6257,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to move popup to same offset container as target element when popup already exists on the page. Using a popup inside of an element without overflow:visible, like a sidebar, may require you to set this to false
+       * 
        * Category: Popup Settings
        * @default true
        * @type {any}
@@ -5845,6 +6266,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should attach mutationObservers to automatically run destroy when the element is removed from the page's DOM.
+       * 
        * Category: Popup Settings
        * @default true
        * @type {any}
@@ -5853,6 +6275,7 @@ declare namespace SemanticUI {
 
       /**
        * When the popup surpasses the boundary of this element, it will attempt to find another display position.
+       * 
        * Category: Popup Settings
        * @default HTMLElement
        * @type {any}
@@ -5861,6 +6284,7 @@ declare namespace SemanticUI {
 
       /**
        * Selector or jquery object specifying where the popup should be created.
+       * 
        * Category: Popup Settings
        * @default body
        * @type {HTMLElement | JQuery | string}
@@ -5869,6 +6293,7 @@ declare namespace SemanticUI {
 
       /**
        * Will automatically hide a popup on scroll event in this context
+       * 
        * Category: Popup Settings
        * @default HTMLElement
        * @type {HTMLElement | JQuery | string}
@@ -5877,6 +6302,7 @@ declare namespace SemanticUI {
 
       /**
        * Number of pixels that a popup is allowed to appear outside the boundaries of its context. This allows for permissible rounding errors when an element is against the edge of its context.
+       * 
        * Category: Popup Settings
        * @default 2
        * @type {any}
@@ -5885,6 +6311,7 @@ declare namespace SemanticUI {
 
       /**
        * Position that the popup should appear
+       * 
        * Category: Popup Settings
        * @default top left
        * @type {any}
@@ -5893,6 +6320,7 @@ declare namespace SemanticUI {
 
       /**
        * If a popup is inline it will be created next to current element, allowing for local css rules to apply. It will not be removed from the DOM after being hidden. Otherwise popups will appended to body and removed after being hidden.
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5900,6 +6328,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup contents should be preserved in the page after being hidden, allowing it to re-appear slightly faster on subsequent loads.
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5907,6 +6336,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to adjacent or opposite to prefer adjacent or opposite position if popup cannot fit on screen
+       * 
        * Category: Popup Settings
        * @default opposite
        * @type {any}
@@ -5915,6 +6345,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, right center forces the popup to use this position as a last resort even if it is partially offstage. Setting this to true will use the last attempted position.
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5922,6 +6353,7 @@ declare namespace SemanticUI {
 
       /**
        * Event used to trigger popup. Can be either focus, click, hover, or manual. Manual popups must be triggered with $('.element').popup('show');
+       * 
        * Category: Popup Settings
        * @default hover
        * @type {any}
@@ -5930,6 +6362,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay in milliseconds before showing or hiding a popup on hover or focus
+       * 
        * Category: Popup Settings
        * @default {"show":50,"hide":70}
        * @type {number}
@@ -5938,6 +6371,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Popup Settings
        * @default scale
        * @type {SemanticUI.AnimationNames}
@@ -5946,6 +6380,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Popup Settings
        * @default 200
        * @type {number}
@@ -5954,6 +6389,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should set fluid popup variation width on load to avoid width: 100%including padding
+       * 
        * Category: Popup Settings
        * @default true
        * @type {any}
@@ -5962,6 +6398,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should not close on hover (useful for popup navigation menus)
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -5969,6 +6406,7 @@ declare namespace SemanticUI {
 
       /**
        * When using on: 'click' specifies whether clicking the page should close the popup
+       * 
        * Category: Popup Settings
        * @default true
        * @type {any}
@@ -5977,6 +6415,7 @@ declare namespace SemanticUI {
 
       /**
        * When using on: 'hover' whether touchstart events should be added to allow the popup to be triggered
+       * 
        * Category: Popup Settings
        * @default true
        * @type {any}
@@ -5985,6 +6424,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether popup should hide on scroll or touchmove, auto only hides for popups without on: 'click'.
+       * 
        * Category: Popup Settings
        * @default auto
        * @type {any}
@@ -5993,6 +6433,7 @@ declare namespace SemanticUI {
 
       /**
        * If a selector or jQuery object is specified this allows the popup to be positioned relative to that element.
+       * 
        * Category: Popup Settings
        * @type {any}
        */
@@ -6000,6 +6441,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset for distance of popup from element
+       * 
        * Category: Popup Settings
        * @type {number}
        */
@@ -6007,6 +6449,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from calculated position
+       * 
        * Category: Popup Settings
        * @type {number}
        */
@@ -6014,6 +6457,7 @@ declare namespace SemanticUI {
 
       /**
        * Number of iterations before giving up search for popup position when a popup cannot fit on screen
+       * 
        * Category: Popup Settings
        * @default 15
        * @type {number}
@@ -6022,6 +6466,7 @@ declare namespace SemanticUI {
 
       /**
        * Popup variation to use, can use multiple variations with a space delimiter
+       * 
        * Category: Content Settings
        * @type {any}
        */
@@ -6029,6 +6474,7 @@ declare namespace SemanticUI {
 
       /**
        * Content to display
+       * 
        * Category: Content Settings
        * @type {any}
        */
@@ -6036,6 +6482,7 @@ declare namespace SemanticUI {
 
       /**
        * Title to display alongside content
+       * 
        * Category: Content Settings
        * @type {any}
        */
@@ -6043,6 +6490,7 @@ declare namespace SemanticUI {
 
       /**
        * HTML content to display instead of preformatted title and content
+       * 
        * Category: Content Settings
        * @type {HTMLElement | JQuery | string}
        */
@@ -6119,6 +6567,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on popup element creation, with created popup
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6127,6 +6576,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback immediately before Popup is removed from DOM
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6135,6 +6585,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before popup is shown. Returning false from this callback will cancel the popup from showing.
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6143,6 +6594,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup is shown
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6151,6 +6603,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback before popup is hidden. Returning false from this callback will cancel the popup from hiding.
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6159,6 +6612,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup is hidden
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6167,6 +6621,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after popup cannot be plaed on screen
+       * 
        * Category: Callback
        * @param {any} $module
        * @returns {any}
@@ -6175,6 +6630,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -6259,6 +6715,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether success state should automatically trigger when progress completes
+       * 
        * Category: Progress Settings
        * 
        * @default true
@@ -6269,6 +6726,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether progress should automatically show activity when incremented
+       * 
        * Category: Progress Settings
        * 
        * @default true
@@ -6279,6 +6737,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true, values that calculate to above 100% or below 0% will be adjusted. When set to false, inappropriate values will produce an error.
+       * 
        * Category: Progress Settings
        * 
        * @default true
@@ -6289,6 +6748,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either to display progress as percent or ratio. Matches up to corresponding text template with the same name.
+       * 
        * Category: Progress Settings
        * 
        * @default percent
@@ -6299,6 +6759,7 @@ declare namespace SemanticUI {
 
       /**
        * When incrementing without value, sets range for random increment value
+       * 
        * Category: Progress Settings
        * 
        * @default {"min":2,"max":5}
@@ -6309,6 +6770,7 @@ declare namespace SemanticUI {
 
       /**
        * Decimal point precision for calculated progress
+       * 
        * Category: Progress Settings
        * 
        * @type {any}
@@ -6318,6 +6780,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting a total value will make each call to increment get closer to this total (i.e. 1/20, 2/20 etc)
+       * 
        * Category: Progress Settings
        * 
        * @type {any}
@@ -6327,6 +6790,7 @@ declare namespace SemanticUI {
 
       /**
        * Sets current value, when total is specified, this is used to calculate a ratio of the total, with percent this should be the overall percent
+       * 
        * Category: Progress Settings
        * 
        * @type {any}
@@ -6412,6 +6876,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on percentage change
+       * 
        * Category: Callback
        * 
        * @param {any} percent
@@ -6424,6 +6889,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on success state
+       * 
        * Category: Callback
        * 
        * @param {any} total
@@ -6434,6 +6900,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on active state
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -6445,6 +6912,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on error state
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -6456,6 +6924,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on warning state
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -6467,6 +6936,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 300
@@ -6477,6 +6947,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default auto
@@ -6487,6 +6958,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 33.333333333333336
@@ -6497,6 +6969,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -6506,6 +6979,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 100
@@ -6516,6 +6990,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -6525,6 +7000,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"active":false,"error":false,"success":false,"warning":false,"percent":"{percent}%","ratio":"{value} of {total}"}
@@ -6539,6 +7015,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether success state should automatically trigger when progress completes
+       * 
        * Category: Progress Settings
        * @default true
        * @type {any}
@@ -6547,6 +7024,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether progress should automatically show activity when incremented
+       * 
        * Category: Progress Settings
        * @default true
        * @type {any}
@@ -6555,6 +7033,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true, values that calculate to above 100% or below 0% will be adjusted. When set to false, inappropriate values will produce an error.
+       * 
        * Category: Progress Settings
        * @default true
        * @type {any}
@@ -6563,6 +7042,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either to display progress as percent or ratio. Matches up to corresponding text template with the same name.
+       * 
        * Category: Progress Settings
        * @default percent
        * @type {'percent' | 'ratio' | string}
@@ -6571,6 +7051,7 @@ declare namespace SemanticUI {
 
       /**
        * When incrementing without value, sets range for random increment value
+       * 
        * Category: Progress Settings
        * @default {"min":2,"max":5}
        * @type {any}
@@ -6579,6 +7060,7 @@ declare namespace SemanticUI {
 
       /**
        * Decimal point precision for calculated progress
+       * 
        * Category: Progress Settings
        * @type {any}
        */
@@ -6586,6 +7068,7 @@ declare namespace SemanticUI {
 
       /**
        * Setting a total value will make each call to increment get closer to this total (i.e. 1/20, 2/20 etc)
+       * 
        * Category: Progress Settings
        * @type {any}
        */
@@ -6593,6 +7076,7 @@ declare namespace SemanticUI {
 
       /**
        * Sets current value, when total is specified, this is used to calculate a ratio of the total, with percent this should be the overall percent
+       * 
        * Category: Progress Settings
        * @type {any}
        */
@@ -6676,6 +7160,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on percentage change
+       * 
        * Category: Callback
        * @param {any} percent
        * @param {any} value
@@ -6686,6 +7171,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on success state
+       * 
        * Category: Callback
        * @param {any} total
        * @returns {any}
@@ -6694,6 +7180,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on active state
+       * 
        * Category: Callback
        * @param {any} value
        * @param {any} total
@@ -6703,6 +7190,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on error state
+       * 
        * Category: Callback
        * @param {any} value
        * @param {any} total
@@ -6712,6 +7200,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on warning state
+       * 
        * Category: Callback
        * @param {any} value
        * @param {any} total
@@ -6721,6 +7210,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 300
        * @type {any}
@@ -6729,6 +7219,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default auto
        * @type {any}
@@ -6737,6 +7228,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 33.333333333333336
        * @type {any}
@@ -6745,6 +7237,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -6752,6 +7245,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 100
        * @type {any}
@@ -6760,6 +7254,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -6767,6 +7262,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"active":false,"error":false,"success":false,"warning":false,"percent":"{percent}%","ratio":"{value} of {total}"}
        * @type {any}
@@ -6940,6 +7436,7 @@ declare namespace SemanticUI {
 
       /**
        * A number representing the default rating to apply
+       * 
        * Category: Rating Settings
        * 
        * @type {any}
@@ -6949,6 +7446,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether callbacks like onRate should fire immediately after initializing with the current value.
+       * 
        * Category: Rating Settings
        * 
        * @type {any}
@@ -6958,6 +7456,7 @@ declare namespace SemanticUI {
 
       /**
        * By default a rating will be only clearable if there is 1 icon. Setting to true/false will allow or disallow a user to clear their rating
+       * 
        * Category: Rating Settings
        * 
        * @default auto
@@ -6968,6 +7467,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to enable user's ability to rate
+       * 
        * Category: Rating Settings
        * 
        * @default true
@@ -7041,6 +7541,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after user selects a new rating
+       * 
        * Category: Callback
        * 
        * @param {any} value
@@ -7051,6 +7552,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -7060,6 +7562,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 4
@@ -7070,6 +7573,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -7084,6 +7588,7 @@ declare namespace SemanticUI {
 
       /**
        * A number representing the default rating to apply
+       * 
        * Category: Rating Settings
        * @type {any}
        */
@@ -7091,6 +7596,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether callbacks like onRate should fire immediately after initializing with the current value.
+       * 
        * Category: Rating Settings
        * @type {any}
        */
@@ -7098,6 +7604,7 @@ declare namespace SemanticUI {
 
       /**
        * By default a rating will be only clearable if there is 1 icon. Setting to true/false will allow or disallow a user to clear their rating
+       * 
        * Category: Rating Settings
        * @default auto
        * @type {any}
@@ -7106,6 +7613,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to enable user's ability to rate
+       * 
        * Category: Rating Settings
        * @default true
        * @type {any}
@@ -7177,6 +7685,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after user selects a new rating
+       * 
        * Category: Callback
        * @param {any} value
        * @returns {any}
@@ -7185,6 +7694,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -7192,6 +7702,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 4
        * @type {any}
@@ -7200,6 +7711,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -7243,6 +7755,7 @@ declare namespace SemanticUI {
 
       /**
        * Settings for API call.
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -7252,6 +7765,7 @@ declare namespace SemanticUI {
 
       /**
        * Minimum characters to query for results
+       * 
        * Category: Behavior
        * 
        * @default 1
@@ -7262,6 +7776,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Behavior
        * 
        * @default scale
@@ -7272,6 +7787,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Behavior
        * 
        * @default 200
@@ -7282,6 +7798,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum results to display when using local and simple search, maximum category count for category search
+       * 
        * Category: Behavior
        * 
        * @default 7
@@ -7292,6 +7809,7 @@ declare namespace SemanticUI {
 
       /**
        * Caches results locally to avoid requerying server
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -7302,6 +7820,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a Javascript object which will be searched locally
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -7311,6 +7830,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether the search should automatically select the first search result after searching
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -7320,6 +7840,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether a "no results" message should be shown if no results are found. (These messages can be modified using the template object specified below)
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -7330,6 +7851,7 @@ declare namespace SemanticUI {
 
       /**
        * Return local results that match anywhere inside your content
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -7340,6 +7862,7 @@ declare namespace SemanticUI {
 
       /**
        * List mapping display content to JSON property, either with API or source.
+       * 
        * Category: Behavior
        * 
        * @default {"categories":"results","categoryName":"name","categoryResults":"results","description":"description","image":"image","price":"price","results":"results","title":"title","url":"url","action":"action","actionText":"text","actionURL":"url"}
@@ -7350,6 +7873,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify object properties inside local source object which will be searched
+       * 
        * Category: Behavior
        * 
        * @default ["title","description"]
@@ -7360,6 +7884,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay before hiding results after search blur
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -7369,6 +7894,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay before querying results on inputchange
+       * 
        * Category: Behavior
        * 
        * @default 200
@@ -7379,6 +7905,7 @@ declare namespace SemanticUI {
 
       /**
        * Easing equation when using fallback Javascript animation
+       * 
        * Category: Behavior
        * 
        * @default easeOutExpo
@@ -7465,6 +7992,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element selection by user. The first parameter includes the filtered response results for that element. The function should return false to prevent default action (closing search results and selecting value).
+       * 
        * Category: Callback
        * 
        * @param {any} result
@@ -7476,6 +8004,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after processing element template to add HTML to results. Function should return false to prevent default actions.
+       * 
        * Category: Callback
        * 
        * @param {any} html
@@ -7486,6 +8015,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on search query
+       * 
        * Category: Callback
        * 
        * @param {any} query
@@ -7496,6 +8026,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on server response
+       * 
        * Category: Callback
        * 
        * @param {any} response
@@ -7506,6 +8037,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when results are opened
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Search.Settings
@@ -7514,6 +8046,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when results are closed
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Search.Settings
@@ -7522,6 +8055,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default standard
@@ -7532,6 +8066,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -7541,6 +8076,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -7551,6 +8087,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -7565,6 +8102,7 @@ declare namespace SemanticUI {
 
       /**
        * Settings for API call.
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -7572,6 +8110,7 @@ declare namespace SemanticUI {
 
       /**
        * Minimum characters to query for results
+       * 
        * Category: Behavior
        * @default 1
        * @type {any}
@@ -7580,6 +8119,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating menu in and out. Fade and slide down are available without including ui transitions
+       * 
        * Category: Behavior
        * @default scale
        * @type {SemanticUI.AnimationNames}
@@ -7588,6 +8128,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of animation events
+       * 
        * Category: Behavior
        * @default 200
        * @type {number}
@@ -7596,6 +8137,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum results to display when using local and simple search, maximum category count for category search
+       * 
        * Category: Behavior
        * @default 7
        * @type {any}
@@ -7604,6 +8146,7 @@ declare namespace SemanticUI {
 
       /**
        * Caches results locally to avoid requerying server
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -7612,6 +8155,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a Javascript object which will be searched locally
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -7619,6 +8163,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether the search should automatically select the first search result after searching
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -7626,6 +8171,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether a "no results" message should be shown if no results are found. (These messages can be modified using the template object specified below)
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -7634,6 +8180,7 @@ declare namespace SemanticUI {
 
       /**
        * Return local results that match anywhere inside your content
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -7642,6 +8189,7 @@ declare namespace SemanticUI {
 
       /**
        * List mapping display content to JSON property, either with API or source.
+       * 
        * Category: Behavior
        * @default {"categories":"results","categoryName":"name","categoryResults":"results","description":"description","image":"image","price":"price","results":"results","title":"title","url":"url","action":"action","actionText":"text","actionURL":"url"}
        * @type {any}
@@ -7650,6 +8198,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify object properties inside local source object which will be searched
+       * 
        * Category: Behavior
        * @default ["title","description"]
        * @type {any}
@@ -7658,6 +8207,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay before hiding results after search blur
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -7665,6 +8215,7 @@ declare namespace SemanticUI {
 
       /**
        * Delay before querying results on inputchange
+       * 
        * Category: Behavior
        * @default 200
        * @type {any}
@@ -7673,6 +8224,7 @@ declare namespace SemanticUI {
 
       /**
        * Easing equation when using fallback Javascript animation
+       * 
        * Category: Behavior
        * @default easeOutExpo
        * @type {any}
@@ -7757,6 +8309,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on element selection by user. The first parameter includes the filtered response results for that element. The function should return false to prevent default action (closing search results and selecting value).
+       * 
        * Category: Callback
        * @param {any} result
        * @param {any} response
@@ -7766,6 +8319,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback after processing element template to add HTML to results. Function should return false to prevent default actions.
+       * 
        * Category: Callback
        * @param {any} html
        * @returns {any}
@@ -7774,6 +8328,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on search query
+       * 
        * Category: Callback
        * @param {any} query
        * @returns {any}
@@ -7782,6 +8337,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on server response
+       * 
        * Category: Callback
        * @param {any} response
        * @returns {any}
@@ -7790,18 +8346,21 @@ declare namespace SemanticUI {
 
       /**
        * Callback when results are opened
+       * 
        * Category: Callback
        */
       'onResultsOpen' |
 
       /**
        * Callback when results are closed
+       * 
        * Category: Callback
        */
       'onResultsClose' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default standard
        * @type {any}
@@ -7810,6 +8369,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -7817,6 +8377,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -7825,6 +8386,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -7966,6 +8528,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of side change animation
+       * 
        * Category: Shape Settings
        * 
        * @type {number}
@@ -7975,6 +8538,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to next will use the width of the next side during the shape's animation. When set to initial it will use the width of the shape at initialization. When set to a specifix pixel height, will force the width to that height.
+       * 
        * Category: Shape Settings
        * 
        * @default initial
@@ -7985,6 +8549,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to next will use the height of the next side during the shape's animation. When set to initial it will use the height of the shape at initialization. When set to a specifix pixel height, will force the height to that height.
+       * 
        * Category: Shape Settings
        * 
        * @default initial
@@ -8057,6 +8622,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called before side change
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Shape.Settings
@@ -8065,6 +8631,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after visible side change
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Shape.Settings
@@ -8073,6 +8640,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -8082,6 +8650,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -8095,6 +8664,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of side change animation
+       * 
        * Category: Shape Settings
        * @type {number}
        */
@@ -8102,6 +8672,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to next will use the width of the next side during the shape's animation. When set to initial it will use the width of the shape at initialization. When set to a specifix pixel height, will force the width to that height.
+       * 
        * Category: Shape Settings
        * @default initial
        * @type {any}
@@ -8110,6 +8681,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to next will use the height of the next side during the shape's animation. When set to initial it will use the height of the shape at initialization. When set to a specifix pixel height, will force the height to that height.
+       * 
        * Category: Shape Settings
        * @default initial
        * @type {any}
@@ -8180,18 +8752,21 @@ declare namespace SemanticUI {
 
       /**
        * Is called before side change
+       * 
        * Category: Callback
        */
       'beforeChange' |
 
       /**
        * Is called after visible side change
+       * 
        * Category: Callback
        */
       'onChange' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -8199,6 +8774,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -8312,6 +8888,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sidebar will appear inside
+       * 
        * Category: Behavior
        * 
        * @default body
@@ -8322,6 +8899,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether multiple sidebars can be open at once
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -8331,6 +8909,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether sidebar can be closed by clicking on page
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -8341,6 +8920,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to dim page contents when sidebar is visible
+       * 
        * Category: Behavior
        * 
        * @default true
@@ -8351,6 +8931,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to lock page scroll when sidebar is visible
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -8360,6 +8941,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to return to original scroll position when sidebar is hidden, automatically occurs with transition: scale
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -8369,6 +8951,7 @@ declare namespace SemanticUI {
 
       /**
        * When sidebar is initialized without the proper HTML, using this option will defer creation of DOM to use requestAnimationFrame.
+       * 
        * Category: Behavior
        * 
        * @type {any}
@@ -8378,6 +8961,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating sidebar. Defaults to 'auto' which selects transition from defaultTransition based on direction.
+       * 
        * Category: Animation
        * 
        * @default auto
@@ -8388,6 +8972,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from defaultTransitionbased on direction.
+       * 
        * Category: Animation
        * 
        * @default auto
@@ -8398,6 +8983,7 @@ declare namespace SemanticUI {
 
       /**
        * Default transitions for each direction and screen size, used with transition: auto
+       * 
        * Category: Animation
        * 
        * @default {"computer":{"left":"uncover","right":"uncover","top":"overlay","bottom":"overlay"},"mobile":{"left":"uncover","right":"uncover","top":"overlay","bottom":"overlay"}}
@@ -8408,6 +8994,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of sidebar animation when using legacy Javascript animation
+       * 
        * Category: Animation
        * 
        * @default 500
@@ -8487,6 +9074,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a sidebar begins animating in.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sidebar.Settings
@@ -8495,6 +9083,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a sidebar has finished animating in.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sidebar.Settings
@@ -8503,6 +9092,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a sidebar begins to hide or show
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sidebar.Settings
@@ -8511,6 +9101,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called before a sidebar begins to animate out.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sidebar.Settings
@@ -8519,6 +9110,7 @@ declare namespace SemanticUI {
 
       /**
        * Is called after a sidebar has finished animating out.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sidebar.Settings
@@ -8531,6 +9123,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sidebar will appear inside
+       * 
        * Category: Behavior
        * @default body
        * @type {HTMLElement | JQuery | string}
@@ -8539,6 +9132,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether multiple sidebars can be open at once
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -8546,6 +9140,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether sidebar can be closed by clicking on page
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -8554,6 +9149,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to dim page contents when sidebar is visible
+       * 
        * Category: Behavior
        * @default true
        * @type {any}
@@ -8562,6 +9158,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to lock page scroll when sidebar is visible
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -8569,6 +9166,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to return to original scroll position when sidebar is hidden, automatically occurs with transition: scale
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -8576,6 +9174,7 @@ declare namespace SemanticUI {
 
       /**
        * When sidebar is initialized without the proper HTML, using this option will defer creation of DOM to use requestAnimationFrame.
+       * 
        * Category: Behavior
        * @type {any}
        */
@@ -8583,6 +9182,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating sidebar. Defaults to 'auto' which selects transition from defaultTransition based on direction.
+       * 
        * Category: Animation
        * @default auto
        * @type {SemanticUI.AnimationNames}
@@ -8591,6 +9191,7 @@ declare namespace SemanticUI {
 
       /**
        * Named transition to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from defaultTransitionbased on direction.
+       * 
        * Category: Animation
        * @default auto
        * @type {any}
@@ -8599,6 +9200,7 @@ declare namespace SemanticUI {
 
       /**
        * Default transitions for each direction and screen size, used with transition: auto
+       * 
        * Category: Animation
        * @default {"computer":{"left":"uncover","right":"uncover","top":"overlay","bottom":"overlay"},"mobile":{"left":"uncover","right":"uncover","top":"overlay","bottom":"overlay"}}
        * @type {any}
@@ -8607,6 +9209,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of sidebar animation when using legacy Javascript animation
+       * 
        * Category: Animation
        * @default 500
        * @type {number}
@@ -8684,30 +9287,35 @@ declare namespace SemanticUI {
 
       /**
        * Is called when a sidebar begins animating in.
+       * 
        * Category: Callback
        */
       'onVisible' |
 
       /**
        * Is called when a sidebar has finished animating in.
+       * 
        * Category: Callback
        */
       'onShow' |
 
       /**
        * Is called when a sidebar begins to hide or show
+       * 
        * Category: Callback
        */
       'onChange' |
 
       /**
        * Is called before a sidebar begins to animate out.
+       * 
        * Category: Callback
        */
       'onHide' |
 
       /**
        * Is called after a sidebar has finished animating out.
+       * 
        * Category: Callback
        */
       'onHidden'
@@ -8827,6 +9435,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default ["accordion","api","checkbox","dimmer","dropdown","embed","form","modal","nag","popup","rating","shape","sidebar","state","sticky","tab","transition","visit","visibility"]
@@ -8837,6 +9446,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default site
@@ -8847,6 +9457,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"cache":{},"config":{},"sections":{},"section":{},"utilities":{}}
@@ -8903,6 +9514,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default ["accordion","api","checkbox","dimmer","dropdown","embed","form","modal","nag","popup","rating","shape","sidebar","state","sticky","tab","transition","visit","visibility"]
        * @type {any}
@@ -8911,6 +9523,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default site
        * @type {any}
@@ -8919,6 +9532,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"cache":{},"config":{},"sections":{},"section":{},"utilities":{}}
        * @type {any}
@@ -8997,6 +9611,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9006,6 +9621,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9015,6 +9631,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9024,6 +9641,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9033,6 +9651,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9042,6 +9661,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -9052,6 +9672,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9061,6 +9682,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 1000
@@ -9071,6 +9693,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"text":".loading, .disabled","active":".disabled"}
@@ -9081,6 +9704,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9090,6 +9714,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"input":{"disabled":true,"loading":true,"active":true},"button":{"disabled":true,"loading":true,"active":true},"progress":{"active":true,"success":true,"warning":true,"error":true}}
@@ -9100,6 +9725,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"active":true,"disabled":true,"error":true,"loading":true,"success":true,"warning":true}
@@ -9110,6 +9736,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"disabled":false,"flash":false,"hover":false,"active":false,"inactive":false,"activate":false,"deactivate":false}
@@ -9187,6 +9814,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9194,6 +9822,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9201,6 +9830,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9208,6 +9838,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9215,6 +9846,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9222,6 +9854,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -9230,6 +9863,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9237,6 +9871,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 1000
        * @type {any}
@@ -9245,6 +9880,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"text":".loading, .disabled","active":".disabled"}
        * @type {any}
@@ -9253,6 +9889,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9260,6 +9897,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"input":{"disabled":true,"loading":true,"active":true},"button":{"disabled":true,"loading":true,"active":true},"progress":{"active":true,"success":true,"warning":true,"error":true}}
        * @type {any}
@@ -9268,6 +9906,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"active":true,"disabled":true,"error":true,"loading":true,"success":true,"warning":true}
        * @type {any}
@@ -9276,6 +9915,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"disabled":false,"flash":false,"hover":false,"active":false,"inactive":false,"activate":false,"deactivate":false}
        * @type {any}
@@ -9291,6 +9931,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether element should be "pushed" by the viewport, attaching to the bottom of the screen when scrolling up
+       * 
        * Category: Sticky Settings
        * 
        * @type {any}
@@ -9300,6 +9941,7 @@ declare namespace SemanticUI {
 
       /**
        * Sticky container height will only be set if the difference between heights of container and context is larger than this jitter value.
+       * 
        * Category: Sticky Settings
        * 
        * @default 5
@@ -9310,6 +9952,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether any change in context DOM should automatically refresh cached sticky positions
+       * 
        * Category: Sticky Settings
        * 
        * @type {any}
@@ -9319,6 +9962,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sticky element should stick to
+       * 
        * Category: Sticky Settings
        * 
        * @type {HTMLElement | JQuery | string}
@@ -9328,6 +9972,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sticky should attach onscroll events.
+       * 
        * Category: Sticky Settings
        * 
        * @default HTMLElement
@@ -9338,6 +9983,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from the top of the screen when fixing element to viewport
+       * 
        * Category: Sticky Settings
        * 
        * @type {number}
@@ -9347,6 +9993,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from the bottom of the screen when fixing element to viewport
+       * 
        * Category: Sticky Settings
        * 
        * @type {any}
@@ -9411,6 +10058,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is repositioned from layout change
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9419,6 +10067,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when requestAnimationFrame fires from scroll handler.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9427,6 +10076,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is fixed to page
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9435,6 +10085,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is unfixed from page
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9443,6 +10094,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is bound to top of parent container
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9451,6 +10103,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is bound to bottom of parent container
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Sticky.Settings
@@ -9459,6 +10112,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -9472,6 +10126,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether element should be "pushed" by the viewport, attaching to the bottom of the screen when scrolling up
+       * 
        * Category: Sticky Settings
        * @type {any}
        */
@@ -9479,6 +10134,7 @@ declare namespace SemanticUI {
 
       /**
        * Sticky container height will only be set if the difference between heights of container and context is larger than this jitter value.
+       * 
        * Category: Sticky Settings
        * @default 5
        * @type {any}
@@ -9487,6 +10143,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether any change in context DOM should automatically refresh cached sticky positions
+       * 
        * Category: Sticky Settings
        * @type {any}
        */
@@ -9494,6 +10151,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sticky element should stick to
+       * 
        * Category: Sticky Settings
        * @type {HTMLElement | JQuery | string}
        */
@@ -9501,6 +10159,7 @@ declare namespace SemanticUI {
 
       /**
        * Context which sticky should attach onscroll events.
+       * 
        * Category: Sticky Settings
        * @default HTMLElement
        * @type {HTMLElement | JQuery | string}
@@ -9509,6 +10168,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from the top of the screen when fixing element to viewport
+       * 
        * Category: Sticky Settings
        * @type {number}
        */
@@ -9516,6 +10176,7 @@ declare namespace SemanticUI {
 
       /**
        * Offset in pixels from the bottom of the screen when fixing element to viewport
+       * 
        * Category: Sticky Settings
        * @type {any}
        */
@@ -9578,42 +10239,49 @@ declare namespace SemanticUI {
 
       /**
        * Callback when element is repositioned from layout change
+       * 
        * Category: Callback
        */
       'onReposition' |
 
       /**
        * Callback when requestAnimationFrame fires from scroll handler.
+       * 
        * Category: Callback
        */
       'onScroll' |
 
       /**
        * Callback when element is fixed to page
+       * 
        * Category: Callback
        */
       'onStick' |
 
       /**
        * Callback when element is unfixed from page
+       * 
        * Category: Callback
        */
       'onUnstick' |
 
       /**
        * Callback when element is bound to top of parent container
+       * 
        * Category: Callback
        */
       'onTop' |
 
       /**
        * Callback when element is bound to bottom of parent container
+       * 
        * Category: Callback
        */
       'onBottom' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -9628,6 +10296,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether tab should load remote content as same url as history
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9637,6 +10306,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to record history events for tab changes
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9646,6 +10316,7 @@ declare namespace SemanticUI {
 
       /**
        * Do not load content remotely on first tab load. Useful when open tab is rendered on server.
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9655,6 +10326,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether inline scripts in tab HTML should be parsed on tab load. Defaults to once, parsing only on first load. Can also be set to true or false to always parse or never parse inline scripts.
+       * 
        * Category: Tab Settings
        * 
        * @default once
@@ -9665,6 +10337,7 @@ declare namespace SemanticUI {
 
       /**
        * Tab should reload content every time it is opened
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9674,6 +10347,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either siblings or all. Siblings will only de-activate tab activators that are siblings of the clicked element when a tab is selected. All will deactivate all other tab activators initialized at the same time.
+       * 
        * Category: Tab Settings
        * 
        * @default siblings
@@ -9684,6 +10358,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either response or html. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.
+       * 
        * Category: Tab Settings
        * 
        * @default response
@@ -9694,6 +10369,7 @@ declare namespace SemanticUI {
 
       /**
        * Tab should cache content after loading locally to avoid server trip on second load
+       * 
        * Category: Tab Settings
        * 
        * @default true
@@ -9704,6 +10380,7 @@ declare namespace SemanticUI {
 
       /**
        * Settings object for $.api call
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9713,6 +10390,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to hash or state. Hash will use an in-page link to create history events. State will use DOM History and load pages from server on refresh.
+       * 
        * Category: Tab Settings
        * 
        * @default hash
@@ -9723,6 +10401,7 @@ declare namespace SemanticUI {
 
       /**
        * When using historyType state you must specify the base URL for all internal links.
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9732,6 +10411,7 @@ declare namespace SemanticUI {
 
       /**
        * Tabs are limited to those found inside this context
+       * 
        * Category: Tab Settings
        * 
        * @type {HTMLElement | JQuery | string}
@@ -9741,6 +10421,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled limits tabs to children of passed context
+       * 
        * Category: Tab Settings
        * 
        * @type {any}
@@ -9750,6 +10431,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum amount of nested tabs allowed (avoids recursion)
+       * 
        * Category: Tab Settings
        * 
        * @default 25
@@ -9829,6 +10511,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback only the first time a tab is loaded
+       * 
        * Category: Callback
        * 
        * @param {string} tabPath
@@ -9841,6 +10524,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback every time a tab is loaded
+       * 
        * Category: Callback
        * 
        * @param {string} tabPath
@@ -9853,6 +10537,7 @@ declare namespace SemanticUI {
 
       /**
        * Called when a tab begins loading remote content
+       * 
        * Category: Callback
        * 
        * @param {string} tabPath
@@ -9863,6 +10548,7 @@ declare namespace SemanticUI {
 
       /**
        * Called after a tab becomes visible
+       * 
        * Category: Callback
        * 
        * @param {string} tabPath
@@ -9873,6 +10559,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -9887,6 +10574,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether tab should load remote content as same url as history
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9894,6 +10582,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to record history events for tab changes
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9901,6 +10590,7 @@ declare namespace SemanticUI {
 
       /**
        * Do not load content remotely on first tab load. Useful when open tab is rendered on server.
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9908,6 +10598,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether inline scripts in tab HTML should be parsed on tab load. Defaults to once, parsing only on first load. Can also be set to true or false to always parse or never parse inline scripts.
+       * 
        * Category: Tab Settings
        * @default once
        * @type {any}
@@ -9916,6 +10607,7 @@ declare namespace SemanticUI {
 
       /**
        * Tab should reload content every time it is opened
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9923,6 +10615,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either siblings or all. Siblings will only de-activate tab activators that are siblings of the clicked element when a tab is selected. All will deactivate all other tab activators initialized at the same time.
+       * 
        * Category: Tab Settings
        * @default siblings
        * @type {any}
@@ -9931,6 +10624,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to either response or html. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.
+       * 
        * Category: Tab Settings
        * @default response
        * @type {any}
@@ -9939,6 +10633,7 @@ declare namespace SemanticUI {
 
       /**
        * Tab should cache content after loading locally to avoid server trip on second load
+       * 
        * Category: Tab Settings
        * @default true
        * @type {any}
@@ -9947,6 +10642,7 @@ declare namespace SemanticUI {
 
       /**
        * Settings object for $.api call
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9954,6 +10650,7 @@ declare namespace SemanticUI {
 
       /**
        * Can be set to hash or state. Hash will use an in-page link to create history events. State will use DOM History and load pages from server on refresh.
+       * 
        * Category: Tab Settings
        * @default hash
        * @type {any}
@@ -9962,6 +10659,7 @@ declare namespace SemanticUI {
 
       /**
        * When using historyType state you must specify the base URL for all internal links.
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9969,6 +10667,7 @@ declare namespace SemanticUI {
 
       /**
        * Tabs are limited to those found inside this context
+       * 
        * Category: Tab Settings
        * @type {HTMLElement | JQuery | string}
        */
@@ -9976,6 +10675,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled limits tabs to children of passed context
+       * 
        * Category: Tab Settings
        * @type {any}
        */
@@ -9983,6 +10683,7 @@ declare namespace SemanticUI {
 
       /**
        * Maximum amount of nested tabs allowed (avoids recursion)
+       * 
        * Category: Tab Settings
        * @default 25
        * @type {any}
@@ -10060,6 +10761,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback only the first time a tab is loaded
+       * 
        * Category: Callback
        * @param {string} tabPath
        * @param {any[]} parameterArray
@@ -10070,6 +10772,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback every time a tab is loaded
+       * 
        * Category: Callback
        * @param {string} tabPath
        * @param {any[]} parameterArray
@@ -10080,6 +10783,7 @@ declare namespace SemanticUI {
 
       /**
        * Called when a tab begins loading remote content
+       * 
        * Category: Callback
        * @param {string} tabPath
        * @returns {any}
@@ -10088,6 +10792,7 @@ declare namespace SemanticUI {
 
       /**
        * Called after a tab becomes visible
+       * 
        * Category: Callback
        * @param {string} tabPath
        * @returns {any}
@@ -10096,6 +10801,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -10161,6 +10867,7 @@ declare namespace SemanticUI {
 
       /**
        * Named animation event to used. Must be defined in CSS.
+       * 
        * Category: Transition Settings
        * 
        * @default fade
@@ -10171,6 +10878,7 @@ declare namespace SemanticUI {
 
       /**
        * Interval in MS between each elements transition
+       * 
        * Category: Transition Settings
        * 
        * @type {any}
@@ -10180,6 +10888,7 @@ declare namespace SemanticUI {
 
       /**
        * When an interval is specified, sets order of animations. auto reverses only animations that are hiding.
+       * 
        * Category: Transition Settings
        * 
        * @default auto
@@ -10190,6 +10899,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated.
+       * 
        * Category: Transition Settings
        * 
        * @type {any}
@@ -10199,6 +10909,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of the CSS transition animation
+       * 
        * Category: Transition Settings
        * 
        * @type {number}
@@ -10208,6 +10919,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled a timeout will be added to ensure animationend callback occurs even if element is hidden
+       * 
        * Category: Transition Settings
        * 
        * @default true
@@ -10218,6 +10930,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled will allow same animation to be queued while it is already occurring
+       * 
        * Category: Transition Settings
        * 
        * @type {any}
@@ -10227,6 +10940,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically queue animation if another is occurring
+       * 
        * Category: Transition Settings
        * 
        * @default true
@@ -10299,6 +11013,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each transition that changes visibility to shown
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Transition.Settings
@@ -10307,6 +11022,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each transition that changes visibility to hidden
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Transition.Settings
@@ -10315,6 +11031,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on animation start, useful for queued animations
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Transition.Settings
@@ -10323,6 +11040,7 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each transition complete
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Transition.Settings
@@ -10331,6 +11049,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 100
@@ -10345,6 +11064,7 @@ declare namespace SemanticUI {
 
       /**
        * Named animation event to used. Must be defined in CSS.
+       * 
        * Category: Transition Settings
        * @default fade
        * @type {SemanticUI.AnimationNames}
@@ -10353,6 +11073,7 @@ declare namespace SemanticUI {
 
       /**
        * Interval in MS between each elements transition
+       * 
        * Category: Transition Settings
        * @type {any}
        */
@@ -10360,6 +11081,7 @@ declare namespace SemanticUI {
 
       /**
        * When an interval is specified, sets order of animations. auto reverses only animations that are hiding.
+       * 
        * Category: Transition Settings
        * @default auto
        * @type {any}
@@ -10368,6 +11090,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated.
+       * 
        * Category: Transition Settings
        * @type {any}
        */
@@ -10375,6 +11098,7 @@ declare namespace SemanticUI {
 
       /**
        * Duration of the CSS transition animation
+       * 
        * Category: Transition Settings
        * @type {number}
        */
@@ -10382,6 +11106,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled a timeout will be added to ensure animationend callback occurs even if element is hidden
+       * 
        * Category: Transition Settings
        * @default true
        * @type {any}
@@ -10390,6 +11115,7 @@ declare namespace SemanticUI {
 
       /**
        * If enabled will allow same animation to be queued while it is already occurring
+       * 
        * Category: Transition Settings
        * @type {any}
        */
@@ -10397,6 +11123,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically queue animation if another is occurring
+       * 
        * Category: Transition Settings
        * @default true
        * @type {any}
@@ -10467,30 +11194,35 @@ declare namespace SemanticUI {
 
       /**
        * Callback on each transition that changes visibility to shown
+       * 
        * Category: Callback
        */
       'onShow' |
 
       /**
        * Callback on each transition that changes visibility to hidden
+       * 
        * Category: Callback
        */
       'onHide' |
 
       /**
        * Callback on animation start, useful for queued animations
+       * 
        * Category: Callback
        */
       'onStart' |
 
       /**
        * Callback on each transition complete
+       * 
        * Category: Callback
        */
       'onComplete' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 100
        * @type {any}
@@ -10689,6 +11421,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10698,6 +11431,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10707,6 +11441,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10716,6 +11451,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 1.7777777777777777
@@ -10726,6 +11462,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10735,6 +11472,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10744,6 +11482,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10753,6 +11492,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10762,6 +11502,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10771,6 +11512,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default auto
@@ -10781,6 +11523,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default auto
@@ -10791,6 +11534,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default auto
@@ -10801,6 +11545,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default #442359
@@ -10811,6 +11556,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -10821,6 +11567,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -10830,6 +11577,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default true
@@ -10840,6 +11588,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -10924,6 +11673,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10931,6 +11681,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10938,6 +11689,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10945,6 +11697,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 1.7777777777777777
        * @type {any}
@@ -10953,6 +11706,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10960,6 +11714,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10967,6 +11722,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10974,6 +11730,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10981,6 +11738,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -10988,6 +11746,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default auto
        * @type {any}
@@ -10996,6 +11755,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default auto
        * @type {any}
@@ -11004,6 +11764,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default auto
        * @type {any}
@@ -11012,6 +11773,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default #442359
        * @type {any}
@@ -11020,6 +11782,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -11028,6 +11791,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11035,6 +11799,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default true
        * @type {any}
@@ -11043,6 +11808,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -11058,6 +11824,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false a callback will occur each time an element passes the threshold for a condition.
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11068,6 +11835,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true a callback will occur anytime an element passes a condition not just immediately after the threshold is met.
+       * 
        * Category: Functionality
        * 
        * @type {any}
@@ -11077,6 +11845,7 @@ declare namespace SemanticUI {
 
       /**
        * Set to image to load images when on screen. Set to fixed to add class name fixed when passed.
+       * 
        * Category: Functionality
        * 
        * @type {any}
@@ -11086,6 +11855,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked immediately on init
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11096,6 +11866,7 @@ declare namespace SemanticUI {
 
       /**
        * The scroll context visibility should use.
+       * 
        * Category: Functionality
        * 
        * @default HTMLElement
@@ -11106,6 +11877,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on window load. This ensures that after images load content positions will be updated correctly.
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11116,6 +11888,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on window resize. Useful when content resizes causes continuous changes in position
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11126,6 +11899,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on calls to refresh. These calls can be triggered from either resize, load or manually calling $('.foo').visibility('refresh')
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11136,6 +11910,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a z-index when using type: 'fixed'.
+       * 
        * Category: Functionality
        * 
        * @default 10
@@ -11146,6 +11921,7 @@ declare namespace SemanticUI {
 
       /**
        * Value that context scrollTop should be adjusted in pixels. Useful for making content appear below content fixed to the page.
+       * 
        * Category: Functionality
        * 
        * @type {number}
@@ -11155,6 +11931,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether element calculations should include its margin
+       * 
        * Category: Functionality
        * 
        * @type {any}
@@ -11164,6 +11941,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to an integer, scroll position will be debounced using this ms value. false will debounce with requestAnimationFrame.
+       * 
        * Category: Functionality
        * 
        * @type {number}
@@ -11173,6 +11951,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically refresh content when changes are made to the element's DOM subtree
+       * 
        * Category: Functionality
        * 
        * @default true
@@ -11183,6 +11962,7 @@ declare namespace SemanticUI {
 
       /**
        * When using type: image allows you to specify transition when showing a loaded image
+       * 
        * Category: Functionality
        * 
        * @default fade in
@@ -11193,6 +11973,7 @@ declare namespace SemanticUI {
 
       /**
        * When using type: image allows you to specify transition duration
+       * 
        * Category: Functionality
        * 
        * @default 1000
@@ -11259,6 +12040,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's top edge has passed bottom of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11267,6 +12049,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's top edge has passed top of the screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11275,6 +12058,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's bottom edge has passed bottom of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11283,6 +12067,7 @@ declare namespace SemanticUI {
 
       /**
        * Any part of an element is visible on screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11291,6 +12076,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's bottom edge has passed top of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11299,6 +12085,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's top edge has not passed bottom of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11307,6 +12094,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's top edge has not passed top of the screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11315,6 +12103,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's bottom edge has not passed bottom of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11323,6 +12112,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's top has not passed top of screen but bottom has
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11331,6 +12121,7 @@ declare namespace SemanticUI {
 
       /**
        * Element's bottom edge has not passed top of screen
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11339,6 +12130,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs after an image has completed loading
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11347,6 +12139,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs after all img initialized at the same time have loaded.
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11355,6 +12148,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs after element has been assigned position fixed
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11363,6 +12157,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs after element has been removed from fixed position
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11371,6 +12166,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs each time an elements calculations are updated
+       * 
        * Category: Callback
        * 
        * @param {any} calculations
@@ -11381,6 +12177,7 @@ declare namespace SemanticUI {
 
       /**
        * Occurs whenever element's visibility is refreshed
+       * 
        * Category: Callback
        * 
        * @memberOf SemanticUI.Visibility.Settings
@@ -11389,6 +12186,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {}
@@ -11399,6 +12197,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11408,6 +12207,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11421,6 +12221,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to false a callback will occur each time an element passes the threshold for a condition.
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11429,6 +12230,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to true a callback will occur anytime an element passes a condition not just immediately after the threshold is met.
+       * 
        * Category: Functionality
        * @type {any}
        */
@@ -11436,6 +12238,7 @@ declare namespace SemanticUI {
 
       /**
        * Set to image to load images when on screen. Set to fixed to add class name fixed when passed.
+       * 
        * Category: Functionality
        * @type {any}
        */
@@ -11443,6 +12246,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked immediately on init
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11451,6 +12255,7 @@ declare namespace SemanticUI {
 
       /**
        * The scroll context visibility should use.
+       * 
        * Category: Functionality
        * @default HTMLElement
        * @type {HTMLElement | JQuery | string}
@@ -11459,6 +12264,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on window load. This ensures that after images load content positions will be updated correctly.
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11467,6 +12273,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on window resize. Useful when content resizes causes continuous changes in position
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11475,6 +12282,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether visibility conditions should be checked on calls to refresh. These calls can be triggered from either resize, load or manually calling $('.foo').visibility('refresh')
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11483,6 +12291,7 @@ declare namespace SemanticUI {
 
       /**
        * Specify a z-index when using type: 'fixed'.
+       * 
        * Category: Functionality
        * @default 10
        * @type {any}
@@ -11491,6 +12300,7 @@ declare namespace SemanticUI {
 
       /**
        * Value that context scrollTop should be adjusted in pixels. Useful for making content appear below content fixed to the page.
+       * 
        * Category: Functionality
        * @type {number}
        */
@@ -11498,6 +12308,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether element calculations should include its margin
+       * 
        * Category: Functionality
        * @type {any}
        */
@@ -11505,6 +12316,7 @@ declare namespace SemanticUI {
 
       /**
        * When set to an integer, scroll position will be debounced using this ms value. false will debounce with requestAnimationFrame.
+       * 
        * Category: Functionality
        * @type {number}
        */
@@ -11512,6 +12324,7 @@ declare namespace SemanticUI {
 
       /**
        * Whether to automatically refresh content when changes are made to the element's DOM subtree
+       * 
        * Category: Functionality
        * @default true
        * @type {any}
@@ -11520,6 +12333,7 @@ declare namespace SemanticUI {
 
       /**
        * When using type: image allows you to specify transition when showing a loaded image
+       * 
        * Category: Functionality
        * @default fade in
        * @type {SemanticUI.AnimationNames}
@@ -11528,6 +12342,7 @@ declare namespace SemanticUI {
 
       /**
        * When using type: image allows you to specify transition duration
+       * 
        * Category: Functionality
        * @default 1000
        * @type {number}
@@ -11592,90 +12407,105 @@ declare namespace SemanticUI {
 
       /**
        * Element's top edge has passed bottom of screen
+       * 
        * Category: Callback
        */
       'onTopVisible' |
 
       /**
        * Element's top edge has passed top of the screen
+       * 
        * Category: Callback
        */
       'onTopPassed' |
 
       /**
        * Element's bottom edge has passed bottom of screen
+       * 
        * Category: Callback
        */
       'onBottomVisible' |
 
       /**
        * Any part of an element is visible on screen
+       * 
        * Category: Callback
        */
       'onPassing' |
 
       /**
        * Element's bottom edge has passed top of screen
+       * 
        * Category: Callback
        */
       'onBottomPassed' |
 
       /**
        * Element's top edge has not passed bottom of screen
+       * 
        * Category: Callback
        */
       'onTopVisibleReverse' |
 
       /**
        * Element's top edge has not passed top of the screen
+       * 
        * Category: Callback
        */
       'onTopPassedReverse' |
 
       /**
        * Element's bottom edge has not passed bottom of screen
+       * 
        * Category: Callback
        */
       'onBottomVisibleReverse' |
 
       /**
        * Element's top has not passed top of screen but bottom has
+       * 
        * Category: Callback
        */
       'onPassingReverse' |
 
       /**
        * Element's bottom edge has not passed top of screen
+       * 
        * Category: Callback
        */
       'onBottomPassedReverse' |
 
       /**
        * Occurs after an image has completed loading
+       * 
        * Category: Callback
        */
       'onLoad' |
 
       /**
        * Occurs after all img initialized at the same time have loaded.
+       * 
        * Category: Callback
        */
       'onAllLoaded' |
 
       /**
        * Occurs after element has been assigned position fixed
+       * 
        * Category: Callback
        */
       'onFixed' |
 
       /**
        * Occurs after element has been removed from fixed position
+       * 
        * Category: Callback
        */
       'onUnfixed' |
 
       /**
        * Occurs each time an elements calculations are updated
+       * 
        * Category: Callback
        * @param {any} calculations
        * @returns {any}
@@ -11684,12 +12514,14 @@ declare namespace SemanticUI {
 
       /**
        * Occurs whenever element's visibility is refreshed
+       * 
        * Category: Callback
        */
       'onRefresh' |
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {}
        * @type {any}
@@ -11698,6 +12530,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11705,6 +12538,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11803,6 +12637,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11812,6 +12647,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11821,6 +12657,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11830,6 +12667,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11839,6 +12677,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default &
@@ -11849,6 +12688,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default localstorage
@@ -11859,6 +12699,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default {"count":"visit-count","ids":"visit-ids"}
@@ -11869,6 +12710,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default 30
@@ -11879,6 +12721,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11888,6 +12731,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @default /
@@ -11898,6 +12742,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11907,6 +12752,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * 
        * @type {any}
@@ -11962,6 +12808,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11969,6 +12816,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11976,6 +12824,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11983,6 +12832,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -11990,6 +12840,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default &
        * @type {any}
@@ -11998,6 +12849,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default localstorage
        * @type {any}
@@ -12006,6 +12858,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default {"count":"visit-count","ids":"visit-ids"}
        * @type {any}
@@ -12014,6 +12867,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default 30
        * @type {any}
@@ -12022,6 +12876,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -12029,6 +12884,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @default /
        * @type {any}
@@ -12037,6 +12893,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */
@@ -12044,6 +12901,7 @@ declare namespace SemanticUI {
 
       /**
        * No documentation
+       * 
        * Category: !!UN-DOCUMENTED!!
        * @type {any}
        */

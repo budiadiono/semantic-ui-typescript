@@ -32,9 +32,10 @@ module.exports = function (components) {
         cmt += '\r\n * ' + setting
       } else {
         cmt += '\r\n * ' + setting.description
-        if (setting.category)
+        if (setting.category) {
+          cmt += '\r\n * '
           cmt += '\r\n * Category: ' + setting.category
-
+        }
         if (!setting.isDummy)
           cmt += '\r\n * '
 
