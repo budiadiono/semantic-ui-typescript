@@ -98,7 +98,7 @@ module.exports = function (components) {
     build: function (done) {
       buildTypes()
 
-      _.each(components, function (c) { 
+      _.each(components, function (c) {
         buildSettings(c)
         buildBehaviors(c)
       })
@@ -107,7 +107,7 @@ module.exports = function (components) {
       var jqueryStr = tsUtils.wrapInterface('JQuery', jqueries.join('\r\n\r\n'))
 
       var contents = beautify(moduleStr + jqueryStr, { indent_size: 2 })
-      if (done) done(header() + contents)      
+      if (done) done(header() + contents)
     }
 
   }
@@ -172,33 +172,36 @@ module.exports = function (components) {
   function buildBehaviors (component) {
     var str = ''
 
+    let name = 'SemanticUI.' + tsUtils.pascalize(component.name)
+
+    str += '\r\n//' + component.name
+    str += '\r\n' + tsUtils.comment('Initialize ' + name)
+    str += '\r\n' + component.name + '(param?: ' + name + '.Settings): JQuery'
+
+    str += '\r\n' + tsUtils.comment('Change ' + name + ' settings')
+    str += '\r\n' + component.name + "(param: 'setting', settingName: " + name + '.SettingNames, value?: any): JQuery'
+
+    jqueries.push(str)
+
     if (component.behaviors && component.behaviors.length) {
-      let name = 'SemanticUI.' + tsUtils.pascalize(component.name)
-
-      str += '\r\n//' + component.name
-      str += '\r\n' + tsUtils.comment('Initialize ' + name)
-      str += '\r\n' + component.name + '(param?: ' + name + '.Settings): JQuery'
-
-      str += '\r\n' + tsUtils.comment('Change ' + name + ' settings')
-      str += '\r\n' + component.name + "(param: 'setting', settingName: " + name + '.SettingNames, value?: any): JQuery'
-
+      var str1 = ''
       _.each(component.behaviors, function (b) {
-        str += '\r\n' + tsUtils.comment(b)
-        str += '\r\n' + component.name + '(param: ' + "'" + b.name + "'"
+        str1 += '\r\n' + tsUtils.comment(b)
+        str1 += '\r\n' + component.name + '(param: ' + "'" + b.name + "'"
 
         if (b.params) {
-          str += ', '
+          str1 += ', '
           var prms = []
           _.each(b.params, function (p, k) {
             prms.push(k + ': ' + tsUtils.fixType(p.type))
           })
-          str += prms.join(', ')
+          str1 += prms.join(', ')
         }
 
-        str += '): any'
+        str1 += '): any'
       })
 
-      jqueries.push(str)
+      jqueries.push(str1)
     }
   }
 }

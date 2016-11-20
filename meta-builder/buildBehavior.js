@@ -15,8 +15,9 @@ module.exports = function (c) {
   })
 
   // TODO: should we implement http://legacy.semantic-ui.com/module.html#/behavior ?
-  
-  if (behaviors && !_.find(behaviors, function (cb) {
+
+  if (!behaviors) behaviors = []
+  if (!_.find(behaviors, function (cb) {
       return cb.name === 'destroy'
     })) {
     behaviors.push({

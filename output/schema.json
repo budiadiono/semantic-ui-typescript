@@ -1587,6 +1587,13 @@
         "default": "{}",
         "isDummy": true
       }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
+        "isDummy": true
+      }
     ]
   },
   "dimmer": {
@@ -3613,6 +3620,13 @@
         "default": "{}",
         "isDummy": true
       }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
+        "isDummy": true
+      }
     ]
   },
   "modal": {
@@ -4239,6 +4253,13 @@
         "category": "!!UN-DOCUMENTED!!",
         "description": "No documentation",
         "type": "any",
+        "isDummy": true
+      }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
         "isDummy": true
       }
     ]
@@ -7087,6 +7108,13 @@
         "default": "{\"cache\":{},\"config\":{},\"sections\":{},\"section\":{},\"utilities\":{}}",
         "isDummy": true
       }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
+        "isDummy": true
+      }
     ]
   },
   "state": {
@@ -7263,6 +7291,13 @@
         "description": "No documentation",
         "type": "any",
         "default": "{\"disabled\":false,\"flash\":false,\"hover\":false,\"active\":false,\"inactive\":false,\"activate\":false,\"deactivate\":false}",
+        "isDummy": true
+      }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
         "isDummy": true
       }
     ]
@@ -7495,6 +7530,13 @@
         "category": "!!UN-DOCUMENTED!!",
         "description": "No documentation",
         "type": "any",
+        "isDummy": true
+      }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
         "isDummy": true
       }
     ]
@@ -8536,6 +8578,13 @@
         "default": "{}",
         "isDummy": true
       }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
+        "isDummy": true
+      }
     ]
   },
   "visibility": {
@@ -9237,6 +9286,13 @@
         "category": "!!UN-DOCUMENTED!!",
         "description": "No documentation",
         "type": "any",
+        "isDummy": true
+      }
+    ],
+    "behaviors": [
+      {
+        "description": "Removes all changes to the page made by initialization",
+        "name": "destroy",
         "isDummy": true
       }
     ]

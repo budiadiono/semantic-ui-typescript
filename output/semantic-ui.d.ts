@@ -2021,6 +2021,13 @@ declare namespace SemanticUI {
        */
       'colors'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -4771,6 +4778,13 @@ declare namespace SemanticUI {
        */
       'rules'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -5778,6 +5792,13 @@ declare namespace SemanticUI {
        * @type {any}
        */
       'onHide'
+
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -9584,6 +9605,13 @@ declare namespace SemanticUI {
        */
       'namespaceStub'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -9967,6 +9995,13 @@ declare namespace SemanticUI {
        */
       'text'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -10331,6 +10366,13 @@ declare namespace SemanticUI {
        * @type {any}
        */
       'container'
+
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -11870,6 +11912,13 @@ declare namespace SemanticUI {
        */
       'templates'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -12967,6 +13016,13 @@ declare namespace SemanticUI {
        */
       'onChange'
 
+    type BehaviorNames =
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
+
   }
 
 
@@ -12984,6 +13040,8 @@ interface JQuery {
    * Change SemanticUI.Api settings
    */
   api(param: 'setting', settingName: SemanticUI.Api.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Execute query using existing API settings
@@ -13114,6 +13172,8 @@ interface JQuery {
    */
   accordion(param: 'setting', settingName: SemanticUI.Accordion.SettingNames, value ? : any): JQuery
 
+
+
   /**
    * Refreshes all cached selectors and data
    */
@@ -13159,6 +13219,8 @@ interface JQuery {
    * Change SemanticUI.Checkbox settings
    */
   checkbox(param: 'setting', settingName: SemanticUI.Checkbox.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Switches a checkbox from current state
@@ -13278,6 +13340,26 @@ interface JQuery {
   checkbox(param: 'destroy'): any
 
 
+  //colorize
+
+  /**
+   * Initialize SemanticUI.Colorize
+   */
+  colorize(param ? : SemanticUI.Colorize.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Colorize settings
+   */
+  colorize(param: 'setting', settingName: SemanticUI.Colorize.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  colorize(param: 'destroy'): any
+
+
   //dimmer
 
   /**
@@ -13289,6 +13371,8 @@ interface JQuery {
    * Change SemanticUI.Dimmer settings
    */
   dimmer(param: 'setting', settingName: SemanticUI.Dimmer.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Detaches a given element from DOM and reattaches element inside dimmer
@@ -13419,6 +13503,8 @@ interface JQuery {
    * Change SemanticUI.Dropdown settings
    */
   dropdown(param: 'setting', settingName: SemanticUI.Dropdown.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Recreates dropdown menu from select option values.
@@ -13632,6 +13718,8 @@ interface JQuery {
    */
   embed(param: 'setting', settingName: SemanticUI.Embed.SettingNames, value ? : any): JQuery
 
+
+
   /**
    * Changes iframe to a new content source
    * @param {string} source
@@ -13691,6 +13779,26 @@ interface JQuery {
   embed(param: 'destroy'): any
 
 
+  //form
+
+  /**
+   * Initialize SemanticUI.Form
+   */
+  form(param ? : SemanticUI.Form.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Form settings
+   */
+  form(param: 'setting', settingName: SemanticUI.Form.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  form(param: 'destroy'): any
+
+
   //modal
 
   /**
@@ -13702,6 +13810,8 @@ interface JQuery {
    * Change SemanticUI.Modal settings
    */
   modal(param: 'setting', settingName: SemanticUI.Modal.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Shows the modal
@@ -13776,6 +13886,26 @@ interface JQuery {
   modal(param: 'destroy'): any
 
 
+  //nag
+
+  /**
+   * Initialize SemanticUI.Nag
+   */
+  nag(param ? : SemanticUI.Nag.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Nag settings
+   */
+  nag(param: 'setting', settingName: SemanticUI.Nag.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  nag(param: 'destroy'): any
+
+
   //popup
 
   /**
@@ -13787,6 +13917,8 @@ interface JQuery {
    * Change SemanticUI.Popup settings
    */
   popup(param: 'setting', settingName: SemanticUI.Popup.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Shows popup
@@ -13867,6 +13999,8 @@ interface JQuery {
    * Change SemanticUI.Progress settings
    */
   progress(param: 'setting', settingName: SemanticUI.Progress.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Sets current percent of progress to value. If using a total will convert from percent to estimated value.
@@ -14042,6 +14176,8 @@ interface JQuery {
    */
   rating(param: 'setting', settingName: SemanticUI.Rating.SettingNames, value ? : any): JQuery
 
+
+
   /**
    * Sets rating programmatically
    * @param {number} rating
@@ -14085,6 +14221,8 @@ interface JQuery {
    * Change SemanticUI.Search settings
    */
   search(param: 'setting', settingName: SemanticUI.Search.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Search for value currently set in search input
@@ -14223,6 +14361,8 @@ interface JQuery {
    */
   shape(param: 'setting', settingName: SemanticUI.Shape.SettingNames, value ? : any): JQuery
 
+
+
   /**
    * Flips the shape upward
    */
@@ -14338,6 +14478,8 @@ interface JQuery {
    */
   sidebar(param: 'setting', settingName: SemanticUI.Sidebar.SettingNames, value ? : any): JQuery
 
+
+
   /**
    * Attaches sidebar action to given selector. Default event if none specified is toggle
    * @param {HTMLElement | JQuery | string} selector
@@ -14406,6 +14548,66 @@ interface JQuery {
   sidebar(param: 'destroy'): any
 
 
+  //site
+
+  /**
+   * Initialize SemanticUI.Site
+   */
+  site(param ? : SemanticUI.Site.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Site settings
+   */
+  site(param: 'setting', settingName: SemanticUI.Site.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  site(param: 'destroy'): any
+
+
+  //state
+
+  /**
+   * Initialize SemanticUI.State
+   */
+  state(param ? : SemanticUI.State.Settings): JQuery
+
+  /**
+   * Change SemanticUI.State settings
+   */
+  state(param: 'setting', settingName: SemanticUI.State.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  state(param: 'destroy'): any
+
+
+  //sticky
+
+  /**
+   * Initialize SemanticUI.Sticky
+   */
+  sticky(param ? : SemanticUI.Sticky.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Sticky settings
+   */
+  sticky(param: 'setting', settingName: SemanticUI.Sticky.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  sticky(param: 'destroy'): any
+
+
   //tab
 
   /**
@@ -14417,6 +14619,8 @@ interface JQuery {
    * Change SemanticUI.Tab settings
    */
   tab(param: 'setting', settingName: SemanticUI.Tab.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Attaches tab action to given selector. Default event if none specified is toggle
@@ -14483,6 +14687,8 @@ interface JQuery {
    * Change SemanticUI.Transition settings
    */
   transition(param: 'setting', settingName: SemanticUI.Transition.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Stop current animation and preserve queue
@@ -14601,6 +14807,26 @@ interface JQuery {
   transition(param: 'destroy'): any
 
 
+  //video
+
+  /**
+   * Initialize SemanticUI.Video
+   */
+  video(param ? : SemanticUI.Video.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Video settings
+   */
+  video(param: 'setting', settingName: SemanticUI.Video.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  video(param: 'destroy'): any
+
+
   //visibility
 
   /**
@@ -14612,6 +14838,8 @@ interface JQuery {
    * Change SemanticUI.Visibility settings
    */
   visibility(param: 'setting', settingName: SemanticUI.Visibility.SettingNames, value ? : any): JQuery
+
+
 
   /**
    * Disable callbacks temporarily. This is useful if you need to adjust scroll position and do not want to trigger callbacks during the position change.
@@ -14657,5 +14885,25 @@ interface JQuery {
    * Removes all changes to the page made by initialization
    */
   visibility(param: 'destroy'): any
+
+
+  //visit
+
+  /**
+   * Initialize SemanticUI.Visit
+   */
+  visit(param ? : SemanticUI.Visit.Settings): JQuery
+
+  /**
+   * Change SemanticUI.Visit settings
+   */
+  visit(param: 'setting', settingName: SemanticUI.Visit.SettingNames, value ? : any): JQuery
+
+
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  visit(param: 'destroy'): any
 
 }
