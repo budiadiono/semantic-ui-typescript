@@ -1379,7 +1379,12 @@ declare namespace SemanticUI {
        * Toggles accordion content at index
        * @param {number} index
        */
-      'toggle '
+      'toggle ' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -1870,7 +1875,12 @@ declare namespace SemanticUI {
       /**
        * Returns whether element is able to be unchecked
        */
-      'can uncheck'
+      'can uncheck' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -2480,7 +2490,12 @@ declare namespace SemanticUI {
       /**
        * Sets a dimmer as disabled
        */
-      'set disabled'
+      'set disabled' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -3707,7 +3722,12 @@ declare namespace SemanticUI {
       /**
        * Returns placeholder text
        */
-      'get placeholder text'
+      'get placeholder text' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -5349,7 +5369,12 @@ declare namespace SemanticUI {
        * @param {HTMLElement | JQuery | string} selector
        * @param {Modal.BehaviorNames} behavior?
        */
-      'attach events'
+      'attach events' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -7425,7 +7450,12 @@ declare namespace SemanticUI {
       /**
        * Removes progress to error state
        */
-      'remove error'
+      'remove error' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -7744,7 +7774,12 @@ declare namespace SemanticUI {
       /**
        * Clears current rating
        */
-      'clear rating'
+      'clear rating' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -8877,7 +8912,12 @@ declare namespace SemanticUI {
       /**
        * Returns translation for next side staged down
        */
-      'get transform down'
+      'get transform down' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -9382,7 +9422,12 @@ declare namespace SemanticUI {
       /**
        * Returns vendor prefixed transition end event
        */
-      'get transition event'
+      'get transition event' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -10856,7 +10901,12 @@ declare namespace SemanticUI {
        * Removes cached HTML for path
        * @param {any} path
        */
-      'cache remove'
+      'cache remove' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -11340,7 +11390,12 @@ declare namespace SemanticUI {
       /**
        * Returns whether animations are supported
        */
-      'is supported'
+      'is supported' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -12584,7 +12639,12 @@ declare namespace SemanticUI {
       /**
        * Returns screen size as object
        */
-      'get screen size'
+      'get screen size' |
+
+      /**
+       * Removes all changes to the page made by initialization
+       */
+      'destroy'
 
   }
 
@@ -13082,6 +13142,11 @@ interface JQuery {
    */
   accordion(param: 'toggle ', index: number): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  accordion(param: 'destroy'): any
+
 
   //checkbox
 
@@ -13207,6 +13272,11 @@ interface JQuery {
    */
   checkbox(param: 'can uncheck'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  checkbox(param: 'destroy'): any
+
 
   //dimmer
 
@@ -13331,6 +13401,11 @@ interface JQuery {
    * Sets a dimmer as disabled
    */
   dimmer(param: 'set disabled'): any
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  dimmer(param: 'destroy'): any
 
 
   //dropdown
@@ -13539,6 +13614,11 @@ interface JQuery {
    */
   dropdown(param: 'get placeholder text'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  dropdown(param: 'destroy'): any
+
 
   //embed
 
@@ -13689,6 +13769,11 @@ interface JQuery {
    * @param {Modal.BehaviorNames} behavior?
    */
   modal(param: 'attach events', selector: HTMLElement | JQuery | string, behavior ? : SemanticUI.Modal.BehaviorNames): any
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  modal(param: 'destroy'): any
 
 
   //popup
@@ -13939,6 +14024,11 @@ interface JQuery {
    */
   progress(param: 'remove error'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  progress(param: 'destroy'): any
+
 
   //rating
 
@@ -13977,6 +14067,11 @@ interface JQuery {
    * Clears current rating
    */
   rating(param: 'clear rating'): any
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  rating(param: 'destroy'): any
 
 
   //search
@@ -14225,6 +14320,11 @@ interface JQuery {
    */
   shape(param: 'get transform down'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  shape(param: 'destroy'): any
+
 
   //sidebar
 
@@ -14300,6 +14400,11 @@ interface JQuery {
    */
   sidebar(param: 'get transition event'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  sidebar(param: 'destroy'): any
+
 
   //tab
 
@@ -14360,6 +14465,11 @@ interface JQuery {
    * @param {any} path
    */
   tab(param: 'cache remove', path: any): any
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  tab(param: 'destroy'): any
 
 
   //transition
@@ -14485,6 +14595,11 @@ interface JQuery {
    */
   transition(param: 'is supported'): any
 
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  transition(param: 'destroy'): any
+
 
   //visibility
 
@@ -14537,5 +14652,10 @@ interface JQuery {
    * Returns screen size as object
    */
   visibility(param: 'get screen size'): any
+
+  /**
+   * Removes all changes to the page made by initialization
+   */
+  visibility(param: 'destroy'): any
 
 }
